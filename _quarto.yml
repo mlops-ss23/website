@@ -18,7 +18,7 @@ website:
 
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2022, Jan Kirenz"
+    left: "&copy; Copyright 2023, Jan Kirenz"
     background: "#D9E3E4"
 
   sidebar:
@@ -123,7 +123,7 @@ format:
     theme:
       light: [cosmo, theme.scss]
       dark: [cosmo, theme-dark.scss]
-    mainfont: "Atkinson Hyperlegible"
+    mainfont: "Myriad Pro Condensed"
     code-copy: true
     code-overflow: wrap
     toc: true
