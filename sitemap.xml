@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/mlops-ss23/website/about.html</loc>
-    <lastmod>2022-12-31T21:16:48.587Z</lastmod>
+    <loc>https://mlops-ss23.github.io/website/course-links.html</loc>
+    <lastmod>2022-12-31T22:44:31.575Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/mlops-ss23/website/index.html</loc>
-    <lastmod>2022-12-31T21:16:49.207Z</lastmod>
+    <loc>https://mlops-ss23.github.io/website/course-overview.html</loc>
+    <lastmod>2022-12-31T22:44:33.671Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/course-team.html</loc>
+    <lastmod>2022-12-31T22:44:34.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/about.html</loc>
+    <lastmod>2022-12-31T22:44:34.411Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/weeks/week-1.html</loc>
+    <lastmod>2022-12-31T22:44:34.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/course-support.html</loc>
+    <lastmod>2022-12-31T22:44:35.191Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/computing-troubleshooting.html</loc>
+    <lastmod>2022-12-31T22:44:35.543Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/course-faq.html</loc>
+    <lastmod>2022-12-31T22:44:35.891Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/course-syllabus.html</loc>
+    <lastmod>2022-12-31T22:44:36.279Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/computing-access.html</loc>
+    <lastmod>2022-12-31T22:44:36.655Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/project-tips-resources.html</loc>
+    <lastmod>2022-12-31T22:44:37.031Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/project-description.html</loc>
+    <lastmod>2022-12-31T22:44:37.379Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/index.html</loc>
+    <lastmod>2022-12-31T22:44:37.759Z</lastmod>
   </url>
 </urlset>
