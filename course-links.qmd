@@ -1,0 +1,12 @@
+---
+title: "Useful links"
+---
+
+|                            |                                                                                                                                      |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| RStudio containers         | 🔗 on [](https://)                                                                  |
+| Course GitHub organization | 🔗 on [GitHub]()                                                                                        |
+| Discussion forum           | 🔗 on [Moodle]()                                                                 |
+| Lecture streaming and recordings         | 🔗 on [Panopto]() |
+| Gradebook                  | 🔗 on [Moodle]()     |
+| Virtual meetings           | 🔗 on [Zoom]()      |

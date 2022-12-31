@@ -1,7 +1,7 @@
 ---
-title: "website"
+title: "MLOps"
+tbl-colwidths: [5,10,30,5,5,5,5,5,5,5]
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This page contains an outline of the topics, content, and assignments for the semester.
+Note that this schedule will be updated as the semester progresses, with all changes documented here.

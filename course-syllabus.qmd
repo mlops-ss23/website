@@ -1,0 +1,7 @@
+---
+title: "Syllabus"
+---
+
+
+
+[**Click here**](/documents/xyz.pdf "PDF of syllabus") **to download a PDF copy of the syllabus.**
