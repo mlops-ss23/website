@@ -109,7 +109,7 @@ format:
     theme:
       light: [cosmo, theme.scss]
       dark: [cosmo, theme-dark.scss]
-#    mainfont: "Myriad Pro Condensed"
+    mainfont: "Roboto Condensed"
     code-copy: true
     code-overflow: wrap
     toc: true
