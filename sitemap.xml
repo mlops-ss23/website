@@ -2,50 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mlops-ss23.github.io/website/course-links.html</loc>
-    <lastmod>2023-01-01T10:30:48.409Z</lastmod>
+    <lastmod>2023-01-01T20:28:02.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/conceptual/3-data-engineering/1-data-source/lec-1.html</loc>
+    <lastmod>2023-01-01T20:28:03.599Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/course-overview.html</loc>
-    <lastmod>2023-01-01T10:30:50.481Z</lastmod>
+    <lastmod>2023-01-01T20:28:04.655Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/about.html</loc>
-    <lastmod>2023-01-01T10:30:50.857Z</lastmod>
+    <lastmod>2023-01-01T20:28:05.003Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/weeks/week-1.html</loc>
-    <lastmod>2023-01-01T10:30:51.253Z</lastmod>
+    <lastmod>2023-01-01T20:28:05.359Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/course-support.html</loc>
-    <lastmod>2023-01-01T10:30:51.601Z</lastmod>
+    <lastmod>2023-01-01T20:28:05.703Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/computing-troubleshooting.html</loc>
-    <lastmod>2023-01-01T10:30:51.985Z</lastmod>
+    <lastmod>2023-01-01T20:28:06.039Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/course-faq.html</loc>
-    <lastmod>2023-01-01T10:30:52.341Z</lastmod>
+    <lastmod>2023-01-01T20:28:06.375Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/course-syllabus.html</loc>
-    <lastmod>2023-01-01T10:30:52.717Z</lastmod>
+    <lastmod>2023-01-01T20:28:06.715Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/computing-access.html</loc>
-    <lastmod>2023-01-01T10:30:53.069Z</lastmod>
+    <lastmod>2023-01-01T20:28:07.083Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/project-tips-resources.html</loc>
-    <lastmod>2023-01-01T10:30:53.445Z</lastmod>
+    <lastmod>2023-01-01T20:28:07.419Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/project-description.html</loc>
-    <lastmod>2023-01-01T10:30:53.789Z</lastmod>
+    <lastmod>2023-01-01T20:28:07.787Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/index.html</loc>
-    <lastmod>2023-01-01T10:30:54.177Z</lastmod>
+    <lastmod>2023-01-01T20:28:08.135Z</lastmod>
   </url>
 </urlset>

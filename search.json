@@ -7,6 +7,188 @@
     "text": "RStudio containers\n🔗 on \n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nDiscussion forum\n🔗 on Moodle\n\n\nLecture streaming and recordings\n🔗 on Panopto\n\n\nGradebook\n🔗 on Moodle\n\n\nVirtual meetings\n🔗 on Zoom"
   },
   {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#meet-the-professor",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#meet-the-professor",
+    "title": "Title",
+    "section": "Meet the professor",
+    "text": "Meet the professor\n\n\nTxt\n\n-Txt"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#check-out-conversations",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#check-out-conversations",
+    "title": "Title",
+    "section": "Check out Conversations",
+    "text": "Check out Conversations\n\nGo"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#what-is-regression-analysis",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#what-is-regression-analysis",
+    "title": "Title",
+    "section": "What is regression analysis",
+    "text": "What is regression analysis\n\n\n“In statistical modeling, regression analysis is a set of statistical processes for estimating the relationships among variables. It includes many techniques for modeling and analyzing several variables, when the focus is on the relationship between a dependent variable and one or more independent variables (or predictors). More specifically, regression analysis helps one understand how the typical value of the dependent variable (or ‘criterion variable’) changes when any one of the independent variables is varied, while the other independent variables are held fixed.”\n\n\nSource: Wikipedia"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#course-faq",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#course-faq",
+    "title": "Title",
+    "section": "Course FAQ",
+    "text": "Course FAQ\n\n\nWhat background is assumed for the course? Introductory statistics or probability course.\nWill we be doing computing? Yes. We will use R.\nWill we learn the mathematical theory of regression? Yes and No. The course is primarily focused on application; however, we will discuss some of the mathematics of simple linear regression. The 1-credit course STA 211: Mathematics of Regression you can take simultaneously / after dives into more of the mathematics."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#course-learning-objectives",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#course-learning-objectives",
+    "title": "Title",
+    "section": "Course learning objectives",
+    "text": "Course learning objectives\n\nAnalyze real-world data to answer questions about multivariable relationships.\nFit and evaluate linear and logistic regression models.\nAssess whether a proposed model is appropriate and describe its limitations.\nUse Quarto to write reproducible reports and GitHub for version control and collaboration.\nCommunicate results from statistical analyses to a general audience."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#examples-of-regression-in-practice",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#examples-of-regression-in-practice",
+    "title": "Title",
+    "section": "Examples of regression in practice",
+    "text": "Examples of regression in practice\n\n\nNew Yorkers Will Pay $56 A Month To Trim A Minute Off Their Commute\nHow FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19\nEffect of Forensic Evidence on Criminal Justice Case Processing\nWhy it’s so freaking hard to make a good COVID-19 model"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#homepage",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#homepage",
+    "title": "Title",
+    "section": "Homepage",
+    "text": "Homepage\nsta210-s22.github.io/website\n\nAll course materials\nLinks to Sakai, GitHub, RStudio containers, etc.\nLet’s take a tour!"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#course-toolkit",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#course-toolkit",
+    "title": "Title",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta210-s22\nRStudio containers: cmgr.oit.duke.edu/containers\nDiscussion forum: Conversations\nAssignment submission and feedback: Gradescope\n\n\n\n\n\n\n\nImportant\n\n\nReserve an RStudio Container (titled STA 210) before lab on Monday!"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#activities-prepare-participate-practice-perform",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#activities-prepare-participate-practice-perform",
+    "title": "Title",
+    "section": "Activities: Prepare, Participate, Practice, Perform",
+    "text": "Activities: Prepare, Participate, Practice, Perform\n\nPrepare: Introduce new content and prepare for lectures by completing the readings (and sometimes watching the videos)\nParticipate: Attend and actively participate in lectures and labs, office hours, team meetings\nPractice: Practice applying statistical concepts and computing with application exercises during lecture, graded for completion\nPerform: Put together what you’ve learned to analyze real-world data\n\nLab assignments x 7 (first individual, later team-based)\nHomework assignments x 5 (individual)\nThree take-home exams\nTerm project presented during the final exam period"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#cadence",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#cadence",
+    "title": "Title",
+    "section": "Cadence",
+    "text": "Cadence\n\n\nLabs: Start and make large progress on Monday in lab section, finish up by Friday 5pm of that week\nHWs: Posted Friday morning, due following Friday 5pm\nExams: Exam review Thursday in class, exam posted Friday morning, no lab on Monday of following week, due Monday 11:59pm\nProject: Deadlines throughout the semester, with some lab and lecture time dedicated to working on them, and most work done in teams outside of class"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#teams",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#teams",
+    "title": "Title",
+    "section": "Teams",
+    "text": "Teams\n\nTeam assignments\n\nAssigned by me\nApplication exercises, labs, and project\nPeer evaluation during teamwork and after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#grading",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#grading",
+    "title": "Title",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nApplication exercises\n3%\n\n\nHomework\n35% (7% x 5)\n\n\nProject\n15%\n\n\nLab\n14% (2% x 7)\n\n\nExam 01\n10%\n\n\nExam 02\n10%\n\n\nExam 03\n10%\n\n\nTeamwork\n3%\n\n\n\nSee course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#support",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#support",
+    "title": "Title",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours\nAsk and answer questions on the discussion forum\nReserve email for questions on personal matters and/or grades\nRead the course support page"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#announcements",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#announcements",
+    "title": "Title",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Sakai (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#diversity-inclusion",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#diversity-inclusion",
+    "title": "Title",
+    "section": "Diversity + inclusion",
+    "text": "Diversity + inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nIf you have a name that differs from those that appear in your official Duke records, please let me know!\nPlease let me know your preferred pronouns. You’ll also be able to note this in the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#accessibility",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#accessibility",
+    "title": "Title",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#covid-policies",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#covid-policies",
+    "title": "Title",
+    "section": "COVID policies",
+    "text": "COVID policies\n\nWear a mask at all times!\nRead and follow university guidance"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#late-work-waivers-regrades-policy",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#late-work-waivers-regrades-policy",
+    "title": "Title",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#collaboration-policy",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#collaboration-policy",
+    "title": "Title",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nHomeworks must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#sharing-reusing-code-policy",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#sharing-reusing-code-policy",
+    "title": "Title",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#academic-integrity",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#academic-integrity",
+    "title": "Title",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#most-importantly",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#most-importantly",
+    "title": "Title",
+    "section": "Most importantly!",
+    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#five-tips-for-success",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#five-tips-for-success",
+    "title": "Title",
+    "section": "Five tips for success",
+    "text": "Five tips for success\n\nComplete all the preparation work before class.\nAsk questions.\nDo the readings.\nDo the homework and lab.\nDon’t procrastinate and don’t let a week pass by with lingering questions."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#learning-during-a-pandemic",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#learning-during-a-pandemic",
+    "title": "Title",
+    "section": "Learning during a pandemic",
+    "text": "Learning during a pandemic\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded during this crisis."
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#this-weeks-tasks",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#this-weeks-tasks",
+    "title": "Title",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nGet a GitHub account if you don’t have one (some advice for choosing a username here)\nComplete the Getting to know you survey if you haven’t yet done so!\nRead the syllabus\nWatch out for next week’s announcement email, in your inbox sometime tomorrow"
+  },
+  {
+    "objectID": "conceptual/3-data-engineering/1-data-source/lec-1.html#midori-says",
+    "href": "conceptual/3-data-engineering/1-data-source/lec-1.html#midori-says",
+    "title": "Title",
+    "section": "Midori says…",
+    "text": "Midori says…"
+  },
+  {
     "objectID": "course-overview.html",
     "href": "course-overview.html",
     "title": "MLOps",
