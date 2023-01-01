@@ -112,185 +112,185 @@
     "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here."
   },
   {
-    "objectID": "slides/lec-1.html#meet-the-professor",
-    "href": "slides/lec-1.html#meet-the-professor",
-    "title": "Title",
-    "section": "Meet the professor",
-    "text": "Meet the professor\n\n\nTxt\n\n-Txt"
+    "objectID": "slides/lec-1.html#hello-there",
+    "href": "slides/lec-1.html#hello-there",
+    "title": "Quarto Presentations",
+    "section": "Hello, There",
+    "text": "Hello, There\nThe following presentation is based on this demo provided by Quarto.\nNote that you need to install ipyleaflet(conda install ipyleaflet)\nThis presentation will show you examples of what you can do with Quarto and Reveal.js, including:\n\nPresenting code and LaTeX equations\nIncluding computations in slide output\nImage, video, and iframe backgrounds\nFancy transitions and animations\nPrinting to PDF\n\n…and much more"
   },
   {
-    "objectID": "slides/lec-1.html#check-out-conversations",
-    "href": "slides/lec-1.html#check-out-conversations",
-    "title": "Title",
-    "section": "Check out Conversations",
-    "text": "Check out Conversations\n\nGo"
+    "objectID": "slides/lec-1.html#pretty-code",
+    "href": "slides/lec-1.html#pretty-code",
+    "title": "Quarto Presentations",
+    "section": "Pretty Code",
+    "text": "Pretty Code\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\nimport pandas as pd\nimport altair as alt\n\n# sorted bar chart\nalt.Chart(source).mark_bar().encode(\n    x=alt.X('homeownership', sort='-y'), \n    y=alt.Y('count(homeownership)')\n)\n\nLearn more: Syntax Highlighting"
   },
   {
-    "objectID": "slides/lec-1.html#what-is-regression-analysis",
-    "href": "slides/lec-1.html#what-is-regression-analysis",
-    "title": "Title",
-    "section": "What is regression analysis",
-    "text": "What is regression analysis\n\n\n“In statistical modeling, regression analysis is a set of statistical processes for estimating the relationships among variables. It includes many techniques for modeling and analyzing several variables, when the focus is on the relationship between a dependent variable and one or more independent variables (or predictors). More specifically, regression analysis helps one understand how the typical value of the dependent variable (or ‘criterion variable’) changes when any one of the independent variables is varied, while the other independent variables are held fixed.”\n\n\nSource: Wikipedia"
+    "objectID": "slides/lec-1.html#code-animations",
+    "href": "slides/lec-1.html#code-animations",
+    "title": "Quarto Presentations",
+    "section": "Code Animations",
+    "text": "Code Animations\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\nimport pandas as pd\nimport altair as alt\n\nalt.Chart(source).mark_bar().encode(\n    x=alt.X('homeownership', sort='-y'), \n    y=alt.Y('count(homeownership)')\n)\n\nLearn more: Code Animations"
   },
   {
-    "objectID": "slides/lec-1.html#course-faq",
-    "href": "slides/lec-1.html#course-faq",
-    "title": "Title",
-    "section": "Course FAQ",
-    "text": "Course FAQ\n\n\nWhat background is assumed for the course? Introductory statistics or probability course.\nWill we be doing computing? Yes. We will use R.\nWill we learn the mathematical theory of regression? Yes and No. The course is primarily focused on application; however, we will discuss some of the mathematics of simple linear regression. The 1-credit course STA 211: Mathematics of Regression you can take simultaneously / after dives into more of the mathematics."
+    "objectID": "slides/lec-1.html#line-highlighting",
+    "href": "slides/lec-1.html#line-highlighting",
+    "title": "Quarto Presentations",
+    "section": "Line Highlighting",
+    "text": "Line Highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport pandas as pd\nimport altair as alt\n\nROOT = \"https://raw.githubusercontent.com/kirenz/datasets/master/\"\nDATA = \"loans50.csv\"\n\ndf = pd.read_csv(ROOT + DATA)\n\n# sorted bar chart\nalt.Chart(df).mark_bar().encode(\n    x=alt.X('homeownership', sort='-y'), \n    y=alt.Y('count(homeownership)')\n).properties( \n    title='This is a simple bar chart',\n    width=300,\n    height=150\n)\n\nLearn more: Line Highlighting"
   },
   {
-    "objectID": "slides/lec-1.html#course-learning-objectives",
-    "href": "slides/lec-1.html#course-learning-objectives",
-    "title": "Title",
-    "section": "Course learning objectives",
-    "text": "Course learning objectives\n\nAnalyze real-world data to answer questions about multivariable relationships.\nFit and evaluate linear and logistic regression models.\nAssess whether a proposed model is appropriate and describe its limitations.\nUse Quarto to write reproducible reports and GitHub for version control and collaboration.\nCommunicate results from statistical analyses to a general audience."
+    "objectID": "slides/lec-1.html#executable-code",
+    "href": "slides/lec-1.html#executable-code",
+    "title": "Quarto Presentations",
+    "section": "Executable Code",
+    "text": "Executable Code\n\n\n\n\n\n\n\n\nLearn more: Executable Code"
   },
   {
-    "objectID": "slides/lec-1.html#examples-of-regression-in-practice",
-    "href": "slides/lec-1.html#examples-of-regression-in-practice",
-    "title": "Title",
-    "section": "Examples of regression in practice",
-    "text": "Examples of regression in practice\n\n\nNew Yorkers Will Pay $56 A Month To Trim A Minute Off Their Commute\nHow FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19\nEffect of Forensic Evidence on Criminal Justice Case Processing\nWhy it’s so freaking hard to make a good COVID-19 model"
+    "objectID": "slides/lec-1.html#latex-equations",
+    "href": "slides/lec-1.html#latex-equations",
+    "title": "Quarto Presentations",
+    "section": "LaTeX Equations",
+    "text": "LaTeX Equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]\n\n\n\nLearn more: LaTeX Equations"
   },
   {
-    "objectID": "slides/lec-1.html#homepage",
-    "href": "slides/lec-1.html#homepage",
-    "title": "Title",
-    "section": "Homepage",
-    "text": "Homepage\nsta210-s22.github.io/website\n\nAll course materials\nLinks to Sakai, GitHub, RStudio containers, etc.\nLet’s take a tour!"
+    "objectID": "slides/lec-1.html#column-layout",
+    "href": "slides/lec-1.html#column-layout",
+    "title": "Quarto Presentations",
+    "section": "Column Layout",
+    "text": "Column Layout\nArrange content into columns of varying widths:\n\n\nThis is a text\nLorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.\n\n\n\n\n\n\n\n\n\n  \n    \n      \n      emp_length\n      homeownership\n    \n  \n  \n    \n      0\n      3.0\n      rent\n    \n    \n      2\n      NaN\n      mortgage\n    \n  \n\n\n\n\n\n\n\nLearn more: Multiple Columns"
   },
   {
-    "objectID": "slides/lec-1.html#course-toolkit",
-    "href": "slides/lec-1.html#course-toolkit",
-    "title": "Title",
-    "section": "Course toolkit",
-    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta210-s22\nRStudio containers: cmgr.oit.duke.edu/containers\nDiscussion forum: Conversations\nAssignment submission and feedback: Gradescope\n\n\n\n\n\n\n\nImportant\n\n\nReserve an RStudio Container (titled STA 210) before lab on Monday!"
+    "objectID": "slides/lec-1.html#incremental-lists",
+    "href": "slides/lec-1.html#incremental-lists",
+    "title": "Quarto Presentations",
+    "section": "Incremental Lists",
+    "text": "Incremental Lists\nLists can optionally be displayed incrementally:\n\n\nFirst item\nSecond item\nThird item\n\n\n\n Insert pauses to make other types of content display incrementally.\n\nLearn more: Incremental Lists"
   },
   {
-    "objectID": "slides/lec-1.html#activities-prepare-participate-practice-perform",
-    "href": "slides/lec-1.html#activities-prepare-participate-practice-perform",
-    "title": "Title",
-    "section": "Activities: Prepare, Participate, Practice, Perform",
-    "text": "Activities: Prepare, Participate, Practice, Perform\n\nPrepare: Introduce new content and prepare for lectures by completing the readings (and sometimes watching the videos)\nParticipate: Attend and actively participate in lectures and labs, office hours, team meetings\nPractice: Practice applying statistical concepts and computing with application exercises during lecture, graded for completion\nPerform: Put together what you’ve learned to analyze real-world data\n\nLab assignments x 7 (first individual, later team-based)\nHomework assignments x 5 (individual)\nThree take-home exams\nTerm project presented during the final exam period"
+    "objectID": "slides/lec-1.html#fragments",
+    "href": "slides/lec-1.html#fragments",
+    "title": "Quarto Presentations",
+    "section": "Fragments",
+    "text": "Fragments\nIncremental text display and animation with fragments:\n\n\nFade in\n\n\nSlide up while fading in\n\n\nSlide left while fading in\n\n\nFade in then semi out\n\n\n\nStrike\n\n\nHighlight red\n\n\nLearn more: Fragments"
   },
   {
-    "objectID": "slides/lec-1.html#cadence",
-    "href": "slides/lec-1.html#cadence",
-    "title": "Title",
-    "section": "Cadence",
-    "text": "Cadence\n\n\nLabs: Start and make large progress on Monday in lab section, finish up by Friday 5pm of that week\nHWs: Posted Friday morning, due following Friday 5pm\nExams: Exam review Thursday in class, exam posted Friday morning, no lab on Monday of following week, due Monday 11:59pm\nProject: Deadlines throughout the semester, with some lab and lecture time dedicated to working on them, and most work done in teams outside of class"
+    "objectID": "slides/lec-1.html#slide-backgrounds",
+    "href": "slides/lec-1.html#slide-backgrounds",
+    "title": "Quarto Presentations",
+    "section": "Slide Backgrounds",
+    "text": "Slide Backgrounds\nSet the background attribute on a slide to change the background color (all CSS color formats are supported).\nDifferent background transitions are available via the background-transition option.\n\nLearn more: Slide Backgrounds"
   },
   {
-    "objectID": "slides/lec-1.html#teams",
-    "href": "slides/lec-1.html#teams",
-    "title": "Title",
-    "section": "Teams",
-    "text": "Teams\n\nTeam assignments\n\nAssigned by me\nApplication exercises, labs, and project\nPeer evaluation during teamwork and after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+    "objectID": "slides/lec-1.html#media-backgrounds",
+    "href": "slides/lec-1.html#media-backgrounds",
+    "title": "Quarto Presentations",
+    "section": "Media Backgrounds",
+    "text": "Media Backgrounds\nYou can also use the following as a slide background:\n\nAn image: background-image\nA video: background-video\nAn iframe: background-iframe\n\n\nLearn more: Media Backgrounds"
   },
   {
-    "objectID": "slides/lec-1.html#grading",
-    "href": "slides/lec-1.html#grading",
-    "title": "Title",
-    "section": "Grading",
-    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nApplication exercises\n3%\n\n\nHomework\n35% (7% x 5)\n\n\nProject\n15%\n\n\nLab\n14% (2% x 7)\n\n\nExam 01\n10%\n\n\nExam 02\n10%\n\n\nExam 03\n10%\n\n\nTeamwork\n3%\n\n\n\nSee course syllabus for how the final letter grade will be determined."
+    "objectID": "slides/lec-1.html#absolute-position",
+    "href": "slides/lec-1.html#absolute-position",
+    "title": "Quarto Presentations",
+    "section": "Absolute Position",
+    "text": "Absolute Position\nPosition images or other elements at precise locations\n\n\n\n\nLearn more: Absolute Position"
   },
   {
-    "objectID": "slides/lec-1.html#support",
-    "href": "slides/lec-1.html#support",
-    "title": "Title",
-    "section": "Support",
-    "text": "Support\n\nAttend office hours\nAsk and answer questions on the discussion forum\nReserve email for questions on personal matters and/or grades\nRead the course support page"
+    "objectID": "slides/lec-1.html#auto-animate",
+    "href": "slides/lec-1.html#auto-animate",
+    "title": "Quarto Presentations",
+    "section": "Auto-Animate",
+    "text": "Auto-Animate\nAutomatically animate matching elements across slides with Auto-Animate.\n\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Auto-Animate"
   },
   {
-    "objectID": "slides/lec-1.html#announcements",
-    "href": "slides/lec-1.html#announcements",
-    "title": "Title",
-    "section": "Announcements",
-    "text": "Announcements\n\nPosted on Sakai (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform"
+    "objectID": "slides/lec-1.html#auto-animate-1",
+    "href": "slides/lec-1.html#auto-animate-1",
+    "title": "Quarto Presentations",
+    "section": "Auto-Animate",
+    "text": "Auto-Animate\nAutomatically animate matching elements across slides with Auto-Animate.\n\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Auto-Animate"
   },
   {
-    "objectID": "slides/lec-1.html#diversity-inclusion",
-    "href": "slides/lec-1.html#diversity-inclusion",
-    "title": "Title",
-    "section": "Diversity + inclusion",
-    "text": "Diversity + inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nIf you have a name that differs from those that appear in your official Duke records, please let me know!\nPlease let me know your preferred pronouns. You’ll also be able to note this in the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+    "objectID": "slides/lec-1.html#slide-transitions",
+    "href": "slides/lec-1.html#slide-transitions",
+    "title": "Quarto Presentations",
+    "section": "Slide Transitions",
+    "text": "Slide Transitions\nThe next few slides will transition using the slide transition\n\n\n\n\n\n\n\nTransition\nDescription\n\n\n\n\nnone\nNo transition (default, switch instantly)\n\n\nfade\nCross fade\n\n\nslide\nSlide horizontally\n\n\nconvex\nSlide at a convex angle\n\n\nconcave\nSlide at a concave angle\n\n\nzoom\nScale the incoming slide so it grows in from the center of the screen.\n\n\n\n\nLearn more: Slide Transitions"
   },
   {
-    "objectID": "slides/lec-1.html#accessibility",
-    "href": "slides/lec-1.html#accessibility",
-    "title": "Title",
-    "section": "Accessibility",
-    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+    "objectID": "slides/lec-1.html#tabsets",
+    "href": "slides/lec-1.html#tabsets",
+    "title": "Quarto Presentations",
+    "section": "Tabsets",
+    "text": "Tabsets\n\nPlotData\n\n\n\n\n\n\n\n\n\n\nLearn more: Tabsets"
   },
   {
-    "objectID": "slides/lec-1.html#covid-policies",
-    "href": "slides/lec-1.html#covid-policies",
-    "title": "Title",
-    "section": "COVID policies",
-    "text": "COVID policies\n\nWear a mask at all times!\nRead and follow university guidance"
+    "objectID": "slides/lec-1.html#interactive-slides",
+    "href": "slides/lec-1.html#interactive-slides",
+    "title": "Quarto Presentations",
+    "section": "Interactive Slides",
+    "text": "Interactive Slides\nInclude Jupyter widgets and htmlwidgets in your presentations\n\n\n\n\n\n\nLearn more: Jupyter widgets, htmlwidgets"
   },
   {
-    "objectID": "slides/lec-1.html#late-work-waivers-regrades-policy",
-    "href": "slides/lec-1.html#late-work-waivers-regrades-policy",
-    "title": "Title",
-    "section": "Late work, waivers, regrades policy",
-    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+    "objectID": "slides/lec-1.html#preview-links",
+    "href": "slides/lec-1.html#preview-links",
+    "title": "Quarto Presentations",
+    "section": "Preview Links",
+    "text": "Preview Links\nNavigate to hyperlinks without disrupting the flow of your presentation.\nUse the preview-links option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:\n\nMatplotlib: Visualization with Python\n\n\nLearn more: Preview Links"
   },
   {
-    "objectID": "slides/lec-1.html#collaboration-policy",
-    "href": "slides/lec-1.html#collaboration-policy",
-    "title": "Title",
-    "section": "Collaboration policy",
-    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nHomeworks must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer."
+    "objectID": "slides/lec-1.html#themes",
+    "href": "slides/lec-1.html#themes",
+    "title": "Quarto Presentations",
+    "section": "Themes",
+    "text": "Themes\n10 Built-in Themes (or create your own)\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Themes"
   },
   {
-    "objectID": "slides/lec-1.html#sharing-reusing-code-policy",
-    "href": "slides/lec-1.html#sharing-reusing-code-policy",
-    "title": "Title",
-    "section": "Sharing / reusing code policy",
-    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+    "objectID": "slides/lec-1.html#easy-navigation",
+    "href": "slides/lec-1.html#easy-navigation",
+    "title": "Quarto Presentations",
+    "section": "Easy Navigation",
+    "text": "Easy Navigation\n\nQuickly jump to other parts of your presentation\n\n\n\n\n\n\n\nToggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.\n\n\n\nYou can also press m to toggle the menu open and closed.\n\nLearn more: Navigation"
   },
   {
-    "objectID": "slides/lec-1.html#academic-integrity",
-    "href": "slides/lec-1.html#academic-integrity",
-    "title": "Title",
-    "section": "Academic integrity",
-    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+    "objectID": "slides/lec-1.html#chalkboard",
+    "href": "slides/lec-1.html#chalkboard",
+    "title": "Quarto Presentations",
+    "section": "Chalkboard",
+    "text": "Chalkboard\n\nFree form drawing and slide annotations\n\n\n\n\n\n\n\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\n\n\n\n\n\n\n\n\n\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\n\n\n\nYou can also press b to toggle the chalkboard or c to toggle the notes canvas.\n\nLearn more: Chalkboard"
   },
   {
-    "objectID": "slides/lec-1.html#most-importantly",
-    "href": "slides/lec-1.html#most-importantly",
-    "title": "Title",
-    "section": "Most importantly!",
-    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
+    "objectID": "slides/lec-1.html#point-of-view",
+    "href": "slides/lec-1.html#point-of-view",
+    "title": "Quarto Presentations",
+    "section": "Point of View",
+    "text": "Point of View\nPress o to toggle overview mode:\n\nHold down the Alt key (or Ctrl in Linux) and click on any element to zoom towards it—try it now on this slide.\n\nLearn more: Overview Mode, Slide Zoom"
   },
   {
-    "objectID": "slides/lec-1.html#five-tips-for-success",
-    "href": "slides/lec-1.html#five-tips-for-success",
-    "title": "Title",
-    "section": "Five tips for success",
-    "text": "Five tips for success\n\nComplete all the preparation work before class.\nAsk questions.\nDo the readings.\nDo the homework and lab.\nDon’t procrastinate and don’t let a week pass by with lingering questions."
+    "objectID": "slides/lec-1.html#speaker-view",
+    "href": "slides/lec-1.html#speaker-view",
+    "title": "Quarto Presentations",
+    "section": "Speaker View",
+    "text": "Speaker View\nPress s (or use the presentation menu) to open speaker view\n\n\nLearn more: Speaker View"
   },
   {
-    "objectID": "slides/lec-1.html#learning-during-a-pandemic",
-    "href": "slides/lec-1.html#learning-during-a-pandemic",
-    "title": "Title",
-    "section": "Learning during a pandemic",
-    "text": "Learning during a pandemic\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded during this crisis."
+    "objectID": "slides/lec-1.html#authoring-tools",
+    "href": "slides/lec-1.html#authoring-tools",
+    "title": "Quarto Presentations",
+    "section": "Authoring Tools",
+    "text": "Authoring Tools\nLive side-by-side preview for any notebook or text editor including Jupyter and VS Code\n\n\n\n\n\n\n\n\nLearn more: Jupyter, VS Code, Text Editors"
   },
   {
-    "objectID": "slides/lec-1.html#this-weeks-tasks",
-    "href": "slides/lec-1.html#this-weeks-tasks",
-    "title": "Title",
-    "section": "This week’s tasks",
-    "text": "This week’s tasks\n\nGet a GitHub account if you don’t have one (some advice for choosing a username here)\nComplete the Getting to know you survey if you haven’t yet done so!\nRead the syllabus\nWatch out for next week’s announcement email, in your inbox sometime tomorrow"
+    "objectID": "slides/lec-1.html#authoring-tools-1",
+    "href": "slides/lec-1.html#authoring-tools-1",
+    "title": "Quarto Presentations",
+    "section": "Authoring Tools",
+    "text": "Authoring Tools\nRStudio includes an integrated presentation preview pane\n\n\nLearn more: RStudio"
   },
   {
-    "objectID": "slides/lec-1.html#midori-says",
-    "href": "slides/lec-1.html#midori-says",
-    "title": "Title",
-    "section": "Midori says…",
-    "text": "Midori says…"
+    "objectID": "slides/lec-1.html#and-more",
+    "href": "slides/lec-1.html#and-more",
+    "title": "Quarto Presentations",
+    "section": "And More…",
+    "text": "And More…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations\n\n\n\n\nhttps://quarto.org"
   }
 ]
