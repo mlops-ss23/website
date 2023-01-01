@@ -10,7 +10,6 @@ format:
     multiplex: true
     transition: fade
     slide-number: true
-editor: visual
 execute:
   freeze: auto
 ---
