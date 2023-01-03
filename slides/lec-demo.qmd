@@ -83,10 +83,9 @@ Learn more: [Code Animations](https://quarto.org/docs/presentations/revealjs/adv
 import pandas as pd
 import altair as alt
 
-ROOT = "https://raw.githubusercontent.com/kirenz/datasets/master/"
-DATA = "loans50.csv"
+DATA = "https://raw.githubusercontent.com/kirenz/datasets/master/loan50.csv"
 
-df = pd.read_csv(ROOT + DATA)
+df = pd.read_csv(DATA)
 
 # sorted bar chart
 alt.Chart(df).mark_bar().encode(
@@ -117,10 +116,9 @@ import altair as alt
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-ROOT = "https://raw.githubusercontent.com/kirenz/datasets/master/"
-DATA = "loan50.csv"
+DATA = "https://raw.githubusercontent.com/kirenz/datasets/master/loan50.csv"
 
-df = pd.read_csv(ROOT + DATA)
+df = pd.read_csv(DATA)
 
 # sorted bar chart
 plot = alt.Chart(df).mark_bar().encode(
@@ -388,10 +386,9 @@ import altair as alt
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-ROOT = "https://raw.githubusercontent.com/kirenz/datasets/master/"
-DATA = "loans50.csv"
+DATA = "https://raw.githubusercontent.com/kirenz/datasets/master/loan50.csv"
 
-df = pd.read_csv(ROOT + DATA)
+df = pd.read_csv(DATA)
 
 # sorted bar chart
 plot1 = alt.Chart(df).mark_bar().encode(
