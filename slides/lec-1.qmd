@@ -302,11 +302,11 @@ Learn more: [Media Backgrounds](https://quarto.org/docs/presentations/revealjs/#
 
 Position images or other elements at precise locations
 
-![](images/jupyter-edit.png){.absolute top="170" left="30" width="400" height="400"}
+![](/images/jupyter-edit.png){.absolute top="170" left="30" width="400" height="400"}
 
-![](images/jupyter-preview.png){.absolute .fragment top="150" right="80" width="450"}
+![](./images/jupyter-preview.png){.absolute .fragment top="150" right="80" width="450"}
 
-![](images/moon.png){.absolute .fragment bottom="110" right="130" width="300"}
+![](../images/moon.png){.absolute .fragment bottom="110" right="130" width="300"}
 
 ::: footer
 Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
