@@ -1,41 +1,77 @@
 ---
-title: Introduction to MLOps
-subtitle: ML System
+title: Template
+subtitle: Txt
+author: Jan Kirenz
 format:
   revealjs:
+    theme: default
+    transition: fade
     slide-number: true
     chalkboard:
       buttons: false
     preview-links: auto
     logo: images/quarto.png
     css: styles.css
-    footer: '<https://quarto.org>'
-resources:
-  - demo.pdf
+    footer: '<https://mlops-ss23.github.io/website/>'
+    incremental: true 
 jupyter: python3
 ---
 
-## Hello, There
+```{r include = FALSE}
+library(countdown)
+```
 
-The following presentation is based on [this demo](https://github.com/quarto-dev/quarto-web/tree/main/docs/presentations/revealjs/demo) provided by Quarto.
+## MLOps
 
-Note that you need to install `ipyleaflet`(conda install ipyleaflet)
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
 
 
-This presentation will show you examples of what you can do with Quarto and [Reveal.js](https://revealjs.com), including:
+## Welcome!
 
--   Presenting code and LaTeX equations
--   Including computations in slide output
--   Image, video, and iframe backgrounds
--   Fancy transitions and animations
--   Printing to PDF
+- Name, current job, your major in the masters program
+- What do you hope to get out of this course?
+- Anything you want to share/ask?
 
-...and much more
+```{r}
+countdown(minutes = 8)
+```
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+## Take the survey
+
+- Go to the course website: <https://mlops-ss23.github.io/website/>
+
+- Click on the instructions for Lab 0 on the course schedule
+
+- Take the *Getting to know you* survey
+
+## Assignments
+
+- Txt
+
+
+
+## Wrap up
+
+Any questions about the course?
+
 
 ## Pretty Code {auto-animate="true"}
 
--   Over 20 syntax highlighting themes available
--   Default theme optimized for accessibility
+Code
 
 ``` python
 import pandas as pd
@@ -51,6 +87,7 @@ alt.Chart(source).mark_bar().encode(
 ::: footer
 Learn more: [Syntax Highlighting](https://quarto.org/docs/output-formats/html-code.html#highlighting)
 :::
+
 
 
 ## Code Animations {auto-animate="true"}
