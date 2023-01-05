@@ -1,6 +1,6 @@
 ---
 title: MLOps
-subtitle: Welcome to our course!
+subtitle: Welcome 👋
 author: Jan Kirenz
 format:
   revealjs:
@@ -42,13 +42,12 @@ countdown(minutes = 8)
 
 
 
-## Take the survey
+## Organization
 
-- Go to the course website: <https://mlops-ss23.github.io/website/>
+- Course website: <https://mlops-ss23.github.io/website/>
 
-- Click on the instructions for Lab 0 on the course schedule
+- Moodle course
 
-- Take the *Getting to know you* survey
 
 ## Assignments
 
