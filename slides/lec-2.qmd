@@ -1,0 +1,53 @@
+---
+title: Introduction to ML Systems Design
+subtitle: Lecture 2
+author: Jan Kirenz
+format:
+  revealjs:
+    theme: default
+    transition: fade
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: images/logo.png
+    css: slides.scss
+    footer: MLOps | Jan Kirenz
+    incremental: true 
+#jupyter: python3
+---
+
+# Introduction to Machine Learning Systems Design
+
+
+
+## Business and ML Objectives
+
+- Goal of any project is to increase profits
+
+  - **Directly**: Increasing sales and cutting costs
+
+  - **Indirectly**: e.g., higher customer satisfaction and increasing traffic on a website
+
+- Tie the performance of an ML system to the overall business performance
+
+## E Commerce example
+
+- E commerce site that cares about purchase-through rate
+
+- You want to move your recommender system from batch prediction to online prediction
+
+
+
+::: {.notes}
+E commerce site that cares about purchase-through rate and you want to move your recommender system from batch prediction to online prediction. You might reason that online prediction will enable recommendations
+more relevant to users right now, which can lead to a higher purchase-through rate.
+You can even do an experiment to show that online prediction can improve your
+recommender system’s predictive accuracy by X% and, historically on your site, each
+percent increase in the recommender system’s predictive accuracy led to a certain
+increase in purchase-through rate.
+:::
+
+## Recommender example
+
+- Netflix measures the performance of their recommender system using take-rate: the number of quality plays divided by the number of recommendations a user sees
