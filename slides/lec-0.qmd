@@ -1,6 +1,6 @@
 ---
-title: Template
-subtitle: Txt
+title: MLOps
+subtitle: Welcome to our course!
 author: Jan Kirenz
 format:
   revealjs:
@@ -37,9 +37,10 @@ countdown(minutes = 8)
 
 ## Resources
 
-::: {style="text-align: center; margin-top: 1em"}
-[Matplotlib: Visualization with Python](https://matplotlib.org/){preview-link="true" style="text-align: center"}
-:::
+
+![Designing Machine Learning Systems by Chip Huyen, released May 2022](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/)
+
+
 
 ## Take the survey
 
