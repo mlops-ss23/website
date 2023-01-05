@@ -322,43 +322,43 @@
     "text": "And More…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations\n\n\n\n\nhttps://mlops-ss23.github.io/website/"
   },
   {
-    "objectID": "slides/lec-0 copy.html#mlops",
-    "href": "slides/lec-0 copy.html#mlops",
+    "objectID": "slides/lec-1.html#mlops",
+    "href": "slides/lec-1.html#mlops",
     "title": "Template",
     "section": "MLOps",
     "text": "MLOps\n\nTxt"
   },
   {
-    "objectID": "slides/lec-0 copy.html#welcome",
-    "href": "slides/lec-0 copy.html#welcome",
+    "objectID": "slides/lec-1.html#welcome",
+    "href": "slides/lec-1.html#welcome",
     "title": "Template",
     "section": "Welcome!",
-    "text": "Welcome!\n\nName, current job, your major in the masters program\nWhat do you hope to get out of this course?\nAnything you want to share/ask?\n\ncountdown(minutes = 8)"
+    "text": "Welcome!\n\nName, current job, your major in the masters program\nWhat do you hope to get out of this course?\nAnything you want to share/ask?\n\n\n\n\n−+\n08:00"
   },
   {
-    "objectID": "slides/lec-0 copy.html#resources",
-    "href": "slides/lec-0 copy.html#resources",
+    "objectID": "slides/lec-1.html#resources",
+    "href": "slides/lec-1.html#resources",
     "title": "Template",
     "section": "Resources",
     "text": "Resources\n\nMatplotlib: Visualization with Python"
   },
   {
-    "objectID": "slides/lec-0 copy.html#take-the-survey",
-    "href": "slides/lec-0 copy.html#take-the-survey",
+    "objectID": "slides/lec-1.html#take-the-survey",
+    "href": "slides/lec-1.html#take-the-survey",
     "title": "Template",
     "section": "Take the survey",
     "text": "Take the survey\n\nGo to the course website: https://mlops-ss23.github.io/website/\nClick on the instructions for Lab 0 on the course schedule\nTake the Getting to know you survey"
   },
   {
-    "objectID": "slides/lec-0 copy.html#assignments",
-    "href": "slides/lec-0 copy.html#assignments",
+    "objectID": "slides/lec-1.html#assignments",
+    "href": "slides/lec-1.html#assignments",
     "title": "Template",
     "section": "Assignments",
     "text": "Assignments\n\nTxt"
   },
   {
-    "objectID": "slides/lec-0 copy.html#wrap-up",
-    "href": "slides/lec-0 copy.html#wrap-up",
+    "objectID": "slides/lec-1.html#wrap-up",
+    "href": "slides/lec-1.html#wrap-up",
     "title": "Template",
     "section": "Wrap up",
     "text": "Wrap up\nAny questions about the course?\n\n\n\nhttps://mlops-ss23.github.io/website/"
