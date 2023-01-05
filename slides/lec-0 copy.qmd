@@ -1,9 +1,10 @@
 ---
-title: Welcome to MLOps!
-subtitle: Introduction
+title: Template
+subtitle: Txt
 author: Jan Kirenz
 format:
   revealjs:
+    theme: default
     transition: fade
     slide-number: true
     chalkboard:
@@ -12,6 +13,7 @@ format:
     logo: images/quarto.png
     css: styles.css
     footer: '<https://mlops-ss23.github.io/website/>'
+    incremental: true 
 jupyter: python3
 ---
 

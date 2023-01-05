@@ -1,0 +1,11 @@
+{
+  "hash": "0effb449728165dbb382fd027a4c57ac",
+  "result": {
+    "markdown": "---\ntitle: Template\nsubtitle: Txt\nauthor: Jan Kirenz\nformat:\n  revealjs:\n    theme: default\n    transition: fade\n    slide-number: true\n    chalkboard:\n      buttons: false\n    preview-links: auto\n    logo: images/quarto.png\n    css: styles.css\n    footer: '<https://mlops-ss23.github.io/website/>'\n    incremental: true\n---\n\n```{r include = FALSE}\nlibrary(countdown)\n```\n\n\n## MLOps {background-iframe=\"https://media.giphy.com/media/ko7twHhomhk8E/giphy.gif\"}\n\n\n\n- Txt\n\n\n\n## Welcome! {background-color=\"red\"}\n\n- Name, current job, your major in the masters program\n- What do you hope to get out of this course?\n- Anything you want to share/ask?\n\n\n```{r}\ncountdown(minutes = 8)\n```\n\n\n\n## Resources\n\n::: {style=\"text-align: center; margin-top: 1em\"}\n[Matplotlib: Visualization with Python](https://matplotlib.org/){preview-link=\"true\" style=\"text-align: center\"}\n:::\n\n## Take the survey\n\n- Go to the course website: <https://mlops-ss23.github.io/website/>\n\n- Click on the instructions for Lab 0 on the course schedule\n\n- Take the *Getting to know you* survey\n\n## Assignments\n\n- Txt\n\n\n\n## Wrap up\n\nAny questions about the course?\n\n",
+    "supporting": [
+      "lec-0 copy_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
