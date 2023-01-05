@@ -14,10 +14,12 @@ format:
     css: styles.css
     footer: '<https://mlops-ss23.github.io/website/>'
     incremental: true 
-jupyter: python3
+#jupyter: python3
 ---
 
-```{r include = FALSE}
+```{r}
+#| echo: false
+
 library(countdown)
 ```
 
