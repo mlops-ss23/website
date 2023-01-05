@@ -1,6 +1,6 @@
 ---
-title: Template
-subtitle: Txt
+title: Overview of ML Systems
+subtitle: Relationship Between MLOps and ML Systems Design
 author: Jan Kirenz
 format:
   revealjs:
