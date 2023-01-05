@@ -17,7 +17,8 @@ format:
 jupyter: python3
 ---
 
-```{r include = FALSE}
+```{r}
+#| echo: false
 library(countdown)
 ```
 
