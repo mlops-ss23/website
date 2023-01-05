@@ -112,185 +112,255 @@
     "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here."
   },
   {
-    "objectID": "slides/lec-0.html#hello-there",
-    "href": "slides/lec-0.html#hello-there",
-    "title": "Introduction to MLOps",
-    "section": "Hello, There",
-    "text": "Hello, There\nThe following presentation is based on this demo provided by Quarto.\nNote that you need to install ipyleaflet(conda install ipyleaflet)\nThis presentation will show you examples of what you can do with Quarto and Reveal.js, including:\n\nPresenting code and LaTeX equations\nIncluding computations in slide output\nImage, video, and iframe backgrounds\nFancy transitions and animations\nPrinting to PDF\n\n…and much more"
+    "objectID": "slides/lec-temp.html#mlops",
+    "href": "slides/lec-temp.html#mlops",
+    "title": "Template",
+    "section": "MLOps",
+    "text": "MLOps\n\n\nLeft column\n\nRight column"
   },
   {
-    "objectID": "slides/lec-0.html#pretty-code",
-    "href": "slides/lec-0.html#pretty-code",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#welcome",
+    "href": "slides/lec-temp.html#welcome",
+    "title": "Template",
+    "section": "Welcome!",
+    "text": "Welcome!\n\nName, current job, your major in the masters program\nWhat do you hope to get out of this course?\nAnything you want to share/ask?\n\ncountdown(minutes = 8)\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "slides/lec-temp.html#take-the-survey",
+    "href": "slides/lec-temp.html#take-the-survey",
+    "title": "Template",
+    "section": "Take the survey",
+    "text": "Take the survey\n\nGo to the course website: https://mlops-ss23.github.io/website/\nClick on the instructions for Lab 0 on the course schedule\nTake the Getting to know you survey"
+  },
+  {
+    "objectID": "slides/lec-temp.html#assignments",
+    "href": "slides/lec-temp.html#assignments",
+    "title": "Template",
+    "section": "Assignments",
+    "text": "Assignments\n\nTxt"
+  },
+  {
+    "objectID": "slides/lec-temp.html#wrap-up",
+    "href": "slides/lec-temp.html#wrap-up",
+    "title": "Template",
+    "section": "Wrap up",
+    "text": "Wrap up\nAny questions about the course?"
+  },
+  {
+    "objectID": "slides/lec-temp.html#pretty-code",
+    "href": "slides/lec-temp.html#pretty-code",
+    "title": "Template",
     "section": "Pretty Code",
-    "text": "Pretty Code\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\nimport pandas as pd\nimport altair as alt\n\n# sorted bar chart\nalt.Chart(source).mark_bar().encode(\n    x=alt.X('homeownership', sort='-y'), \n    y=alt.Y('count(homeownership)')\n)\n\nLearn more: Syntax Highlighting"
+    "text": "Pretty Code\nCode\nimport pandas as pd\nimport altair as alt\n\n# sorted bar chart\nalt.Chart(source).mark_bar().encode(\n    x=alt.X('homeownership', sort='-y'), \n    y=alt.Y('count(homeownership)')\n)\n\nLearn more: Syntax Highlighting"
   },
   {
-    "objectID": "slides/lec-0.html#code-animations",
-    "href": "slides/lec-0.html#code-animations",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#code-animations",
+    "href": "slides/lec-temp.html#code-animations",
+    "title": "Template",
     "section": "Code Animations",
     "text": "Code Animations\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\nimport pandas as pd\nimport altair as alt\n\nalt.Chart(source).mark_bar().encode(\n    x=alt.X('homeownership', sort='-y'), \n    y=alt.Y('count(homeownership)')\n)\n\nLearn more: Code Animations"
   },
   {
-    "objectID": "slides/lec-0.html#line-highlighting",
-    "href": "slides/lec-0.html#line-highlighting",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#line-highlighting",
+    "href": "slides/lec-temp.html#line-highlighting",
+    "title": "Template",
     "section": "Line Highlighting",
     "text": "Line Highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport pandas as pd\nimport altair as alt\n\nDATA = \"https://raw.githubusercontent.com/kirenz/datasets/master/loan50.csv\"\n\ndf = pd.read_csv(DATA)\n\n# sorted bar chart\nalt.Chart(df).mark_bar().encode(\n    x=alt.X('homeownership', sort='-y'), \n    y=alt.Y('count(homeownership)')\n).properties( \n    title='This is a simple bar chart',\n    width=300,\n    height=150\n)\n\nLearn more: Line Highlighting"
   },
   {
-    "objectID": "slides/lec-0.html#executable-code",
-    "href": "slides/lec-0.html#executable-code",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#executable-code",
+    "href": "slides/lec-temp.html#executable-code",
+    "title": "Template",
     "section": "Executable Code",
     "text": "Executable Code\n\n\n\n\n\n\n\n\nLearn more: Executable Code"
   },
   {
-    "objectID": "slides/lec-0.html#latex-equations",
-    "href": "slides/lec-0.html#latex-equations",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#latex-equations",
+    "href": "slides/lec-temp.html#latex-equations",
+    "title": "Template",
     "section": "LaTeX Equations",
     "text": "LaTeX Equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]\n\n\n\nLearn more: LaTeX Equations"
   },
   {
-    "objectID": "slides/lec-0.html#column-layout",
-    "href": "slides/lec-0.html#column-layout",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#column-layout",
+    "href": "slides/lec-temp.html#column-layout",
+    "title": "Template",
     "section": "Column Layout",
     "text": "Column Layout\nArrange content into columns of varying widths:\n\n\nThis is a text\nLorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.\n\n\n\n\n\n   emp_length homeownership\n0         3.0          rent\n2         NaN      mortgage\n\n\n\n\n\nLearn more: Multiple Columns"
   },
   {
-    "objectID": "slides/lec-0.html#incremental-lists",
-    "href": "slides/lec-0.html#incremental-lists",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#incremental-lists",
+    "href": "slides/lec-temp.html#incremental-lists",
+    "title": "Template",
     "section": "Incremental Lists",
     "text": "Incremental Lists\nLists can optionally be displayed incrementally:\n\n\nFirst item\nSecond item\nThird item\n\n\n\n Insert pauses to make other types of content display incrementally.\n\nLearn more: Incremental Lists"
   },
   {
-    "objectID": "slides/lec-0.html#fragments",
-    "href": "slides/lec-0.html#fragments",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#fragments",
+    "href": "slides/lec-temp.html#fragments",
+    "title": "Template",
     "section": "Fragments",
     "text": "Fragments\nIncremental text display and animation with fragments:\n\n\nFade in\n\n\nSlide up while fading in\n\n\nSlide left while fading in\n\n\nFade in then semi out\n\n\n\nStrike\n\n\nHighlight red\n\n\nLearn more: Fragments"
   },
   {
-    "objectID": "slides/lec-0.html#slide-backgrounds",
-    "href": "slides/lec-0.html#slide-backgrounds",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#slide-backgrounds",
+    "href": "slides/lec-temp.html#slide-backgrounds",
+    "title": "Template",
     "section": "Slide Backgrounds",
     "text": "Slide Backgrounds\nSet the background attribute on a slide to change the background color (all CSS color formats are supported).\nDifferent background transitions are available via the background-transition option.\n\nLearn more: Slide Backgrounds"
   },
   {
-    "objectID": "slides/lec-0.html#media-backgrounds",
-    "href": "slides/lec-0.html#media-backgrounds",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#media-backgrounds",
+    "href": "slides/lec-temp.html#media-backgrounds",
+    "title": "Template",
     "section": "Media Backgrounds",
     "text": "Media Backgrounds\nYou can also use the following as a slide background:\n\nAn image: background-image\nA video: background-video\nAn iframe: background-iframe\n\n\nLearn more: Media Backgrounds"
   },
   {
-    "objectID": "slides/lec-0.html#absolute-position",
-    "href": "slides/lec-0.html#absolute-position",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#absolute-position",
+    "href": "slides/lec-temp.html#absolute-position",
+    "title": "Template",
     "section": "Absolute Position",
     "text": "Absolute Position\nPosition images or other elements at precise locations\n\n\n\n\nLearn more: Absolute Position"
   },
   {
-    "objectID": "slides/lec-0.html#auto-animate",
-    "href": "slides/lec-0.html#auto-animate",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#auto-animate",
+    "href": "slides/lec-temp.html#auto-animate",
+    "title": "Template",
     "section": "Auto-Animate",
     "text": "Auto-Animate\nAutomatically animate matching elements across slides with Auto-Animate.\n\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Auto-Animate"
   },
   {
-    "objectID": "slides/lec-0.html#auto-animate-1",
-    "href": "slides/lec-0.html#auto-animate-1",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#auto-animate-1",
+    "href": "slides/lec-temp.html#auto-animate-1",
+    "title": "Template",
     "section": "Auto-Animate",
     "text": "Auto-Animate\nAutomatically animate matching elements across slides with Auto-Animate.\n\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Auto-Animate"
   },
   {
-    "objectID": "slides/lec-0.html#slide-transitions",
-    "href": "slides/lec-0.html#slide-transitions",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#slide-transitions",
+    "href": "slides/lec-temp.html#slide-transitions",
+    "title": "Template",
     "section": "Slide Transitions",
     "text": "Slide Transitions\nThe next few slides will transition using the slide transition\n\n\n\n\n\n\n\nTransition\nDescription\n\n\n\n\nnone\nNo transition (default, switch instantly)\n\n\nfade\nCross fade\n\n\nslide\nSlide horizontally\n\n\nconvex\nSlide at a convex angle\n\n\nconcave\nSlide at a concave angle\n\n\nzoom\nScale the incoming slide so it grows in from the center of the screen.\n\n\n\n\nLearn more: Slide Transitions"
   },
   {
-    "objectID": "slides/lec-0.html#tabsets",
-    "href": "slides/lec-0.html#tabsets",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#tabsets",
+    "href": "slides/lec-temp.html#tabsets",
+    "title": "Template",
     "section": "Tabsets",
     "text": "Tabsets\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n  state  emp_length  term homeownership  annual_income verified_income  \\\n0    NJ         3.0    60          rent          59000    Not Verified   \n1    CA        10.0    36          rent          60000    Not Verified   \n2    SC         NaN    36      mortgage          75000        Verified   \n3    CA         0.0    36          rent          75000    Not Verified   \n4    OH         4.0    60      mortgage         254000    Not Verified   \n\n   debt_to_income  total_credit_limit  total_credit_utilized  \\\n0        0.557525               95131                  32894   \n1        1.305683               51929                  78341   \n2        1.056280              301373                  79221   \n3        0.574347               59890                  43076   \n4        0.238150              422619                  60490   \n\n   num_cc_carrying_balance        loan_purpose  loan_amount grade  \\\n0                        8  debt_consolidation        22000     B   \n1                        2         credit_card         6000     B   \n2                       14  debt_consolidation        25000     E   \n3                       10         credit_card         6000     B   \n4                        2    home_improvement        25000     B   \n\n   interest_rate  public_record_bankrupt loan_status  has_second_income  \\\n0          10.90                       0     Current              False   \n1           9.92                       1     Current              False   \n2          26.30                       0     Current              False   \n3           9.92                       0     Current              False   \n4           9.43                       0     Current              False   \n\n   total_income  \n0         59000  \n1         60000  \n2         75000  \n3         75000  \n4        254000  \n\n\n\n\n\n\nLearn more: Tabsets"
   },
   {
-    "objectID": "slides/lec-0.html#interactive-slides",
-    "href": "slides/lec-0.html#interactive-slides",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#interactive-slides",
+    "href": "slides/lec-temp.html#interactive-slides",
+    "title": "Template",
     "section": "Interactive Slides",
     "text": "Interactive Slides\n\nLearn more: Jupyter widgets, htmlwidgets"
   },
   {
-    "objectID": "slides/lec-0.html#preview-links",
-    "href": "slides/lec-0.html#preview-links",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#preview-links",
+    "href": "slides/lec-temp.html#preview-links",
+    "title": "Template",
     "section": "Preview Links",
     "text": "Preview Links\nNavigate to hyperlinks without disrupting the flow of your presentation.\nUse the preview-links option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:\n\nMatplotlib: Visualization with Python\n\n\nLearn more: Preview Links"
   },
   {
-    "objectID": "slides/lec-0.html#themes",
-    "href": "slides/lec-0.html#themes",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#themes",
+    "href": "slides/lec-temp.html#themes",
+    "title": "Template",
     "section": "Themes",
     "text": "Themes\n10 Built-in Themes (or create your own)\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Themes"
   },
   {
-    "objectID": "slides/lec-0.html#easy-navigation",
-    "href": "slides/lec-0.html#easy-navigation",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#easy-navigation",
+    "href": "slides/lec-temp.html#easy-navigation",
+    "title": "Template",
     "section": "Easy Navigation",
     "text": "Easy Navigation\n\nQuickly jump to other parts of your presentation\n\n\n\n\n\n\n\nToggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.\n\n\n\nYou can also press m to toggle the menu open and closed.\n\nLearn more: Navigation"
   },
   {
-    "objectID": "slides/lec-0.html#chalkboard",
-    "href": "slides/lec-0.html#chalkboard",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#chalkboard",
+    "href": "slides/lec-temp.html#chalkboard",
+    "title": "Template",
     "section": "Chalkboard",
     "text": "Chalkboard\n\nFree form drawing and slide annotations\n\n\n\n\n\n\n\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\n\n\n\n\n\n\n\n\n\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\n\n\n\nYou can also press b to toggle the chalkboard or c to toggle the notes canvas.\n\nLearn more: Chalkboard"
   },
   {
-    "objectID": "slides/lec-0.html#point-of-view",
-    "href": "slides/lec-0.html#point-of-view",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#point-of-view",
+    "href": "slides/lec-temp.html#point-of-view",
+    "title": "Template",
     "section": "Point of View",
     "text": "Point of View\nPress o to toggle overview mode:\n\nHold down the Alt key (or Ctrl in Linux) and click on any element to zoom towards it—try it now on this slide.\n\nLearn more: Overview Mode, Slide Zoom"
   },
   {
-    "objectID": "slides/lec-0.html#speaker-view",
-    "href": "slides/lec-0.html#speaker-view",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#speaker-view",
+    "href": "slides/lec-temp.html#speaker-view",
+    "title": "Template",
     "section": "Speaker View",
     "text": "Speaker View\nPress s (or use the presentation menu) to open speaker view\n\n\nLearn more: Speaker View"
   },
   {
-    "objectID": "slides/lec-0.html#authoring-tools",
-    "href": "slides/lec-0.html#authoring-tools",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#authoring-tools",
+    "href": "slides/lec-temp.html#authoring-tools",
+    "title": "Template",
     "section": "Authoring Tools",
     "text": "Authoring Tools\nLive side-by-side preview for any notebook or text editor including Jupyter and VS Code\n\n\n\n\n\n\n\n\nLearn more: Jupyter, VS Code, Text Editors"
   },
   {
-    "objectID": "slides/lec-0.html#authoring-tools-1",
-    "href": "slides/lec-0.html#authoring-tools-1",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#authoring-tools-1",
+    "href": "slides/lec-temp.html#authoring-tools-1",
+    "title": "Template",
     "section": "Authoring Tools",
     "text": "Authoring Tools\nRStudio includes an integrated presentation preview pane\n\n\nLearn more: RStudio"
   },
   {
-    "objectID": "slides/lec-0.html#and-more",
-    "href": "slides/lec-0.html#and-more",
-    "title": "Introduction to MLOps",
+    "objectID": "slides/lec-temp.html#and-more",
+    "href": "slides/lec-temp.html#and-more",
+    "title": "Template",
     "section": "And More…",
-    "text": "And More…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations\n\n\n\n\nhttps://quarto.org"
+    "text": "And More…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations\n\n\n\n\nhttps://mlops-ss23.github.io/website/"
+  },
+  {
+    "objectID": "slides/lec-0 copy.html#mlops",
+    "href": "slides/lec-0 copy.html#mlops",
+    "title": "Template",
+    "section": "MLOps",
+    "text": "MLOps\n\nTxt"
+  },
+  {
+    "objectID": "slides/lec-0 copy.html#welcome",
+    "href": "slides/lec-0 copy.html#welcome",
+    "title": "Template",
+    "section": "Welcome!",
+    "text": "Welcome!\n\nName, current job, your major in the masters program\nWhat do you hope to get out of this course?\nAnything you want to share/ask?\n\ncountdown(minutes = 8)"
+  },
+  {
+    "objectID": "slides/lec-0 copy.html#resources",
+    "href": "slides/lec-0 copy.html#resources",
+    "title": "Template",
+    "section": "Resources",
+    "text": "Resources\n\nMatplotlib: Visualization with Python"
+  },
+  {
+    "objectID": "slides/lec-0 copy.html#take-the-survey",
+    "href": "slides/lec-0 copy.html#take-the-survey",
+    "title": "Template",
+    "section": "Take the survey",
+    "text": "Take the survey\n\nGo to the course website: https://mlops-ss23.github.io/website/\nClick on the instructions for Lab 0 on the course schedule\nTake the Getting to know you survey"
+  },
+  {
+    "objectID": "slides/lec-0 copy.html#assignments",
+    "href": "slides/lec-0 copy.html#assignments",
+    "title": "Template",
+    "section": "Assignments",
+    "text": "Assignments\n\nTxt"
+  },
+  {
+    "objectID": "slides/lec-0 copy.html#wrap-up",
+    "href": "slides/lec-0 copy.html#wrap-up",
+    "title": "Template",
+    "section": "Wrap up",
+    "text": "Wrap up\nAny questions about the course?\n\n\n\nhttps://mlops-ss23.github.io/website/"
   }
 ]
