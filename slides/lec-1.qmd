@@ -233,4 +233,7 @@ from the two
 
 ## Recap
 
--   
+- Use cases of ML
+- When ML solutions would be appropriate
+- ML in research vs ML in production
+- How ML systems differ from traditional software systems
