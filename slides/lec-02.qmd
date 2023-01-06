@@ -78,7 +78,7 @@ increase in purchase-through rate.
 
 - How long it takes for a company to bring a model to production is proportional to how long it has used ML. Source: Adapted from an image by Algorithmia
 
-::: {note}
+::: {.notes}
 Returns on investment in ML depend a lot on the maturity stage of adoption. The longer you’ve adopted ML, the more efficient your pipeline will run, the faster your development cycle will be, the less engineering time you’ll need, and the lower your cloud bills will be, which all lead to higher returns. According to a 2020 survey by Algorithmia, among companies that are more sophisticated in their ML adoption
 (having had models in production for over five years), almost 75% can deploy a model in under 30 days. Among those just getting started with their ML pipeline, 60% take over 30 days to deploy a model 
 :::
@@ -132,6 +132,8 @@ Returns on investment in ML depend a lot on the maturity stage of adoption. The 
 - Allowing updates without service interruption
 
 
+# Iterative process {background-color="#0ca37f"}
+
 ## Iterative process
 
 - Developing an ML system is an iterative (never-ending) process.
@@ -157,3 +159,130 @@ updated.
 -  11. Deploy the model
 -  12. Model seems to be performing well, but revenue is decreasing -> change your model to optimize for ad click-through rate instead.
 -  13. Go to step 1.
+
+
+## Iterative process
+
+
+![](images/lec-02/fig-2-2-process.png)
+
+
+- Oversimplified representation of what the iterative process for developing ML systems in production looks like from the perspective of a data scientist or an ML engineer.
+
+
+## Step 1: Project scoping
+
+- Identify and involve stakeholders. 
+
+- Define goals, objectives, and constraints. 
+
+- Estimate and allocate resources 
+
+- Organize teams 
+
+## Step 2: Data engineering
+
+- Access to raw data
+
+- Handling data from different sources and formats.
+
+- Curate training data
+
+- Sampling and generating labels
+
+
+## Step 3: ML Model development
+
+- Feature engineering
+
+- Model training and selection
+
+- Model evaluation
+
+
+## Step 4: Model deployment
+
+- Make model accessible to users
+
+
+
+## Step 5: Monitoring and continual learning
+
+- Monitoring for performance decay 
+
+- Maintained to be adaptive to changing environments and changing requirements
+
+## Step 6: Business analysis
+
+- Evaluate model performance against business goals 
+
+- Eliminate unproductive projects or scope out new projects. 
+
+- This step is closely related to the first step
+
+
+
+# Framing ML Problems {background-color="#0ca37f"}
+
+## Types of ML Tasks
+
+![](images/lec-02/fig-2-3-ml-types.png)
+
+## Classification versus regression
+
+- Classification models classify inputs into different categories
+
+- Regression models output a continuous value
+
+
+## Classification versus regression
+
+
+![](images/lec-02/fig-2-4-cl-reg.png)
+
+
+
+- A regression model can be framed as a classification model and vice versa (if we transform the data)
+
+
+## Binary versus multiclass classification
+
+- Binary
+  - Only two possible classes
+
+- Multiclass classification
+  - More than two classes
+
+- High cardinality
+  - Number of classes is high
+
+- Hierarchical classifiaction
+
+## Multiclass versus multilabel classification
+
+- Binary and multiclass classification 
+  - Example belongs to one class
+
+- Multilabel classification problem
+  - Example can belong to multiple classes
+
+## Multiple ways to frame a problem
+
+
+![](images/lec-02/fig-2-5-app.png)
+
+::: {.notes}
+
+This is a bad approach because whenever a new app is added, you might have to retrain your model from scratch, or at least retrain all the components of your model whose number of parameters depends on N
+:::
+
+## Multiple ways to frame a problem
+
+![](images/lec-02/fig-2-6-app.png)
+
+
+::: {.notes}
+
+In this new framing, whenever there’s a new app you want to consider recommending to a user, you simply need to use new inputs with this new app’s feature instead of having to retrain your model or part of your model from scratch.
+:::
+
