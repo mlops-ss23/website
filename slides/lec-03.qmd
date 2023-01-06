@@ -109,3 +109,70 @@ format:
 | Protobuf   | Binary primary  | No                 | Google, TensorFlow (TFRecord) |
 | Pickle     | Binary          | No                 | Python, PyTorch serialization |
 
+
+
+## Row-Major Versus Column-Major Format
+
+- CSV (comma-separated values) is row-major
+
+- Parquet is column-major
+
+![](images/lec-03/fig-3-1-row-column.png)
+
+- Row-major formats
+  - better when you have to do a lot of writes
+
+- Column-major
+  - better when you have to do a lot of column-based reads.
+
+## NumPy vs pandas
+
+- pandas: built around DataFrame
+  - Column-major
+
+- NumPy: 
+  - Major order can be specified
+
+  ![](images/lec-03/fig-3-2-pandas.png)
+
+
+## Text vs Binary Format
+
+  - Text files
+    - Plain text
+    - Human-readable
+    - Not very efficient
+    - E.g. CSV
+  
+  - Binary format
+    - Nontext (only 0s and 1s)
+    - Very compact
+    - Not human-readable
+    - E.g. Parquet files
+
+## Text vs Binary Format
+
+Store number `1000000`
+
+- Text file
+  - 7 characters 
+  - Each character 1 byte
+  - 7 byte
+  
+- Binary file as int32
+  - 32 bits or 4 bytes
+
+## Text vs Binary Format
+
+- File with 17,654 rows and 10 columns
+  - CSV: 14 MB
+  - Parquet: 6 MB 
+
+- Parquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3, compared to text formats
+
+# Data models {background-color="#0ca37f"}
+
+*Describe how data is represented*
+
+## Relational Models
+
