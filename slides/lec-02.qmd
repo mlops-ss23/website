@@ -84,3 +84,76 @@ Returns on investment in ML depend a lot on the maturity stage of adoption. The 
 :::
 
 # Requirements for ML Systems {background-color="#0ca37f"}
+
+## Reliability
+
+
+- The system should continue to perform the correct function at the desired level of performance even in the face of adversity (hardware or software faults, and even human error)
+
+- ML systems can fail silently
+
+
+## Scalability
+
+- Ways an ML system can grow:
+
+  - Complexity (more complex models)
+
+  - Traffic volume (served predictions per day)
+
+  - ML model count (# of models)
+
+## Scalability
+
+- Resource scaling
+  - Up-scaling (expanding the resources to handle growth) 
+  - Down-scaling (reducing the resources when not needed)
+  - Auto-scaling: automatically scaling up and down the number of machines depending on usage.
+
+- *Amazon's autoscaling feature failed on Prime Day (2018), causing their system to crash. An hour of downtime was estimated to cost Amazon between $72 million and $99 million.*
+
+- Artifact management (model monitoring and retraining)
+
+
+## Maintainability
+
+- Code should be documented 
+
+- Code, data, and artifacts should be versioned. 
+
+- Models should be sufficiently reproducible 
+
+## Adaptibility
+
+- Adapt to shifting data distributions and business requirements
+
+- Capacity for performance improvement
+
+- Allowing updates without service interruption
+
+
+## Iterative process
+
+- Developing an ML system is an iterative (never-ending) process.
+
+- Once a system is put into production, it’ll need to be continually monitored and
+updated.
+
+- Example: Building an ML model to predict whether an ad should be shown when users enter a search query
+
+
+## Iterative process workflow example {.scrollable}
+
+- 1. Choose a metric to optimize (e.g. impressions)
+- 2. Collect data and obtain labels
+- 3. Engineer features
+- 4. Train models
+- 5. Error analysis (e.g., wrong labels -> relabel data)
+- 6. Train the model again
+- 7. Error analysis (e.g., data imbalance -> collect more data)
+- 8. Train the model again
+- 9. Model performs poorly on newer data -> update it on more recent data
+-  10. Train the model again
+-  11. Deploy the model
+-  12. Model seems to be performing well, but revenue is decreasing -> change your model to optimize for ad click-through rate instead.
+-  13. Go to step 1.
