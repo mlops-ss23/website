@@ -112,6 +112,27 @@
     "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here."
   },
   {
+    "objectID": "slides/lec-03.html#basics-of-data-engineering",
+    "href": "slides/lec-03.html#basics-of-data-engineering",
+    "title": "Data Engineering Fundamentals",
+    "section": "Basics of Data Engineering",
+    "text": "Basics of Data Engineering\n\nData storage\nData format\nData structure\nData models\n\ndefine how data stored\nin a particular data format\nis structured\n\nData Sources\nUser input data\n\ntext, images, videos, uploaded files, etc.\n\nInternal databases (services and applications)\n\nInventory\nCustomer relationship\n…\n\nSystem-generated data\n\nLogs (tell you how the system is doing)\nSystem outputs (like model predictions)\n\nThird-party data\n\n\n\nLog everything you can (makes debugging easier)\n\nWhat exactly?\nHow?\nHow long?\nPrivacy regulations?"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-sources-1",
+    "href": "slides/lec-03.html#data-sources-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Sources",
+    "text": "Data Sources\n\nFirst-party data\n\nData that your company already collects about your users or customers S\n\nSecond-party data\n\nData collected by another company on their own customers that they make available to you, though you’ll probably have to pay for it\n\nThird-party data\n\nCompanies collect data on the public who aren’t their direct customers"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-formats",
+    "href": "slides/lec-03.html#data-formats",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Formats",
+    "text": "Data Formats\n\n\n\nMLOps | Jan Kirenz"
+  },
+  {
     "objectID": "slides/lec-temp.html#mlops",
     "href": "slides/lec-temp.html#mlops",
     "title": "Template",

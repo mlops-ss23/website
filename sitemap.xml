@@ -2,66 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mlops-ss23.github.io/website/course-links.html</loc>
-    <lastmod>2023-01-06T13:59:19.485Z</lastmod>
+    <lastmod>2023-01-06T14:32:14.492Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/course-overview.html</loc>
-    <lastmod>2023-01-06T13:59:21.545Z</lastmod>
+    <lastmod>2023-01-06T14:32:16.732Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/about.html</loc>
-    <lastmod>2023-01-06T13:59:21.893Z</lastmod>
+    <lastmod>2023-01-06T14:32:17.148Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/weeks/week-1.html</loc>
-    <lastmod>2023-01-06T13:59:22.297Z</lastmod>
+    <lastmod>2023-01-06T14:32:17.552Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/course-support.html</loc>
-    <lastmod>2023-01-06T13:59:22.645Z</lastmod>
+    <lastmod>2023-01-06T14:32:17.956Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/computing-troubleshooting.html</loc>
-    <lastmod>2023-01-06T13:59:23.021Z</lastmod>
+    <lastmod>2023-01-06T14:32:18.328Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/course-faq.html</loc>
-    <lastmod>2023-01-06T13:59:23.369Z</lastmod>
+    <lastmod>2023-01-06T14:32:18.708Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/course-syllabus.html</loc>
-    <lastmod>2023-01-06T13:59:23.737Z</lastmod>
+    <lastmod>2023-01-06T14:32:19.088Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/computing-access.html</loc>
-    <lastmod>2023-01-06T13:59:24.101Z</lastmod>
+    <lastmod>2023-01-06T14:32:19.468Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/project-tips-resources.html</loc>
-    <lastmod>2023-01-06T13:59:24.461Z</lastmod>
+    <lastmod>2023-01-06T14:32:19.880Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/project-description.html</loc>
-    <lastmod>2023-01-06T13:59:24.837Z</lastmod>
+    <lastmod>2023-01-06T14:32:20.292Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/index.html</loc>
-    <lastmod>2023-01-06T13:59:25.189Z</lastmod>
+    <lastmod>2023-01-06T14:32:20.664Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlops-ss23.github.io/website/slides/lec-03.html</loc>
+    <lastmod>2023-01-06T14:32:21.176Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/slides/lec-temp.html</loc>
-    <lastmod>2023-01-06T13:59:26.161Z</lastmod>
+    <lastmod>2023-01-06T14:32:22.232Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/slides/lec-01.html</loc>
-    <lastmod>2023-01-06T13:59:26.649Z</lastmod>
+    <lastmod>2023-01-06T14:32:22.768Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/slides/lec-02.html</loc>
-    <lastmod>2023-01-06T13:59:27.173Z</lastmod>
+    <lastmod>2023-01-06T14:32:23.360Z</lastmod>
   </url>
   <url>
     <loc>https://mlops-ss23.github.io/website/slides/lec-0.html</loc>
-    <lastmod>2023-01-06T13:59:27.489Z</lastmod>
+    <lastmod>2023-01-06T14:32:23.728Z</lastmod>
   </url>
 </urlset>

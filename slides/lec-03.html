@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.280">
 
   <meta name="author" content="Jan Kirenz">
-  <title>MLOps - Spring 2023 - MLOps</title>
+  <title>MLOps - Spring 2023 - Data Engineering Fundamentals</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,7 +30,7 @@
     }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="slides.scss">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -321,10 +321,8 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
-<meta property="og:title" content="MLOps - Spring 2023 - MLOps">
-<meta property="og:description" content="Welcome 👋">
+<meta property="og:title" content="MLOps - Spring 2023 - Data Engineering Fundamentals">
+<meta property="og:description" content="Lecture 3">
 <meta property="og:site-name" content="MLOps - Spring 2023">
 </head>
 <body class="quarto-light">
@@ -332,8 +330,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">MLOps</h1>
-  <p class="subtitle">Welcome 👋</p>
+  <h1 class="title">Data Engineering Fundamentals</h1>
+  <p class="subtitle">Lecture 3</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -344,54 +342,88 @@ Jan Kirenz
 </div>
 
 </section>
-<section class="slide level2">
-
-<div class="cell">
-
-</div>
+<section>
+<section id="data-engineering" class="title-slide slide level1 center" data-background-color="#0ca37f">
+<h1>Data Engineering</h1>
+<p><em>How to collect, process, store, retrieve, and process data</em></p>
 </section>
-<section id="welcome" class="slide level2">
-<h2>Welcome!</h2>
+<section id="basics-of-data-engineering" class="slide level2">
+<h2>Basics of Data Engineering</h2>
 <ul>
-<li class="fragment">Name, current job, your major in the masters program</li>
-<li class="fragment">What do you hope to get out of this course?</li>
-<li class="fragment">Anything you want to share/ask?</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_bc6017b5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">08</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="resources" class="slide level2">
-<h2>Resources</h2>
-
-<img data-src="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/.png" class="r-stretch quarto-figure-center"><p class="caption">Designing Machine Learning Systems by Chip Huyen, released May 2022</p></section>
-<section id="organization" class="slide level2">
-<h2>Organization</h2>
+<li class="fragment"><p>Data storage</p></li>
+<li class="fragment"><p>Data format</p></li>
+<li class="fragment"><p>Data structure</p></li>
+<li class="fragment"><p>Data models</p>
 <ul>
-<li class="fragment"><p>Course website: <a href="https://mlops-ss23.github.io/website/" class="uri">https://mlops-ss23.github.io/website/</a></p></li>
-<li class="fragment"><p>Moodle course</p></li>
+<li class="fragment">define how data stored</li>
+<li class="fragment">in a particular data format</li>
+<li class="fragment">is structured</li>
 </ul>
-</section>
-<section id="assignments" class="slide level2">
-<h2>Assignments</h2>
+<h2 id="data-sources">Data Sources</h2></li>
+<li class="fragment"><p>User input data</p>
 <ul>
-<li class="fragment">Txt</li>
+<li class="fragment">text, images, videos, uploaded files, etc.</li>
+</ul></li>
+<li class="fragment"><p>Internal databases (services and applications)</p>
+<ul>
+<li class="fragment">Inventory</li>
+<li class="fragment">Customer relationship</li>
+<li class="fragment">…</li>
+</ul></li>
+<li class="fragment"><p>System-generated data</p>
+<ul>
+<li class="fragment">Logs (tell you how the system is doing)</li>
+<li class="fragment">System outputs (like model predictions)</li>
+</ul></li>
+<li class="fragment"><p>Third-party data</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Log everything you can (makes debugging easier)
+<ul>
+<li>What exactly?</li>
+<li>How?</li>
+<li>How long?</li>
+<li>Privacy regulations?</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-sources-1" class="slide level2">
+<h2>Data Sources</h2>
+<ul>
+<li class="fragment">First-party data
+<ul>
+<li class="fragment">Data that your company already collects about your users or customers S</li>
+</ul></li>
+<li class="fragment">Second-party data
+<ul>
+<li class="fragment">Data collected by another company on their own customers that they make available to you, though you’ll probably have to pay for it</li>
+</ul></li>
+<li class="fragment">Third-party data
+<ul>
+<li class="fragment">Companies collect data on the public who aren’t their direct customers</li>
+</ul></li>
 </ul>
 </section>
-<section id="wrap-up" class="slide level2">
-<h2>Wrap up</h2>
-<p>Any questions about the course?</p>
+<section id="data-formats" class="slide level2">
+<h2>Data Formats</h2>
 
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://mlops-ss23.github.io/website/" class="uri">https://mlops-ss23.github.io/website/</a></p>
+<p>MLOps | Jan Kirenz</p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -605,44 +637,6 @@ Jan Kirenz
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
