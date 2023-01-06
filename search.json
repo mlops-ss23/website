@@ -165,7 +165,49 @@
     "href": "slides/lec-03.html#some-common-data-formats",
     "title": "Data Engineering Fundamentals",
     "section": "Some common data formats",
-    "text": "Some common data formats\n\n\n\n\n\n\n\n\n\nFormat\nBinary/Text\nHuman-readable\nExample use cases\n\n\n\n\nJSON\nText\nYes\nEverywhere\n\n\nCSV\nText\nYes\nEverywhere\n\n\nParquet\nBinary\nNo\nHadoop, Amazon Redshift\n\n\nAvro\nBinary primary\nNo\nHadoop\n\n\nProtobuf\nBinary primary\nNo\nGoogle, TensorFlow (TFRecord)\n\n\nPickle\nBinary\nNo\nPython, PyTorch serialization\n\n\n\n\n\n\nMLOps | Jan Kirenz"
+    "text": "Some common data formats\n\n\n\n\n\n\n\n\n\nFormat\nBinary/Text\nHuman-readable\nExample use cases\n\n\n\n\nJSON\nText\nYes\nEverywhere\n\n\nCSV\nText\nYes\nEverywhere\n\n\nParquet\nBinary\nNo\nHadoop, Amazon Redshift\n\n\nAvro\nBinary primary\nNo\nHadoop\n\n\nProtobuf\nBinary primary\nNo\nGoogle, TensorFlow (TFRecord)\n\n\nPickle\nBinary\nNo\nPython, PyTorch serialization"
+  },
+  {
+    "objectID": "slides/lec-03.html#row-major-versus-column-major-format",
+    "href": "slides/lec-03.html#row-major-versus-column-major-format",
+    "title": "Data Engineering Fundamentals",
+    "section": "Row-Major Versus Column-Major Format",
+    "text": "Row-Major Versus Column-Major Format\n\nCSV (comma-separated values) is row-major\nParquet is column-major\n\n\n\nRow-major formats\n\nbetter when you have to do a lot of writes\n\nColumn-major\n\nbetter when you have to do a lot of column-based reads."
+  },
+  {
+    "objectID": "slides/lec-03.html#numpy-vs-pandas",
+    "href": "slides/lec-03.html#numpy-vs-pandas",
+    "title": "Data Engineering Fundamentals",
+    "section": "NumPy vs pandas",
+    "text": "NumPy vs pandas\n\npandas: built around DataFrame\n\nColumn-major\n\nNumPy:\n\nMajor order can be specified"
+  },
+  {
+    "objectID": "slides/lec-03.html#text-vs-binary-format",
+    "href": "slides/lec-03.html#text-vs-binary-format",
+    "title": "Data Engineering Fundamentals",
+    "section": "Text vs Binary Format",
+    "text": "Text vs Binary Format\n\nText files\n\nPlain text\nHuman-readable\nNot very efficient\nE.g. CSV\n\nBinary format\n\nNontext (only 0s and 1s)\nVery compact\nNot human-readable\nE.g. Parquet files"
+  },
+  {
+    "objectID": "slides/lec-03.html#text-vs-binary-format-1",
+    "href": "slides/lec-03.html#text-vs-binary-format-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Text vs Binary Format",
+    "text": "Text vs Binary Format\nStore number 1000000\n\nText file\n\n7 characters\nEach character 1 byte\n7 byte\n\nBinary file as int32\n\n32 bits or 4 bytes"
+  },
+  {
+    "objectID": "slides/lec-03.html#text-vs-binary-format-2",
+    "href": "slides/lec-03.html#text-vs-binary-format-2",
+    "title": "Data Engineering Fundamentals",
+    "section": "Text vs Binary Format",
+    "text": "Text vs Binary Format\n\nFile with 17,654 rows and 10 columns\n\nCSV: 14 MB\nParquet: 6 MB\n\nParquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3, compared to text formats"
+  },
+  {
+    "objectID": "slides/lec-03.html#relational-models",
+    "href": "slides/lec-03.html#relational-models",
+    "title": "Data Engineering Fundamentals",
+    "section": "Relational Models",
+    "text": "Relational Models\n\n\n\nMLOps | Jan Kirenz"
   },
   {
     "objectID": "slides/lec-temp.html#mlops",
