@@ -9,7 +9,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.280">
 
-  <title>MLOps - Spring 2023 - Introduction to MLOps</title>
+  <meta name="author" content="Jan Kirenz">
+  <title>MLOps - Spring 2023 - MLOps</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,70 +28,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link rel="stylesheet" href="styles.css">
@@ -384,11 +321,10 @@
       margin-right: 0; 
     }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-<meta property="og:title" content="MLOps - Spring 2023 - Introduction to MLOps">
-<meta property="og:description" content="ML System">
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
+<meta property="og:title" content="MLOps - Spring 2023 - MLOps">
+<meta property="og:description" content="Welcome 👋">
 <meta property="og:site-name" content="MLOps - Spring 2023">
 </head>
 <body class="quarto-light">
@@ -396,615 +332,64 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introduction to MLOps</h1>
-  <p class="subtitle">ML System</p>
+  <h1 class="title">MLOps</h1>
+  <p class="subtitle">Welcome 👋</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Jan Kirenz 
+</div>
+</div>
 </div>
 
 </section>
-<section id="hello-there" class="slide level2">
-<h2>Hello, There</h2>
-<p>The following presentation is based on <a href="https://github.com/quarto-dev/quarto-web/tree/main/docs/presentations/revealjs/demo">this demo</a> provided by Quarto.</p>
-<p>Note that you need to install <code>ipyleaflet</code>(conda install ipyleaflet)</p>
-<p>This presentation will show you examples of what you can do with Quarto and <a href="https://revealjs.com">Reveal.js</a>, including:</p>
+<section class="slide level2">
+
+<div class="cell">
+
+</div>
+</section>
+<section id="welcome" class="slide level2">
+<h2>Welcome!</h2>
 <ul>
-<li>Presenting code and LaTeX equations</li>
-<li>Including computations in slide output</li>
-<li>Image, video, and iframe backgrounds</li>
-<li>Fancy transitions and animations</li>
-<li>Printing to PDF</li>
+<li class="fragment">Name, current job, your major in the masters program</li>
+<li class="fragment">What do you hope to get out of this course?</li>
+<li class="fragment">Anything you want to share/ask?</li>
 </ul>
-<p>…and much more</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_91395d8d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">08</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
-<section id="pretty-code" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Pretty Code</h2>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+
+<img data-src="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/.png" class="r-stretch quarto-figure-center"><p class="caption">Designing Machine Learning Systems by Chip Huyen, released May 2022</p></section>
+<section id="organization" class="slide level2">
+<h2>Organization</h2>
 <ul>
-<li>Over 20 syntax highlighting themes available</li>
-<li>Default theme optimized for accessibility</li>
+<li class="fragment"><p>Course website: <a href="https://mlops-ss23.github.io/website/" class="uri">https://mlops-ss23.github.io/website/</a></p></li>
+<li class="fragment"><p>Moodle course</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2" class="hljs-ln-code"><a href="#cb1-2"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
-<span id="cb1-3" class="hljs-ln-code"><a href="#cb1-3"></a></span>
-<span id="cb1-4" class="hljs-ln-code"><a href="#cb1-4"></a><span class="co"># sorted bar chart</span></span>
-<span id="cb1-5" class="hljs-ln-code"><a href="#cb1-5"></a>alt.Chart(source).mark_bar().encode(</span>
-<span id="cb1-6" class="hljs-ln-code"><a href="#cb1-6"></a>    x<span class="op">=</span>alt.X(<span class="st">'homeownership'</span>, sort<span class="op">=</span><span class="st">'-y'</span>), </span>
-<span id="cb1-7" class="hljs-ln-code"><a href="#cb1-7"></a>    y<span class="op">=</span>alt.Y(<span class="st">'count(homeownership)'</span>)</span>
-<span id="cb1-8" class="hljs-ln-code"><a href="#cb1-8"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/output-formats/html-code.html#highlighting">Syntax Highlighting</a></p>
-</div>
 </section>
-<section id="code-animations" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Code Animations</h2>
+<section id="assignments" class="slide level2">
+<h2>Assignments</h2>
 <ul>
-<li>Over 20 syntax highlighting themes available</li>
-<li>Default theme optimized for accessibility</li>
+<li class="fragment">Txt</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb2-1" class="hljs-ln-code"><a href="#cb2-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2" class="hljs-ln-code"><a href="#cb2-2"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
-<span id="cb2-3" class="hljs-ln-code"><a href="#cb2-3"></a></span>
-<span id="cb2-4" class="hljs-ln-code"><a href="#cb2-4"></a>alt.Chart(source).mark_bar().encode(</span>
-<span id="cb2-5" class="hljs-ln-code"><a href="#cb2-5"></a>    x<span class="op">=</span>alt.X(<span class="st">'homeownership'</span>, sort<span class="op">=</span><span class="st">'-y'</span>), </span>
-<span id="cb2-6" class="hljs-ln-code"><a href="#cb2-6"></a>    y<span class="op">=</span>alt.Y(<span class="st">'count(homeownership)'</span>)</span>
-<span id="cb2-7" class="hljs-ln-code"><a href="#cb2-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations">Code Animations</a></p>
-</div>
 </section>
-<section id="line-highlighting" class="slide level2">
-<h2>Line Highlighting</h2>
-<ul>
-<li>Highlight specific lines for emphasis</li>
-<li>Incrementally highlight additional lines</li>
-</ul>
-<div class="sourceCode" id="cb3" data-code-line-numbers="4-5|7|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>DATA <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kirenz/datasets/master/loan50.csv"</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a></span>
-<span id="cb3-6"><a href="#cb3-6"></a>df <span class="op">=</span> pd.read_csv(DATA)</span>
-<span id="cb3-7"><a href="#cb3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="co"># sorted bar chart</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a>alt.Chart(df).mark_bar().encode(</span>
-<span id="cb3-10"><a href="#cb3-10"></a>    x<span class="op">=</span>alt.X(<span class="st">'homeownership'</span>, sort<span class="op">=</span><span class="st">'-y'</span>), </span>
-<span id="cb3-11"><a href="#cb3-11"></a>    y<span class="op">=</span>alt.Y(<span class="st">'count(homeownership)'</span>)</span>
-<span id="cb3-12"><a href="#cb3-12"></a>).properties( </span>
-<span id="cb3-13"><a href="#cb3-13"></a>    title<span class="op">=</span><span class="st">'This is a simple bar chart'</span>,</span>
-<span id="cb3-14"><a href="#cb3-14"></a>    width<span class="op">=</span><span class="dv">300</span>,</span>
-<span id="cb3-15"><a href="#cb3-15"></a>    height<span class="op">=</span><span class="dv">150</span></span>
-<span id="cb3-16"><a href="#cb3-16"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#line-highlighting">Line Highlighting</a></p>
-</div>
-</section>
-<section id="executable-code" class="slide level2">
-<h2>Executable Code</h2>
-<div class="cell" data-fig-height="4.5" data-fig-width="10" data-execution_count="1">
-<div class="cell-output cell-output-display" data-execution_count="1">
-
-<div id="altair-viz-3264e114ba0042a4b5626ab65c2912b9"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-3264e114ba0042a4b5626ab65c2912b9") {
-      outputDiv = document.getElementById("altair-viz-3264e114ba0042a4b5626ab65c2912b9");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-da268e6db2ac06384179953344dc16fb"}, "mark": "bar", "encoding": {"x": {"field": "homeownership", "sort": "-y", "type": "nominal"}, "y": {"aggregate": "count", "field": "homeownership", "type": "nominal"}}, "height": 250, "title": "This is a simple bar chart", "width": 550, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-da268e6db2ac06384179953344dc16fb": [{"state": "NJ", "emp_length": 3.0, "term": 60, "homeownership": "rent", "annual_income": 59000, "verified_income": "Not Verified", "debt_to_income": 0.5575254237288135, "total_credit_limit": 95131, "total_credit_utilized": 32894, "num_cc_carrying_balance": 8, "loan_purpose": "debt_consolidation", "loan_amount": 22000, "grade": "B", "interest_rate": 10.9, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 59000}, {"state": "CA", "emp_length": 10.0, "term": 36, "homeownership": "rent", "annual_income": 60000, "verified_income": "Not Verified", "debt_to_income": 1.3056833333333333, "total_credit_limit": 51929, "total_credit_utilized": 78341, "num_cc_carrying_balance": 2, "loan_purpose": "credit_card", "loan_amount": 6000, "grade": "B", "interest_rate": 9.92, "public_record_bankrupt": 1, "loan_status": "Current", "has_second_income": false, "total_income": 60000}, {"state": "SC", "emp_length": null, "term": 36, "homeownership": "mortgage", "annual_income": 75000, "verified_income": "Verified", "debt_to_income": 1.05628, "total_credit_limit": 301373, "total_credit_utilized": 79221, "num_cc_carrying_balance": 14, "loan_purpose": "debt_consolidation", "loan_amount": 25000, "grade": "E", "interest_rate": 26.3, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 75000}, {"state": "CA", "emp_length": 0.0, "term": 36, "homeownership": "rent", "annual_income": 75000, "verified_income": "Not Verified", "debt_to_income": 0.5743466666666667, "total_credit_limit": 59890, "total_credit_utilized": 43076, "num_cc_carrying_balance": 10, "loan_purpose": "credit_card", "loan_amount": 6000, "grade": "B", "interest_rate": 9.92, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 75000}, {"state": "OH", "emp_length": 4.0, "term": 60, "homeownership": "mortgage", "annual_income": 254000, "verified_income": "Not Verified", "debt_to_income": 0.2381496062992125, "total_credit_limit": 422619, "total_credit_utilized": 60490, "num_cc_carrying_balance": 2, "loan_purpose": "home_improvement", "loan_amount": 25000, "grade": "B", "interest_rate": 9.43, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 254000}, {"state": "IN", "emp_length": 6.0, "term": 36, "homeownership": "mortgage", "annual_income": 67000, "verified_income": "Source Verified", "debt_to_income": 1.077044776119403, "total_credit_limit": 349825, "total_credit_utilized": 72162, "num_cc_carrying_balance": 4, "loan_purpose": "home_improvement", "loan_amount": 6400, "grade": "B", "interest_rate": 9.92, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 67000}, {"state": "NY", "emp_length": 2.0, "term": 36, "homeownership": "rent", "annual_income": 28800, "verified_income": "Source Verified", "debt_to_income": 0.0997222222222222, "total_credit_limit": 15980, "total_credit_utilized": 2872, "num_cc_carrying_balance": 1, "loan_purpose": "debt_consolidation", "loan_amount": 3000, "grade": "D", "interest_rate": 17.09, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 28800}, {"state": "MO", "emp_length": 10.0, "term": 36, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Not Verified", "debt_to_income": 0.3509125, "total_credit_limit": 258439, "total_credit_utilized": 28073, "num_cc_carrying_balance": 3, "loan_purpose": "credit_card", "loan_amount": 14500, "grade": "A", "interest_rate": 6.08, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 80000}, {"state": "FL", "emp_length": 6.0, "term": 60, "homeownership": "rent", "annual_income": 34000, "verified_income": "Not Verified", "debt_to_income": 0.6975, "total_credit_limit": 87705, "total_credit_utilized": 23715, "num_cc_carrying_balance": 10, "loan_purpose": "credit_card", "loan_amount": 10000, "grade": "A", "interest_rate": 7.97, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 34000}, {"state": "FL", "emp_length": 3.0, "term": 60, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Source Verified", "debt_to_income": 0.1668541666666666, "total_credit_limit": 330394, "total_credit_utilized": 32036, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 18500, "grade": "C", "interest_rate": 12.62, "public_record_bankrupt": 1, "loan_status": "Current", "has_second_income": true, "total_income": 192000}, {"state": "MD", "emp_length": 8.0, "term": 36, "homeownership": "rent", "annual_income": 73000, "verified_income": "Source Verified", "debt_to_income": 0.4143287671232876, "total_credit_limit": 36182, "total_credit_utilized": 30246, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 17000, "grade": "D", "interest_rate": 17.09, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 73000}, {"state": "HI", "emp_length": 10.0, "term": 36, "homeownership": "mortgage", "annual_income": 120000, "verified_income": "Not Verified", "debt_to_income": 0.7989083333333333, "total_credit_limit": 452712, "total_credit_utilized": 95869, "num_cc_carrying_balance": 4, "loan_purpose": "credit_card", "loan_amount": 12000, "grade": "A", "interest_rate": 5.31, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 120000}, {"state": "CT", "emp_length": 10.0, "term": 36, "homeownership": "rent", "annual_income": 100000, "verified_income": "Source Verified", "debt_to_income": 0.27809, "total_credit_limit": 74805, "total_credit_utilized": 27809, "num_cc_carrying_balance": 3, "loan_purpose": "credit_card", "loan_amount": 16000, "grade": "A", "interest_rate": 7.35, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 100000}, {"state": "NE", "emp_length": 2.0, "term": 36, "homeownership": "mortgage", "annual_income": 105000, "verified_income": "Not Verified", "debt_to_income": 0.2681904761904762, "total_credit_limit": 279386, "total_credit_utilized": 28160, "num_cc_carrying_balance": 2, "loan_purpose": "home_improvement", "loan_amount": 16500, "grade": "A", "interest_rate": 5.31, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 105000}, {"state": "CA", "emp_length": 5.0, "term": 36, "homeownership": "rent", "annual_income": 34000, "verified_income": "Not Verified", "debt_to_income": 0.6292941176470588, "total_credit_limit": 33038, "total_credit_utilized": 21396, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 3000, "grade": "A", "interest_rate": 7.96, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 34000}, {"state": "TX", "emp_length": 2.0, "term": 60, "homeownership": "mortgage", "annual_income": 98000, "verified_income": "Verified", "debt_to_income": 1.1071020408163266, "total_credit_limit": 319551, "total_credit_utilized": 108496, "num_cc_carrying_balance": 6, "loan_purpose": "credit_card", "loan_amount": 29400, "grade": "E", "interest_rate": 24.85, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 98000}, {"state": "HI", "emp_length": 5.0, "term": 60, "homeownership": "rent", "annual_income": 68700, "verified_income": "Source Verified", "debt_to_income": 1.4995487627365356, "total_credit_limit": 119325, "total_credit_utilized": 103019, "num_cc_carrying_balance": 5, "loan_purpose": "debt_consolidation", "loan_amount": 13500, "grade": "D", "interest_rate": 18.06, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 68700}, {"state": "CA", "emp_length": 3.0, "term": 60, "homeownership": "rent", "annual_income": 43000, "verified_income": "Source Verified", "debt_to_income": 0.1546527777777777, "total_credit_limit": 60693, "total_credit_utilized": 22270, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 18200, "grade": "B", "interest_rate": 10.42, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 144000}, {"state": "CA", "emp_length": 3.0, "term": 36, "homeownership": "rent", "annual_income": 100000, "verified_income": "Source Verified", "debt_to_income": 0.13823, "total_credit_limit": 69100, "total_credit_utilized": 13823, "num_cc_carrying_balance": 5, "loan_purpose": "other", "loan_amount": 6000, "grade": "A", "interest_rate": 7.96, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 100000}, {"state": "FL", "emp_length": 10.0, "term": 60, "homeownership": "mortgage", "annual_income": 76000, "verified_income": "Source Verified", "debt_to_income": 0.5898157894736842, "total_credit_limit": 249700, "total_credit_utilized": 44826, "num_cc_carrying_balance": 10, "loan_purpose": "debt_consolidation", "loan_amount": 18000, "grade": "D", "interest_rate": 19.42, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 76000}, {"state": "MS", "emp_length": 10.0, "term": 36, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Verified", "debt_to_income": 0.7373059317634845, "total_credit_limit": 136046, "total_credit_utilized": 124994, "num_cc_carrying_balance": 1, "loan_purpose": "car", "loan_amount": 5000, "grade": "C", "interest_rate": 14.08, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 169528}, {"state": "WI", "emp_length": 10.0, "term": 60, "homeownership": "mortgage", "annual_income": 50000, "verified_income": "Verified", "debt_to_income": 0.5234166666666666, "total_credit_limit": 375828, "total_credit_utilized": 87934, "num_cc_carrying_balance": 11, "loan_purpose": "debt_consolidation", "loan_amount": 40000, "grade": "D", "interest_rate": 20.0, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": true, "total_income": 168000}, {"state": "WV", "emp_length": 0.0, "term": 36, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Not Verified", "debt_to_income": 0.7045375, "total_credit_limit": 197299, "total_credit_utilized": 56363, "num_cc_carrying_balance": 6, "loan_purpose": "debt_consolidation", "loan_amount": 4500, "grade": "B", "interest_rate": 9.44, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 80000}, {"state": "CA", "emp_length": 1.0, "term": 36, "homeownership": "rent", "annual_income": 185000, "verified_income": "Not Verified", "debt_to_income": 0.2546756756756757, "total_credit_limit": 102500, "total_credit_utilized": 47115, "num_cc_carrying_balance": 2, "loan_purpose": "credit_card", "loan_amount": 15000, "grade": "B", "interest_rate": 9.92, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 185000}, {"state": "NJ", "emp_length": 5.0, "term": 60, "homeownership": "mortgage", "annual_income": 42000, "verified_income": "Source Verified", "debt_to_income": 0.0866666666666666, "total_credit_limit": 64800, "total_credit_utilized": 3640, "num_cc_carrying_balance": 5, "loan_purpose": "house", "loan_amount": 20000, "grade": "B", "interest_rate": 10.91, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 42000}, {"state": "MA", "emp_length": 2.0, "term": 36, "homeownership": "rent", "annual_income": 100000, "verified_income": "Verified", "debt_to_income": 0.3281962962962963, "total_credit_limit": 144700, "total_credit_utilized": 88613, "num_cc_carrying_balance": 4, "loan_purpose": "small_business", "loan_amount": 20000, "grade": "A", "interest_rate": 5.32, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 270000}, {"state": "TX", "emp_length": 5.0, "term": 36, "homeownership": "mortgage", "annual_income": 65000, "verified_income": "Not Verified", "debt_to_income": 0.2427384615384615, "total_credit_limit": 256974, "total_credit_utilized": 15778, "num_cc_carrying_balance": 7, "loan_purpose": "debt_consolidation", "loan_amount": 10000, "grade": "A", "interest_rate": 6.71, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 65000}, {"state": "IN", "emp_length": 5.0, "term": 36, "homeownership": "own", "annual_income": 45000, "verified_income": "Not Verified", "debt_to_income": 0.1573111111111111, "total_credit_limit": 121323, "total_credit_utilized": 7079, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 9000, "grade": "C", "interest_rate": 15.04, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 45000}, {"state": "RI", "emp_length": 10.0, "term": 60, "homeownership": "mortgage", "annual_income": 245000, "verified_income": "Verified", "debt_to_income": 0.1673632653061224, "total_credit_limit": 495163, "total_credit_utilized": 41004, "num_cc_carrying_balance": 6, "loan_purpose": "credit_card", "loan_amount": 35000, "grade": "B", "interest_rate": 11.98, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 245000}, {"state": "TX", "emp_length": 0.0, "term": 36, "homeownership": "mortgage", "annual_income": 50000, "verified_income": "Source Verified", "debt_to_income": 0.6396770833333333, "total_credit_limit": 203326, "total_credit_utilized": 122818, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 40000, "grade": "C", "interest_rate": 12.62, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 192000}, {"state": "VA", "emp_length": 0.0, "term": 36, "homeownership": "rent", "annual_income": 116000, "verified_income": "Source Verified", "debt_to_income": 0.584396551724138, "total_credit_limit": 446850, "total_credit_utilized": 67790, "num_cc_carrying_balance": 7, "loan_purpose": "debt_consolidation", "loan_amount": 13125, "grade": "B", "interest_rate": 10.91, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 116000}, {"state": "NV", "emp_length": 5.0, "term": 36, "homeownership": "mortgage", "annual_income": 30000, "verified_income": "Not Verified", "debt_to_income": 0.5120089285714285, "total_credit_limit": 190832, "total_credit_utilized": 57345, "num_cc_carrying_balance": 6, "loan_purpose": "home_improvement", "loan_amount": 32000, "grade": "B", "interest_rate": 9.44, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 112000}, {"state": "MA", "emp_length": 4.0, "term": 60, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Not Verified", "debt_to_income": 0.2445412844036697, "total_credit_limit": 432092, "total_credit_utilized": 53310, "num_cc_carrying_balance": 5, "loan_purpose": "debt_consolidation", "loan_amount": 18000, "grade": "B", "interest_rate": 9.93, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 218000}, {"state": "CA", "emp_length": 7.0, "term": 36, "homeownership": "rent", "annual_income": 103000, "verified_income": "Source Verified", "debt_to_income": 0.2658349514563107, "total_credit_limit": 124900, "total_credit_utilized": 27381, "num_cc_carrying_balance": 5, "loan_purpose": "other", "loan_amount": 30000, "grade": "A", "interest_rate": 7.35, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 103000}, {"state": "IL", "emp_length": 5.0, "term": 36, "homeownership": "rent", "annual_income": 58000, "verified_income": "Not Verified", "debt_to_income": 4.777258620689655, "total_credit_limit": 236668, "total_credit_utilized": 277081, "num_cc_carrying_balance": 5, "loan_purpose": "credit_card", "loan_amount": 4400, "grade": "D", "interest_rate": 18.45, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 58000}, {"state": "AZ", "emp_length": 0.0, "term": 36, "homeownership": "own", "annual_income": 55000, "verified_income": "Source Verified", "debt_to_income": 0.2990909090909091, "total_credit_limit": 35900, "total_credit_utilized": 16450, "num_cc_carrying_balance": 12, "loan_purpose": "debt_consolidation", "loan_amount": 7000, "grade": "D", "interest_rate": 17.09, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 55000}, {"state": "MN", "emp_length": null, "term": 36, "homeownership": "mortgage", "annual_income": 65000, "verified_income": "Not Verified", "debt_to_income": 0.7522461538461539, "total_credit_limit": 174860, "total_credit_utilized": 48896, "num_cc_carrying_balance": 4, "loan_purpose": "credit_card", "loan_amount": 25000, "grade": "A", "interest_rate": 7.96, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 65000}, {"state": "IL", "emp_length": 2.0, "term": 36, "homeownership": "rent", "annual_income": 32000, "verified_income": "Source Verified", "debt_to_income": 0.72128125, "total_credit_limit": 45594, "total_credit_utilized": 23081, "num_cc_carrying_balance": 4, "loan_purpose": "renewable_energy", "loan_amount": 6500, "grade": "A", "interest_rate": 6.08, "public_record_bankrupt": 1, "loan_status": "Current", "has_second_income": false, "total_income": 32000}, {"state": "MD", "emp_length": 5.0, "term": 36, "homeownership": "mortgage", "annual_income": 325000, "verified_income": "Source Verified", "debt_to_income": 0.3077507692307692, "total_credit_limit": 793009, "total_credit_utilized": 100019, "num_cc_carrying_balance": 11, "loan_purpose": "credit_card", "loan_amount": 35000, "grade": "A", "interest_rate": 6.71, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 325000}, {"state": "MD", "emp_length": 3.0, "term": 36, "homeownership": "rent", "annual_income": 70000, "verified_income": "Source Verified", "debt_to_income": 5.333728571428572, "total_credit_limit": 272878, "total_credit_utilized": 373361, "num_cc_carrying_balance": 2, "loan_purpose": "other", "loan_amount": 7500, "grade": "A", "interest_rate": 7.34, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 70000}, {"state": "CA", "emp_length": 10.0, "term": 60, "homeownership": "mortgage", "annual_income": 160000, "verified_income": "Verified", "debt_to_income": 0.3344, "total_credit_limit": 581604, "total_credit_utilized": 53504, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 38500, "grade": "C", "interest_rate": 12.62, "public_record_bankrupt": 1, "loan_status": "Current", "has_second_income": false, "total_income": 160000}, {"state": "NJ", "emp_length": 6.0, "term": 36, "homeownership": "rent", "annual_income": 50000, "verified_income": "Source Verified", "debt_to_income": 1.25744, "total_credit_limit": 90398, "total_credit_utilized": 62872, "num_cc_carrying_balance": 5, "loan_purpose": "credit_card", "loan_amount": 15000, "grade": "C", "interest_rate": 16.02, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 50000}, {"state": "IL", "emp_length": 10.0, "term": 60, "homeownership": "rent", "annual_income": 71000, "verified_income": "Not Verified", "debt_to_income": 0.7425211267605634, "total_credit_limit": 115970, "total_credit_utilized": 52719, "num_cc_carrying_balance": 8, "loan_purpose": "car", "loan_amount": 24000, "grade": "B", "interest_rate": 10.9, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 71000}, {"state": "MI", "emp_length": 0.0, "term": 36, "homeownership": "mortgage", "annual_income": 85000, "verified_income": "Not Verified", "debt_to_income": 0.818764705882353, "total_credit_limit": 131847, "total_credit_utilized": 69595, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 24000, "grade": "B", "interest_rate": 9.93, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 85000}, {"state": "CA", "emp_length": 5.0, "term": 36, "homeownership": "mortgage", "annual_income": 87000, "verified_income": "Source Verified", "debt_to_income": 0.0547241379310344, "total_credit_limit": 294946, "total_credit_utilized": 4761, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 12800, "grade": "B", "interest_rate": 9.44, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 87000}, {"state": "TX", "emp_length": 10.0, "term": 36, "homeownership": "mortgage", "annual_income": 60000, "verified_income": "Not Verified", "debt_to_income": 0.7311833333333333, "total_credit_limit": 64017, "total_credit_utilized": 43871, "num_cc_carrying_balance": 5, "loan_purpose": "home_improvement", "loan_amount": 6000, "grade": "B", "interest_rate": 10.42, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 60000}, {"state": "NV", "emp_length": 0.0, "term": 36, "homeownership": "mortgage", "annual_income": 58500, "verified_income": "Verified", "debt_to_income": 0.3968205128205128, "total_credit_limit": 49234, "total_credit_utilized": 23214, "num_cc_carrying_balance": 2, "loan_purpose": "debt_consolidation", "loan_amount": 30000, "grade": "D", "interest_rate": 21.45, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 58500}, {"state": "NH", "emp_length": 2.0, "term": 36, "homeownership": "rent", "annual_income": 50000, "verified_income": "Source Verified", "debt_to_income": 0.50262, "total_credit_limit": 39814, "total_credit_utilized": 25131, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 5825, "grade": "B", "interest_rate": 10.91, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 50000}, {"state": "IL", "emp_length": 2.0, "term": 36, "homeownership": "own", "annual_income": 103000, "verified_income": "Not Verified", "debt_to_income": 0.9735922330097088, "total_credit_limit": 150027, "total_credit_utilized": 100280, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 20000, "grade": "B", "interest_rate": 9.43, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 103000}, {"state": "TX", "emp_length": 9.0, "term": 36, "homeownership": "mortgage", "annual_income": 77500, "verified_income": "Verified", "debt_to_income": 0.6778580645161291, "total_credit_limit": 390156, "total_credit_utilized": 52534, "num_cc_carrying_balance": 2, "loan_purpose": "other", "loan_amount": 15000, "grade": "A", "interest_rate": 6.08, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 77500}]}}, {"mode": "vega-lite"});
-</script>
-</div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#executable-code">Executable Code</a></p>
-</div>
-</section>
-<section id="latex-equations" class="slide level2">
-<h2>LaTeX Equations</h2>
-<p><a href="https://www.mathjax.org/">MathJax</a> rendering of equations to HTML</p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">\begin</span>{<span class="ex">gather*</span>}</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="ss">a_1=b_1+c_1</span><span class="sc">\\</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="ss">a_2=b_2+c_2-d_2+e_2</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="kw">\end</span>{<span class="ex">gather*</span>}</span>
-<span id="cb4-5"><a href="#cb4-5"></a></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="ss">a_{11}&amp; =b_{11}&amp;</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="ss">  a_{12}&amp; =b_{12}</span><span class="sc">\\</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="ss">a_{21}&amp; =b_{21}&amp;</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="ss">  a_{22}&amp; =b_{22}+c_{22}</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:60%;">
-<span class="math display">\[\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*}\]</span>
-<span class="math display">\[\begin{align}
-a_{11}&amp; =b_{11}&amp;
-  a_{12}&amp; =b_{12}\\
-a_{21}&amp; =b_{21}&amp;
-  a_{22}&amp; =b_{22}+c_{22}
-\end{align}\]</span>
-</div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">LaTeX Equations</a></p>
-</div>
-</section>
-<section id="column-layout" class="slide level2 smaller">
-<h2>Column Layout</h2>
-<p>Arrange content into columns of varying widths:</p>
-<div class="columns">
-<div class="column" style="width:35%;">
-<h4 id="this-is-a-text">This is a text</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
-</div><div class="column" style="width:3%;">
-
-</div><div class="column" style="width:62%;">
-<div class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>   emp_length homeownership
-0         3.0          rent
-2         NaN      mortgage</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#multiple-columns">Multiple Columns</a></p>
-</div>
-</section>
-<section id="incremental-lists" class="slide level2">
-<h2>Incremental Lists</h2>
-<p>Lists can optionally be displayed incrementally:</p>
-<div>
-<ul>
-<li class="fragment">First item</li>
-<li class="fragment">Second item</li>
-<li class="fragment">Third item</li>
-</ul>
-</div>
-<div class="fragment">
-<p><br> Insert pauses to make other types of content display incrementally.</p>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#incremental-lists">Incremental Lists</a></p>
-</div>
-</div>
-</section>
-<section id="fragments" class="slide level2">
-<h2>Fragments</h2>
-<p>Incremental text display and animation with fragments:</p>
-<p><br></p>
-<div class="fragment fade-in">
-<p>Fade in</p>
-</div>
-<div class="fragment fade-up">
-<p>Slide up while fading in</p>
-</div>
-<div class="fragment fade-left">
-<p>Slide left while fading in</p>
-</div>
-<div class="fragment fade-in-then-semi-out">
-<p>Fade in then semi out</p>
-</div>
-<div class="fragment">
-<div class="fragment strike">
-<p>Strike</p>
-</div>
-<div class="fragment highlight-red">
-<p>Highlight red</p>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#fragments">Fragments</a></p>
-</div>
-</div>
-</section>
-<section id="slide-backgrounds" class="slide level2" data-background="#43464B">
-<h2>Slide Backgrounds</h2>
-<p>Set the <code>background</code> attribute on a slide to change the background color (all CSS color formats are supported).</p>
-<p>Different background transitions are available via the <code>background-transition</code> option.</p>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#color-backgrounds">Slide Backgrounds</a></p>
-</div>
-</section>
-<section id="media-backgrounds" class="slide level2" data-background="#43464B" data-background-image="images/milky-way.jpeg">
-<h2>Media Backgrounds</h2>
-<p>You can also use the following as a slide background:</p>
-<ul>
-<li><p>An image: <code>background-image</code></p></li>
-<li><p>A video: <code>background-video</code></p></li>
-<li><p>An iframe: <code>background-iframe</code></p></li>
-</ul>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#image-backgrounds">Media Backgrounds</a></p>
-</div>
-</section>
-<section id="absolute-position" class="slide level2">
-<h2>Absolute Position</h2>
-<p>Position images or other elements at precise locations</p>
-<p><img data-src="images/lec-1/jupyter-edit.png" class="absolute" style="top: 170px; left: 30px; width: 400px; height: 400px; "></p>
-<p><img data-src="images/lec-1/jupyter-preview.png" class="absolute fragment" style="top: 150px; right: 80px; width: 450px; "></p>
-<p><img data-src="images/lec-1/moon.png" class="absolute fragment" style="bottom: 110px; right: 130px; width: 300px; "></p>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position">Absolute Position</a></p>
-</div>
-</section>
-<section id="auto-animate" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title">Auto-Animate</h2>
-<p>Automatically animate matching elements across slides with Auto-Animate.</p>
-<div class="r-hstack">
-<div data-id="box1" data-auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;">
-
-</div>
-<div data-id="box2" data-auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;">
-
-</div>
-<div data-id="box3" data-auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;">
-
-</div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#auto-animate">Auto-Animate</a></p>
-</div>
-</section>
-<section id="auto-animate-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title">Auto-Animate</h2>
-<p>Automatically animate matching elements across slides with Auto-Animate.</p>
-<div class="r-stack">
-<div data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;">
-
-</div>
-<div data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;">
-
-</div>
-<div data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;">
-
-</div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#auto-animate">Auto-Animate</a></p>
-</div>
-</section>
-<section id="slide-transitions" class="slide level2 smaller">
-<h2>Slide Transitions</h2>
-<p>The next few slides will transition using the <code>slide</code> transition</p>
-<table>
-<colgroup>
-<col style="width: 14%">
-<col style="width: 85%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Transition</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>none</code></td>
-<td>No transition (default, switch instantly)</td>
-</tr>
-<tr class="even">
-<td><code>fade</code></td>
-<td>Cross fade</td>
-</tr>
-<tr class="odd">
-<td><code>slide</code></td>
-<td>Slide horizontally</td>
-</tr>
-<tr class="even">
-<td><code>convex</code></td>
-<td>Slide at a convex angle</td>
-</tr>
-<tr class="odd">
-<td><code>concave</code></td>
-<td>Slide at a concave angle</td>
-</tr>
-<tr class="even">
-<td><code>zoom</code></td>
-<td>Scale the incoming slide so it grows in from the center of the screen.</td>
-</tr>
-</tbody>
-</table>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions">Slide Transitions</a></p>
-</div>
-</section>
-<section id="tabsets" class="slide level2 smaller scrollable" data-transition="slide">
-<h2>Tabsets</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Plot</a></li><li><a href="#tabset-1-2">Data</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display" data-execution_count="3">
-
-<div id="altair-viz-1fca195874284e239d3a9cc6f2dcffd2"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-1fca195874284e239d3a9cc6f2dcffd2") {
-      outputDiv = document.getElementById("altair-viz-1fca195874284e239d3a9cc6f2dcffd2");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-da268e6db2ac06384179953344dc16fb"}, "mark": "bar", "encoding": {"x": {"field": "homeownership", "sort": "-y", "type": "nominal"}, "y": {"aggregate": "count", "field": "homeownership", "type": "nominal"}}, "height": 150, "title": "This is a simple bar chart", "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-da268e6db2ac06384179953344dc16fb": [{"state": "NJ", "emp_length": 3.0, "term": 60, "homeownership": "rent", "annual_income": 59000, "verified_income": "Not Verified", "debt_to_income": 0.5575254237288135, "total_credit_limit": 95131, "total_credit_utilized": 32894, "num_cc_carrying_balance": 8, "loan_purpose": "debt_consolidation", "loan_amount": 22000, "grade": "B", "interest_rate": 10.9, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 59000}, {"state": "CA", "emp_length": 10.0, "term": 36, "homeownership": "rent", "annual_income": 60000, "verified_income": "Not Verified", "debt_to_income": 1.3056833333333333, "total_credit_limit": 51929, "total_credit_utilized": 78341, "num_cc_carrying_balance": 2, "loan_purpose": "credit_card", "loan_amount": 6000, "grade": "B", "interest_rate": 9.92, "public_record_bankrupt": 1, "loan_status": "Current", "has_second_income": false, "total_income": 60000}, {"state": "SC", "emp_length": null, "term": 36, "homeownership": "mortgage", "annual_income": 75000, "verified_income": "Verified", "debt_to_income": 1.05628, "total_credit_limit": 301373, "total_credit_utilized": 79221, "num_cc_carrying_balance": 14, "loan_purpose": "debt_consolidation", "loan_amount": 25000, "grade": "E", "interest_rate": 26.3, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 75000}, {"state": "CA", "emp_length": 0.0, "term": 36, "homeownership": "rent", "annual_income": 75000, "verified_income": "Not Verified", "debt_to_income": 0.5743466666666667, "total_credit_limit": 59890, "total_credit_utilized": 43076, "num_cc_carrying_balance": 10, "loan_purpose": "credit_card", "loan_amount": 6000, "grade": "B", "interest_rate": 9.92, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 75000}, {"state": "OH", "emp_length": 4.0, "term": 60, "homeownership": "mortgage", "annual_income": 254000, "verified_income": "Not Verified", "debt_to_income": 0.2381496062992125, "total_credit_limit": 422619, "total_credit_utilized": 60490, "num_cc_carrying_balance": 2, "loan_purpose": "home_improvement", "loan_amount": 25000, "grade": "B", "interest_rate": 9.43, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 254000}, {"state": "IN", "emp_length": 6.0, "term": 36, "homeownership": "mortgage", "annual_income": 67000, "verified_income": "Source Verified", "debt_to_income": 1.077044776119403, "total_credit_limit": 349825, "total_credit_utilized": 72162, "num_cc_carrying_balance": 4, "loan_purpose": "home_improvement", "loan_amount": 6400, "grade": "B", "interest_rate": 9.92, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 67000}, {"state": "NY", "emp_length": 2.0, "term": 36, "homeownership": "rent", "annual_income": 28800, "verified_income": "Source Verified", "debt_to_income": 0.0997222222222222, "total_credit_limit": 15980, "total_credit_utilized": 2872, "num_cc_carrying_balance": 1, "loan_purpose": "debt_consolidation", "loan_amount": 3000, "grade": "D", "interest_rate": 17.09, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 28800}, {"state": "MO", "emp_length": 10.0, "term": 36, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Not Verified", "debt_to_income": 0.3509125, "total_credit_limit": 258439, "total_credit_utilized": 28073, "num_cc_carrying_balance": 3, "loan_purpose": "credit_card", "loan_amount": 14500, "grade": "A", "interest_rate": 6.08, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 80000}, {"state": "FL", "emp_length": 6.0, "term": 60, "homeownership": "rent", "annual_income": 34000, "verified_income": "Not Verified", "debt_to_income": 0.6975, "total_credit_limit": 87705, "total_credit_utilized": 23715, "num_cc_carrying_balance": 10, "loan_purpose": "credit_card", "loan_amount": 10000, "grade": "A", "interest_rate": 7.97, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 34000}, {"state": "FL", "emp_length": 3.0, "term": 60, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Source Verified", "debt_to_income": 0.1668541666666666, "total_credit_limit": 330394, "total_credit_utilized": 32036, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 18500, "grade": "C", "interest_rate": 12.62, "public_record_bankrupt": 1, "loan_status": "Current", "has_second_income": true, "total_income": 192000}, {"state": "MD", "emp_length": 8.0, "term": 36, "homeownership": "rent", "annual_income": 73000, "verified_income": "Source Verified", "debt_to_income": 0.4143287671232876, "total_credit_limit": 36182, "total_credit_utilized": 30246, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 17000, "grade": "D", "interest_rate": 17.09, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 73000}, {"state": "HI", "emp_length": 10.0, "term": 36, "homeownership": "mortgage", "annual_income": 120000, "verified_income": "Not Verified", "debt_to_income": 0.7989083333333333, "total_credit_limit": 452712, "total_credit_utilized": 95869, "num_cc_carrying_balance": 4, "loan_purpose": "credit_card", "loan_amount": 12000, "grade": "A", "interest_rate": 5.31, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 120000}, {"state": "CT", "emp_length": 10.0, "term": 36, "homeownership": "rent", "annual_income": 100000, "verified_income": "Source Verified", "debt_to_income": 0.27809, "total_credit_limit": 74805, "total_credit_utilized": 27809, "num_cc_carrying_balance": 3, "loan_purpose": "credit_card", "loan_amount": 16000, "grade": "A", "interest_rate": 7.35, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 100000}, {"state": "NE", "emp_length": 2.0, "term": 36, "homeownership": "mortgage", "annual_income": 105000, "verified_income": "Not Verified", "debt_to_income": 0.2681904761904762, "total_credit_limit": 279386, "total_credit_utilized": 28160, "num_cc_carrying_balance": 2, "loan_purpose": "home_improvement", "loan_amount": 16500, "grade": "A", "interest_rate": 5.31, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 105000}, {"state": "CA", "emp_length": 5.0, "term": 36, "homeownership": "rent", "annual_income": 34000, "verified_income": "Not Verified", "debt_to_income": 0.6292941176470588, "total_credit_limit": 33038, "total_credit_utilized": 21396, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 3000, "grade": "A", "interest_rate": 7.96, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 34000}, {"state": "TX", "emp_length": 2.0, "term": 60, "homeownership": "mortgage", "annual_income": 98000, "verified_income": "Verified", "debt_to_income": 1.1071020408163266, "total_credit_limit": 319551, "total_credit_utilized": 108496, "num_cc_carrying_balance": 6, "loan_purpose": "credit_card", "loan_amount": 29400, "grade": "E", "interest_rate": 24.85, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 98000}, {"state": "HI", "emp_length": 5.0, "term": 60, "homeownership": "rent", "annual_income": 68700, "verified_income": "Source Verified", "debt_to_income": 1.4995487627365356, "total_credit_limit": 119325, "total_credit_utilized": 103019, "num_cc_carrying_balance": 5, "loan_purpose": "debt_consolidation", "loan_amount": 13500, "grade": "D", "interest_rate": 18.06, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 68700}, {"state": "CA", "emp_length": 3.0, "term": 60, "homeownership": "rent", "annual_income": 43000, "verified_income": "Source Verified", "debt_to_income": 0.1546527777777777, "total_credit_limit": 60693, "total_credit_utilized": 22270, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 18200, "grade": "B", "interest_rate": 10.42, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 144000}, {"state": "CA", "emp_length": 3.0, "term": 36, "homeownership": "rent", "annual_income": 100000, "verified_income": "Source Verified", "debt_to_income": 0.13823, "total_credit_limit": 69100, "total_credit_utilized": 13823, "num_cc_carrying_balance": 5, "loan_purpose": "other", "loan_amount": 6000, "grade": "A", "interest_rate": 7.96, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 100000}, {"state": "FL", "emp_length": 10.0, "term": 60, "homeownership": "mortgage", "annual_income": 76000, "verified_income": "Source Verified", "debt_to_income": 0.5898157894736842, "total_credit_limit": 249700, "total_credit_utilized": 44826, "num_cc_carrying_balance": 10, "loan_purpose": "debt_consolidation", "loan_amount": 18000, "grade": "D", "interest_rate": 19.42, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 76000}, {"state": "MS", "emp_length": 10.0, "term": 36, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Verified", "debt_to_income": 0.7373059317634845, "total_credit_limit": 136046, "total_credit_utilized": 124994, "num_cc_carrying_balance": 1, "loan_purpose": "car", "loan_amount": 5000, "grade": "C", "interest_rate": 14.08, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 169528}, {"state": "WI", "emp_length": 10.0, "term": 60, "homeownership": "mortgage", "annual_income": 50000, "verified_income": "Verified", "debt_to_income": 0.5234166666666666, "total_credit_limit": 375828, "total_credit_utilized": 87934, "num_cc_carrying_balance": 11, "loan_purpose": "debt_consolidation", "loan_amount": 40000, "grade": "D", "interest_rate": 20.0, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": true, "total_income": 168000}, {"state": "WV", "emp_length": 0.0, "term": 36, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Not Verified", "debt_to_income": 0.7045375, "total_credit_limit": 197299, "total_credit_utilized": 56363, "num_cc_carrying_balance": 6, "loan_purpose": "debt_consolidation", "loan_amount": 4500, "grade": "B", "interest_rate": 9.44, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 80000}, {"state": "CA", "emp_length": 1.0, "term": 36, "homeownership": "rent", "annual_income": 185000, "verified_income": "Not Verified", "debt_to_income": 0.2546756756756757, "total_credit_limit": 102500, "total_credit_utilized": 47115, "num_cc_carrying_balance": 2, "loan_purpose": "credit_card", "loan_amount": 15000, "grade": "B", "interest_rate": 9.92, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 185000}, {"state": "NJ", "emp_length": 5.0, "term": 60, "homeownership": "mortgage", "annual_income": 42000, "verified_income": "Source Verified", "debt_to_income": 0.0866666666666666, "total_credit_limit": 64800, "total_credit_utilized": 3640, "num_cc_carrying_balance": 5, "loan_purpose": "house", "loan_amount": 20000, "grade": "B", "interest_rate": 10.91, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 42000}, {"state": "MA", "emp_length": 2.0, "term": 36, "homeownership": "rent", "annual_income": 100000, "verified_income": "Verified", "debt_to_income": 0.3281962962962963, "total_credit_limit": 144700, "total_credit_utilized": 88613, "num_cc_carrying_balance": 4, "loan_purpose": "small_business", "loan_amount": 20000, "grade": "A", "interest_rate": 5.32, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 270000}, {"state": "TX", "emp_length": 5.0, "term": 36, "homeownership": "mortgage", "annual_income": 65000, "verified_income": "Not Verified", "debt_to_income": 0.2427384615384615, "total_credit_limit": 256974, "total_credit_utilized": 15778, "num_cc_carrying_balance": 7, "loan_purpose": "debt_consolidation", "loan_amount": 10000, "grade": "A", "interest_rate": 6.71, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 65000}, {"state": "IN", "emp_length": 5.0, "term": 36, "homeownership": "own", "annual_income": 45000, "verified_income": "Not Verified", "debt_to_income": 0.1573111111111111, "total_credit_limit": 121323, "total_credit_utilized": 7079, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 9000, "grade": "C", "interest_rate": 15.04, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 45000}, {"state": "RI", "emp_length": 10.0, "term": 60, "homeownership": "mortgage", "annual_income": 245000, "verified_income": "Verified", "debt_to_income": 0.1673632653061224, "total_credit_limit": 495163, "total_credit_utilized": 41004, "num_cc_carrying_balance": 6, "loan_purpose": "credit_card", "loan_amount": 35000, "grade": "B", "interest_rate": 11.98, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 245000}, {"state": "TX", "emp_length": 0.0, "term": 36, "homeownership": "mortgage", "annual_income": 50000, "verified_income": "Source Verified", "debt_to_income": 0.6396770833333333, "total_credit_limit": 203326, "total_credit_utilized": 122818, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 40000, "grade": "C", "interest_rate": 12.62, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 192000}, {"state": "VA", "emp_length": 0.0, "term": 36, "homeownership": "rent", "annual_income": 116000, "verified_income": "Source Verified", "debt_to_income": 0.584396551724138, "total_credit_limit": 446850, "total_credit_utilized": 67790, "num_cc_carrying_balance": 7, "loan_purpose": "debt_consolidation", "loan_amount": 13125, "grade": "B", "interest_rate": 10.91, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 116000}, {"state": "NV", "emp_length": 5.0, "term": 36, "homeownership": "mortgage", "annual_income": 30000, "verified_income": "Not Verified", "debt_to_income": 0.5120089285714285, "total_credit_limit": 190832, "total_credit_utilized": 57345, "num_cc_carrying_balance": 6, "loan_purpose": "home_improvement", "loan_amount": 32000, "grade": "B", "interest_rate": 9.44, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 112000}, {"state": "MA", "emp_length": 4.0, "term": 60, "homeownership": "mortgage", "annual_income": 80000, "verified_income": "Not Verified", "debt_to_income": 0.2445412844036697, "total_credit_limit": 432092, "total_credit_utilized": 53310, "num_cc_carrying_balance": 5, "loan_purpose": "debt_consolidation", "loan_amount": 18000, "grade": "B", "interest_rate": 9.93, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": true, "total_income": 218000}, {"state": "CA", "emp_length": 7.0, "term": 36, "homeownership": "rent", "annual_income": 103000, "verified_income": "Source Verified", "debt_to_income": 0.2658349514563107, "total_credit_limit": 124900, "total_credit_utilized": 27381, "num_cc_carrying_balance": 5, "loan_purpose": "other", "loan_amount": 30000, "grade": "A", "interest_rate": 7.35, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 103000}, {"state": "IL", "emp_length": 5.0, "term": 36, "homeownership": "rent", "annual_income": 58000, "verified_income": "Not Verified", "debt_to_income": 4.777258620689655, "total_credit_limit": 236668, "total_credit_utilized": 277081, "num_cc_carrying_balance": 5, "loan_purpose": "credit_card", "loan_amount": 4400, "grade": "D", "interest_rate": 18.45, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 58000}, {"state": "AZ", "emp_length": 0.0, "term": 36, "homeownership": "own", "annual_income": 55000, "verified_income": "Source Verified", "debt_to_income": 0.2990909090909091, "total_credit_limit": 35900, "total_credit_utilized": 16450, "num_cc_carrying_balance": 12, "loan_purpose": "debt_consolidation", "loan_amount": 7000, "grade": "D", "interest_rate": 17.09, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 55000}, {"state": "MN", "emp_length": null, "term": 36, "homeownership": "mortgage", "annual_income": 65000, "verified_income": "Not Verified", "debt_to_income": 0.7522461538461539, "total_credit_limit": 174860, "total_credit_utilized": 48896, "num_cc_carrying_balance": 4, "loan_purpose": "credit_card", "loan_amount": 25000, "grade": "A", "interest_rate": 7.96, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 65000}, {"state": "IL", "emp_length": 2.0, "term": 36, "homeownership": "rent", "annual_income": 32000, "verified_income": "Source Verified", "debt_to_income": 0.72128125, "total_credit_limit": 45594, "total_credit_utilized": 23081, "num_cc_carrying_balance": 4, "loan_purpose": "renewable_energy", "loan_amount": 6500, "grade": "A", "interest_rate": 6.08, "public_record_bankrupt": 1, "loan_status": "Current", "has_second_income": false, "total_income": 32000}, {"state": "MD", "emp_length": 5.0, "term": 36, "homeownership": "mortgage", "annual_income": 325000, "verified_income": "Source Verified", "debt_to_income": 0.3077507692307692, "total_credit_limit": 793009, "total_credit_utilized": 100019, "num_cc_carrying_balance": 11, "loan_purpose": "credit_card", "loan_amount": 35000, "grade": "A", "interest_rate": 6.71, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 325000}, {"state": "MD", "emp_length": 3.0, "term": 36, "homeownership": "rent", "annual_income": 70000, "verified_income": "Source Verified", "debt_to_income": 5.333728571428572, "total_credit_limit": 272878, "total_credit_utilized": 373361, "num_cc_carrying_balance": 2, "loan_purpose": "other", "loan_amount": 7500, "grade": "A", "interest_rate": 7.34, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 70000}, {"state": "CA", "emp_length": 10.0, "term": 60, "homeownership": "mortgage", "annual_income": 160000, "verified_income": "Verified", "debt_to_income": 0.3344, "total_credit_limit": 581604, "total_credit_utilized": 53504, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 38500, "grade": "C", "interest_rate": 12.62, "public_record_bankrupt": 1, "loan_status": "Current", "has_second_income": false, "total_income": 160000}, {"state": "NJ", "emp_length": 6.0, "term": 36, "homeownership": "rent", "annual_income": 50000, "verified_income": "Source Verified", "debt_to_income": 1.25744, "total_credit_limit": 90398, "total_credit_utilized": 62872, "num_cc_carrying_balance": 5, "loan_purpose": "credit_card", "loan_amount": 15000, "grade": "C", "interest_rate": 16.02, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 50000}, {"state": "IL", "emp_length": 10.0, "term": 60, "homeownership": "rent", "annual_income": 71000, "verified_income": "Not Verified", "debt_to_income": 0.7425211267605634, "total_credit_limit": 115970, "total_credit_utilized": 52719, "num_cc_carrying_balance": 8, "loan_purpose": "car", "loan_amount": 24000, "grade": "B", "interest_rate": 10.9, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 71000}, {"state": "MI", "emp_length": 0.0, "term": 36, "homeownership": "mortgage", "annual_income": 85000, "verified_income": "Not Verified", "debt_to_income": 0.818764705882353, "total_credit_limit": 131847, "total_credit_utilized": 69595, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 24000, "grade": "B", "interest_rate": 9.93, "public_record_bankrupt": 0, "loan_status": "Fully Paid", "has_second_income": false, "total_income": 85000}, {"state": "CA", "emp_length": 5.0, "term": 36, "homeownership": "mortgage", "annual_income": 87000, "verified_income": "Source Verified", "debt_to_income": 0.0547241379310344, "total_credit_limit": 294946, "total_credit_utilized": 4761, "num_cc_carrying_balance": 3, "loan_purpose": "debt_consolidation", "loan_amount": 12800, "grade": "B", "interest_rate": 9.44, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 87000}, {"state": "TX", "emp_length": 10.0, "term": 36, "homeownership": "mortgage", "annual_income": 60000, "verified_income": "Not Verified", "debt_to_income": 0.7311833333333333, "total_credit_limit": 64017, "total_credit_utilized": 43871, "num_cc_carrying_balance": 5, "loan_purpose": "home_improvement", "loan_amount": 6000, "grade": "B", "interest_rate": 10.42, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 60000}, {"state": "NV", "emp_length": 0.0, "term": 36, "homeownership": "mortgage", "annual_income": 58500, "verified_income": "Verified", "debt_to_income": 0.3968205128205128, "total_credit_limit": 49234, "total_credit_utilized": 23214, "num_cc_carrying_balance": 2, "loan_purpose": "debt_consolidation", "loan_amount": 30000, "grade": "D", "interest_rate": 21.45, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 58500}, {"state": "NH", "emp_length": 2.0, "term": 36, "homeownership": "rent", "annual_income": 50000, "verified_income": "Source Verified", "debt_to_income": 0.50262, "total_credit_limit": 39814, "total_credit_utilized": 25131, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 5825, "grade": "B", "interest_rate": 10.91, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 50000}, {"state": "IL", "emp_length": 2.0, "term": 36, "homeownership": "own", "annual_income": 103000, "verified_income": "Not Verified", "debt_to_income": 0.9735922330097088, "total_credit_limit": 150027, "total_credit_utilized": 100280, "num_cc_carrying_balance": 4, "loan_purpose": "debt_consolidation", "loan_amount": 20000, "grade": "B", "interest_rate": 9.43, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 103000}, {"state": "TX", "emp_length": 9.0, "term": 36, "homeownership": "mortgage", "annual_income": 77500, "verified_income": "Verified", "debt_to_income": 0.6778580645161291, "total_credit_limit": 390156, "total_credit_utilized": 52534, "num_cc_carrying_balance": 2, "loan_purpose": "other", "loan_amount": 15000, "grade": "A", "interest_rate": 6.08, "public_record_bankrupt": 0, "loan_status": "Current", "has_second_income": false, "total_income": 77500}]}}, {"mode": "vega-lite"});
-</script>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="cell" data-execution_count="4">
-<div class="cell-output cell-output-stdout">
-<pre><code>  state  emp_length  term homeownership  annual_income verified_income  \
-0    NJ         3.0    60          rent          59000    Not Verified   
-1    CA        10.0    36          rent          60000    Not Verified   
-2    SC         NaN    36      mortgage          75000        Verified   
-3    CA         0.0    36          rent          75000    Not Verified   
-4    OH         4.0    60      mortgage         254000    Not Verified   
-
-   debt_to_income  total_credit_limit  total_credit_utilized  \
-0        0.557525               95131                  32894   
-1        1.305683               51929                  78341   
-2        1.056280              301373                  79221   
-3        0.574347               59890                  43076   
-4        0.238150              422619                  60490   
-
-   num_cc_carrying_balance        loan_purpose  loan_amount grade  \
-0                        8  debt_consolidation        22000     B   
-1                        2         credit_card         6000     B   
-2                       14  debt_consolidation        25000     E   
-3                       10         credit_card         6000     B   
-4                        2    home_improvement        25000     B   
-
-   interest_rate  public_record_bankrupt loan_status  has_second_income  \
-0          10.90                       0     Current              False   
-1           9.92                       1     Current              False   
-2          26.30                       0     Current              False   
-3           9.92                       0     Current              False   
-4           9.43                       0     Current              False   
-
-   total_income  
-0         59000  
-1         60000  
-2         75000  
-3         75000  
-4        254000  </code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#tabsets">Tabsets</a></p>
-</div>
-</section>
-<section id="interactive-slides" class="slide level2 smaller" data-transition="slide">
-<h2>Interactive Slides</h2>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/interactive/widgets/jupyter.html">Jupyter widgets</a>, <a href="https://quarto.org/docs/interactive/widgets/htmlwidgets.html">htmlwidgets</a></p>
-</div>
-</section>
-<section id="preview-links" class="slide level2">
-<h2>Preview Links</h2>
-<p>Navigate to hyperlinks without disrupting the flow of your presentation.</p>
-<p>Use the <code>preview-links</code> option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:</p>
-<div style="text-align: center; margin-top: 1em">
-<p><a href="https://matplotlib.org/" data-preview-link="true" style="text-align: center">Matplotlib: Visualization with Python</a></p>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links">Preview Links</a></p>
-</div>
-</section>
-<section id="themes" class="slide level2">
-<h2>Themes</h2>
-<p>10 Built-in Themes (or <a href="https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes">create your own</a>)</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="images/lec-1/moon.png"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="images/lec-1/sky.png"></p>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/themes.html">Themes</a></p>
-</div>
-</section>
-<section id="easy-navigation" class="slide level2">
-<h2>Easy Navigation</h2>
-<div style="margin-bottom: 0.9em;">
-<p>Quickly jump to other parts of your presentation</p>
-</div>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 4.8%;justify-content: center;">
-<p><img data-src="images/lec-1/presentation-menu.png" width="41"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 95.2%;justify-content: center;">
-<p>Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.</p>
-</div>
-</div>
-</div>
-<p>You can also press <code>m</code> to toggle the menu open and closed.</p>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#navigation-menu">Navigation</a></p>
-</div>
-</section>
-<section id="chalkboard" class="slide level2" data-chalkboard-buttons="true">
-<h2>Chalkboard</h2>
-<div style="margin-bottom: 0.9em;">
-<p>Free form drawing and slide annotations</p>
-</div>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 4.8%;justify-content: center;">
-<p><img data-src="images/lec-1/presentation-chalkboard.png" width="41"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 95.2%;justify-content: center;">
-<p>Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.</p>
-</div>
-</div>
-</div>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 4.8%;justify-content: center;">
-<p><img data-src="images/lec-1/presentation-notes-canvas.png" width="41"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 95.2%;justify-content: center;">
-<p>Use the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.</p>
-</div>
-</div>
-</div>
-<p>You can also press <code>b</code> to toggle the chalkboard or <code>c</code> to toggle the notes canvas.</p>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard">Chalkboard</a></p>
-</div>
-</section>
-<section id="point-of-view" class="slide level2">
-<h2>Point of View</h2>
-<p>Press <code>o</code> to toggle overview mode:</p>
-
-<img data-src="images/lec-1/overview-mode.png" class="border r-stretch"><p>Hold down the <code>Alt</code> key (or <code>Ctrl</code> in Linux) and click on any element to zoom towards it—try it now on this slide.</p>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#overview-mode">Overview Mode</a>, <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#slide-zoom">Slide Zoom</a></p>
-</div>
-</section>
-<section id="speaker-view" class="slide level2">
-<h2>Speaker View</h2>
-<p>Press <code>s</code> (or use the presentation menu) to open speaker view</p>
-
-<img data-src="images/lec-1/speaker-view.png" width="780" class="r-stretch quarto-figure-center"><div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#speaker-view">Speaker View</a></p>
-</div>
-</section>
-<section id="authoring-tools" class="slide level2 smaller">
-<h2>Authoring Tools</h2>
-<p>Live side-by-side preview for any notebook or text editor including Jupyter and VS Code</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/lec-1/jupyter-edit.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/lec-1/jupyter-preview.png" class="border border-thick"></p>
-</div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/tools/jupyter-lab.html">Jupyter</a>, <a href="https://quarto.org/docs/tools/vscode.html">VS Code</a>, <a href="https://quarto.org/docs/tools/text-editors.html">Text Editors</a></p>
-</div>
-</section>
-<section id="authoring-tools-1" class="slide level2 smaller">
-<h2>Authoring Tools</h2>
-<p>RStudio includes an integrated presentation preview pane</p>
-
-<img data-src="images/lec-1/rstudio.png" class="border r-stretch" width="900"><div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/tools/rstudio.html">RStudio</a></p>
-</div>
-</section>
-<section id="and-more" class="slide level2">
-<h2>And More…</h2>
-<ul>
-<li><a href="https://quarto.org/docs/presentations/revealjs/advanced.html#touch-navigation">Touch</a> optimized (presentations look great on mobile, swipe to navigate slides)</li>
-<li><a href="https://quarto.org/docs/presentations/revealjs/#footer-logo">Footer &amp; Logo</a> (optionally specify custom footer per-slide)</li>
-<li><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#auto-slide">Auto-Slide</a> (step through slides automatically, without any user input)</li>
-<li><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex">Multiplex</a> (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).</li>
-</ul>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/">Quarto Presentations</a></p>
-</div>
+<section id="wrap-up" class="slide level2">
+<h2>Wrap up</h2>
+<p>Any questions about the course?</p>
 
 
-<img src="images/quarto.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://quarto.org" class="uri">https://quarto.org</a></p>
+<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p><a href="https://mlops-ss23.github.io/website/" class="uri">https://mlops-ss23.github.io/website/</a></p>
 </div>
 </section>
     </div>
@@ -1166,7 +551,7 @@ a_{21}&amp; =b_{21}&amp;
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -1220,6 +605,44 @@ a_{21}&amp; =b_{21}&amp;
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

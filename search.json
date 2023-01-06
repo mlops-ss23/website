@@ -322,44 +322,233 @@
     "text": "And More…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations\n\n\n\n\nhttps://mlops-ss23.github.io/website/"
   },
   {
-    "objectID": "slides/lec-1.html#mlops",
-    "href": "slides/lec-1.html#mlops",
-    "title": "Template",
-    "section": "MLOps",
-    "text": "MLOps\n\nTxt"
+    "objectID": "slides/lec-2.html#business-and-ml-objectives",
+    "href": "slides/lec-2.html#business-and-ml-objectives",
+    "title": "Introduction to ML Systems Design",
+    "section": "Business and ML Objectives",
+    "text": "Business and ML Objectives\n\nGoal of any project is to increase profits\n\nDirectly: Increasing sales and cutting costs\nIndirectly: e.g., higher customer satisfaction and increasing traffic on a website\n\nTie the performance of an ML system to the overall business performance"
   },
   {
-    "objectID": "slides/lec-1.html#welcome",
-    "href": "slides/lec-1.html#welcome",
-    "title": "Template",
+    "objectID": "slides/lec-2.html#e-commerce-example",
+    "href": "slides/lec-2.html#e-commerce-example",
+    "title": "Introduction to ML Systems Design",
+    "section": "E Commerce example",
+    "text": "E Commerce example\n\nE commerce site that cares about purchase-through rate\nYou want to move your recommender system from batch prediction to online prediction\n\n\nE commerce site that cares about purchase-through rate and you want to move your recommender system from batch prediction to online prediction. You might reason that online prediction will enable recommendations more relevant to users right now, which can lead to a higher purchase-through rate. You can even do an experiment to show that online prediction can improve your recommender system’s predictive accuracy by X% and, historically on your site, each percent increase in the recommender system’s predictive accuracy led to a certain increase in purchase-through rate."
+  },
+  {
+    "objectID": "slides/lec-2.html#recommender-example",
+    "href": "slides/lec-2.html#recommender-example",
+    "title": "Introduction to ML Systems Design",
+    "section": "Recommender example",
+    "text": "Recommender example\n\nNetflix measures the performance of their recommender system using take-rate: the number of quality plays divided by the number of recommendations a user sees\n\n\n\n\nMLOps | Jan Kirenz"
+  },
+  {
+    "objectID": "slides/lec-1.html#machine-learning",
+    "href": "slides/lec-1.html#machine-learning",
+    "title": "Overview of ML Systems",
+    "section": "Machine Learning",
+    "text": "Machine Learning"
+  },
+  {
+    "objectID": "slides/lec-1.html#when-to-use-machine-learning",
+    "href": "slides/lec-1.html#when-to-use-machine-learning",
+    "title": "Overview of ML Systems",
+    "section": "When to use Machine Learning",
+    "text": "When to use Machine Learning\n\nThe system has the capacity to learn\nThere are patterns to learn, and they are complex\nData is available, or it’s possible to collect data\nIt’s a predicitve problem\nUnseen data shares patterns with the training data"
+  },
+  {
+    "objectID": "slides/lec-1.html#machine-learning-characteristics",
+    "href": "slides/lec-1.html#machine-learning-characteristics",
+    "title": "Overview of ML Systems",
+    "section": "Machine Learning characteristics",
+    "text": "Machine Learning characteristics\nMachine learning is an approach to (1) learn (2) complex patterns from (3) existing data and use these patterns to make (4) predictions on (5) unseen data."
+  },
+  {
+    "objectID": "slides/lec-1.html#additional-characteristics",
+    "href": "slides/lec-1.html#additional-characteristics",
+    "title": "Overview of ML Systems",
+    "section": "Additional characteristics",
+    "text": "Additional characteristics\n\nIt’s repetitive\nThe cost of wrong predictions is cheap\nIt’s at scale\nThe patterns are constantly changing\nIt’s not unethical\nIt’s cost effective (in the long run)"
+  },
+  {
+    "objectID": "slides/lec-1.html#typical-machine-learning-use-cases",
+    "href": "slides/lec-1.html#typical-machine-learning-use-cases",
+    "title": "Overview of ML Systems",
+    "section": "Typical Machine Learning Use Cases",
+    "text": "Typical Machine Learning Use Cases\n\nRecommender system\nMachine translation\nComputer vision\nChat bots"
+  },
+  {
+    "objectID": "slides/lec-1.html#ml-use-cases-booking.com",
+    "href": "slides/lec-1.html#ml-use-cases-booking.com",
+    "title": "Overview of ML Systems",
+    "section": "ML Use Cases: Booking.com",
+    "text": "ML Use Cases: Booking.com\n\n150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com"
+  },
+  {
+    "objectID": "slides/lec-1.html#enterprise-machine-learning-use-cases",
+    "href": "slides/lec-1.html#enterprise-machine-learning-use-cases",
+    "title": "Overview of ML Systems",
+    "section": "Enterprise Machine Learning Use Cases",
+    "text": "Enterprise Machine Learning Use Cases\n\nFraud detection\nPrice optimization\nCustomer acquisition\nChurn prediction\nCustomer service support\nBrand monitoring (sentiment analysis)"
+  },
+  {
+    "objectID": "slides/lec-1.html#state-of-ai",
+    "href": "slides/lec-1.html#state-of-ai",
+    "title": "Overview of ML Systems",
+    "section": "State of AI",
+    "text": "State of AI\nState of AI in 2022 by McKinsey & Company"
+  },
+  {
+    "objectID": "slides/lec-1.html#differences-between-ml-in-research-and-production",
+    "href": "slides/lec-1.html#differences-between-ml-in-research-and-production",
+    "title": "Overview of ML Systems",
+    "section": "Differences between ML in Research and Production",
+    "text": "Differences between ML in Research and Production\n\n\n\n\n\n\n\n\n\nResearch\nProduction\n\n\n\n\nRequirements\nState-of-the-art model performance on benchmark datasets\nDifferent stakeholders have different requirements\n\n\nComputational priority\nFast training, high throughput\nFast inference, low latency\n\n\nData\nStatic\nConstantly shifting\n\n\nFairness\nOften not a focus\nMust be considered\n\n\nInterpretability\nOften not a focus\nMust be considered"
+  },
+  {
+    "objectID": "slides/lec-1.html#different-stakeholders-and-requirements",
+    "href": "slides/lec-1.html#different-stakeholders-and-requirements",
+    "title": "Overview of ML Systems",
+    "section": "Different Stakeholders and requirements",
+    "text": "Different Stakeholders and requirements\n\nConsider a mobile app that recommends restaurants to users.\nThe app makes money by charging restaurants a 10% service fee on each order.\nThis means that expensive orders give the app more money than cheap orders."
+  },
+  {
+    "objectID": "slides/lec-1.html#ml-engineers",
+    "href": "slides/lec-1.html#ml-engineers",
+    "title": "Overview of ML Systems",
+    "section": "ML engineers",
+    "text": "ML engineers\nWant a model that recommends restaurants that users will most likely order from, and they believe they can do so by using a more complex model with more data."
+  },
+  {
+    "objectID": "slides/lec-1.html#sales-team",
+    "href": "slides/lec-1.html#sales-team",
+    "title": "Overview of ML Systems",
+    "section": "Sales team",
+    "text": "Sales team\nWants a model that recommends the more expensive restaurants since these restaurants bring in more service fees."
+  },
+  {
+    "objectID": "slides/lec-1.html#product-team",
+    "href": "slides/lec-1.html#product-team",
+    "title": "Overview of ML Systems",
+    "section": "Product team",
+    "text": "Product team\nNotices that every increase in latency leads to a drop in orders through the service, so they want a model that can return the recommended restaurants in less than 100 milliseconds."
+  },
+  {
+    "objectID": "slides/lec-1.html#ml-platform-team",
+    "href": "slides/lec-1.html#ml-platform-team",
+    "title": "Overview of ML Systems",
+    "section": "ML platform team",
+    "text": "ML platform team\nAs the traffic grows, this team has been woken up in the middle of the night because of problems with scaling their existing system, so they want to hold off on model updates to prioritize improving the ML platform."
+  },
+  {
+    "objectID": "slides/lec-1.html#manager",
+    "href": "slides/lec-1.html#manager",
+    "title": "Overview of ML Systems",
+    "section": "Manager",
+    "text": "Manager\nWants to maximize the margin, and one way to achieve this might be to let go of the ML team."
+  },
+  {
+    "objectID": "slides/lec-1.html#different-model-objectives",
+    "href": "slides/lec-1.html#different-model-objectives",
+    "title": "Overview of ML Systems",
+    "section": "Different Model Objectives",
+    "text": "Different Model Objectives\n\nModel A: Recommending the restaurants that users are most likely to click on\nModel B: Recommending the restaurants that will bring in the most money for the app\nWhich model should be deployed to the users?\nMust-have vs nice-to-have requirements"
+  },
+  {
+    "objectID": "slides/lec-1.html#kaggle-vs-ml-in-production",
+    "href": "slides/lec-1.html#kaggle-vs-ml-in-production",
+    "title": "Overview of ML Systems",
+    "section": "Kaggle vs ML in Production",
+    "text": "Kaggle vs ML in Production\n\nIncentivizing the creation of more accurate models at the expense of other qualities valued by practitioners such as compactness, fairness, and energy efficiency\nEnsemble vs compact model\nNetflix price"
+  },
+  {
+    "objectID": "slides/lec-1.html#computational-priorities",
+    "href": "slides/lec-1.html#computational-priorities",
+    "title": "Overview of ML Systems",
+    "section": "Computational priorities",
+    "text": "Computational priorities\n\nResearch usually prioritizes fast training\nProduction usually prioritizes fast inference\nResearch prioritizes high throughput 1\nProduction prioritizes low latency 2\n\nhow many queries are processed within a specific period of timethe time it takes from receiving a query to returning the result"
+  },
+  {
+    "objectID": "slides/lec-1.html#latency",
+    "href": "slides/lec-1.html#latency",
+    "title": "Overview of ML Systems",
+    "section": "Latency",
+    "text": "Latency\n\nIt’s a common practice to use high percentiles to specify the performance require‐ ments for your system\nFor example, a product manager might specify that the 90th percentile or 99.9th percentile latency of a system must be below a certain number"
+  },
+  {
+    "objectID": "slides/lec-1.html#data-in-research-versus-data-in-production",
+    "href": "slides/lec-1.html#data-in-research-versus-data-in-production",
+    "title": "Overview of ML Systems",
+    "section": "Data in research versus data in production",
+    "text": "Data in research versus data in production\n\n\nSource: Andrej Karpathy, “Building the Software 2.0 Stack,” Spark+AI Summit 2018, video, 17:54, https://oreil.ly/Z21Oz."
+  },
+  {
+    "objectID": "slides/lec-1.html#fairness",
+    "href": "slides/lec-1.html#fairness",
+    "title": "Overview of ML Systems",
+    "section": "Fairness",
+    "text": "Fairness\n\nLoan application might be rejected due to biases in the model\nResume might be ranked lower because the ranking system picks on the spelling of names\nMortgage might get a higher interest rate because it relies partially on biased credit scores\nPredictive policing algorithms\nPersonality tests administered by potential employers"
+  },
+  {
+    "objectID": "slides/lec-1.html#fairness-1",
+    "href": "slides/lec-1.html#fairness-1",
+    "title": "Overview of ML Systems",
+    "section": "Fairness",
+    "text": "Fairness\nIn 2019, “Berkeley researchers found that both face-to-face and online lenders rejected a total of 1.3 million creditworthy Black and Latino applicants between 2008 and 2015.” When the researchers “used the income and credit scores of the rejected applications but deleted the race identifiers, the mortgage application was accepted 1\nKhristopher J. Brooks, “Disparity in Home Lending Costs Minorities Millions, Researchers Find,” CBS News, November 15, 2019, https://oreil.ly/UiHUB."
+  },
+  {
+    "objectID": "slides/lec-1.html#interpretability",
+    "href": "slides/lec-1.html#interpretability",
+    "title": "Overview of ML Systems",
+    "section": "Interpretability",
+    "text": "Interpretability\n\nInterpretability is a requirement for many ML use cases in the industry\nIt’s important to understand why a decision is made so that we can trust a model and detect potential biases.\nIt’s important for developers to be able to debug and improve a model."
+  },
+  {
+    "objectID": "slides/lec-1.html#ml-systems",
+    "href": "slides/lec-1.html#ml-systems",
+    "title": "Overview of ML Systems",
+    "section": "ML Systems",
+    "text": "ML Systems\n\nML systems are part code, part data, and part artifacts created from the two\nUsually applications developed with the most/best data win\nInstead of focusing on improving ML algorithms, most companies will focus on improving their data\nWe need versioning for code and data"
+  },
+  {
+    "objectID": "slides/lec-1.html#recap",
+    "href": "slides/lec-1.html#recap",
+    "title": "Overview of ML Systems",
+    "section": "Recap",
+    "text": "Recap\n\nUse cases of ML\nWhen ML solutions would be appropriate\nML in research vs ML in production\nHow ML systems differ from traditional software systems\n\n\n\n\nMLOps | Jan Kirenz"
+  },
+  {
+    "objectID": "slides/lec-0.html#welcome",
+    "href": "slides/lec-0.html#welcome",
+    "title": "MLOps",
     "section": "Welcome!",
     "text": "Welcome!\n\nName, current job, your major in the masters program\nWhat do you hope to get out of this course?\nAnything you want to share/ask?\n\n\n\n\n−+\n08:00"
   },
   {
-    "objectID": "slides/lec-1.html#resources",
-    "href": "slides/lec-1.html#resources",
-    "title": "Template",
+    "objectID": "slides/lec-0.html#resources",
+    "href": "slides/lec-0.html#resources",
+    "title": "MLOps",
     "section": "Resources",
-    "text": "Resources\n\nMatplotlib: Visualization with Python"
+    "text": "Resources\n\nDesigning Machine Learning Systems by Chip Huyen, released May 2022"
   },
   {
-    "objectID": "slides/lec-1.html#take-the-survey",
-    "href": "slides/lec-1.html#take-the-survey",
-    "title": "Template",
-    "section": "Take the survey",
-    "text": "Take the survey\n\nGo to the course website: https://mlops-ss23.github.io/website/\nClick on the instructions for Lab 0 on the course schedule\nTake the Getting to know you survey"
+    "objectID": "slides/lec-0.html#organization",
+    "href": "slides/lec-0.html#organization",
+    "title": "MLOps",
+    "section": "Organization",
+    "text": "Organization\n\nCourse website: https://mlops-ss23.github.io/website/\nMoodle course"
   },
   {
-    "objectID": "slides/lec-1.html#assignments",
-    "href": "slides/lec-1.html#assignments",
-    "title": "Template",
+    "objectID": "slides/lec-0.html#assignments",
+    "href": "slides/lec-0.html#assignments",
+    "title": "MLOps",
     "section": "Assignments",
     "text": "Assignments\n\nTxt"
   },
   {
-    "objectID": "slides/lec-1.html#wrap-up",
-    "href": "slides/lec-1.html#wrap-up",
-    "title": "Template",
+    "objectID": "slides/lec-0.html#wrap-up",
+    "href": "slides/lec-0.html#wrap-up",
+    "title": "MLOps",
     "section": "Wrap up",
     "text": "Wrap up\nAny questions about the course?\n\n\n\nhttps://mlops-ss23.github.io/website/"
   }

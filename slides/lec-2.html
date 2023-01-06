@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.280">
 
   <meta name="author" content="Jan Kirenz">
-  <title>MLOps - Spring 2023 - Overview of ML Systems</title>
+  <title>MLOps - Spring 2023 - Introduction to ML Systems Design</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -321,8 +321,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="MLOps - Spring 2023 - Overview of ML Systems">
-<meta property="og:description" content="Lecture 1">
+<meta property="og:title" content="MLOps - Spring 2023 - Introduction to ML Systems Design">
+<meta property="og:description" content="Lecture 2">
 <meta property="og:site-name" content="MLOps - Spring 2023">
 </head>
 <body class="quarto-light">
@@ -330,8 +330,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Overview of ML Systems</h1>
-  <p class="subtitle">Lecture 1</p>
+  <h1 class="title">Introduction to ML Systems Design</h1>
+  <p class="subtitle">Lecture 2</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -342,229 +342,46 @@ Jan Kirenz
 </div>
 
 </section>
-<section id="machine-learning" class="slide level2">
-<h2>Machine Learning</h2>
-
-<img data-src="images/lec-1/fig-1-2-patterns.png" class="r-stretch"></section>
-<section id="when-to-use-machine-learning" class="slide level2">
-<h2>When to use Machine Learning</h2>
-<ul>
-<li class="fragment"><p>The system has the capacity to learn</p></li>
-<li class="fragment"><p>There are patterns to learn, and they are complex</p></li>
-<li class="fragment"><p>Data is available, or it’s possible to collect data</p></li>
-<li class="fragment"><p>It’s a predicitve problem</p></li>
-<li class="fragment"><p>Unseen data shares patterns with the training data</p></li>
-</ul>
-</section>
-<section id="machine-learning-characteristics" class="slide level2">
-<h2>Machine Learning characteristics</h2>
-<p>Machine learning is an approach to (1) learn (2) complex patterns from (3) existing data and use these patterns to make (4) predictions on (5) unseen data.</p>
-</section>
-<section id="additional-characteristics" class="slide level2">
-<h2>Additional characteristics</h2>
-<ul>
-<li class="fragment"><p>It’s repetitive</p></li>
-<li class="fragment"><p>The cost of wrong predictions is cheap</p></li>
-<li class="fragment"><p>It’s at scale</p></li>
-<li class="fragment"><p>The patterns are constantly changing</p></li>
-<li class="fragment"><p>It’s not unethical</p></li>
-<li class="fragment"><p>It’s cost effective (in the long run)</p></li>
-</ul>
-</section>
-<section id="typical-machine-learning-use-cases" class="slide level2">
-<h2>Typical Machine Learning Use Cases</h2>
-<ul>
-<li class="fragment"><p>Recommender system</p></li>
-<li class="fragment"><p>Machine translation</p></li>
-<li class="fragment"><p>Computer vision</p></li>
-<li class="fragment"><p>Chat bots</p></li>
-</ul>
-</section>
-<section id="ml-use-cases-booking.com" class="slide level2">
-<h2>ML Use Cases: Booking.com</h2>
-<iframe src="https://www.youtube.com/embed/DEjyUkbVVHA" width="1920" height="1080" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<p><a href="https://booking.ai/150-successful-machine-learning-models-6-lessons-learned-at-booking-com-681e09107bec">150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com</a></p>
-</section>
-<section id="enterprise-machine-learning-use-cases" class="slide level2">
-<h2>Enterprise Machine Learning Use Cases</h2>
-<ul>
-<li class="fragment"><p>Fraud detection</p></li>
-<li class="fragment"><p>Price optimization</p></li>
-<li class="fragment"><p>Customer acquisition</p></li>
-<li class="fragment"><p>Churn prediction</p></li>
-<li class="fragment"><p>Customer service support</p></li>
-<li class="fragment"><p>Brand monitoring (sentiment analysis)</p></li>
-</ul>
-</section>
-<section id="state-of-ai" class="slide level2">
-<h2>State of AI</h2>
-<p><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2022-and-a-half-decade-in-review#review">State of AI in 2022 by McKinsey &amp; Company</a></p>
-</section>
-<section id="understanding-machine-learning-systems" class="title-slide slide level1 center" data-background-color="#0ca37f">
-<h1>Understanding Machine Learning Systems</h1>
-
-</section>
-
 <section>
-<section id="ml-in-research-vs-in-production" class="title-slide slide level1 center">
-<h1>1) ML in Research vs in Production</h1>
+<section id="introduction-to-machine-learning-systems-design" class="title-slide slide level1 center">
+<h1>Introduction to Machine Learning Systems Design</h1>
 
 </section>
-<section id="differences-between-ml-in-research-and-production" class="slide level2">
-<h2>Differences between ML in Research and Production</h2>
-<table>
-<colgroup>
-<col style="width: 17%">
-<col style="width: 43%">
-<col style="width: 39%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Research</th>
-<th>Production</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Requirements</td>
-<td>State-of-the-art model performance on benchmark datasets</td>
-<td>Different stakeholders have different requirements</td>
-</tr>
-<tr class="even">
-<td>Computational priority</td>
-<td>Fast training, high throughput</td>
-<td>Fast inference, low latency</td>
-</tr>
-<tr class="odd">
-<td>Data</td>
-<td>Static</td>
-<td>Constantly shifting</td>
-</tr>
-<tr class="even">
-<td>Fairness</td>
-<td>Often not a focus</td>
-<td>Must be considered</td>
-</tr>
-<tr class="odd">
-<td>Interpretability</td>
-<td>Often not a focus</td>
-<td>Must be considered</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="different-stakeholders-and-requirements" class="slide level2">
-<h2>Different Stakeholders and requirements</h2>
+<section id="business-and-ml-objectives" class="slide level2">
+<h2>Business and ML Objectives</h2>
 <ul>
-<li class="fragment">Consider a mobile app that recommends restaurants to users.</li>
-<li class="fragment">The app makes money by charging restaurants a 10% service fee on each order.</li>
-<li class="fragment">This means that expensive orders give the app more money than cheap orders.</li>
+<li class="fragment"><p>Goal of any project is to increase profits</p>
+<ul>
+<li class="fragment"><p><strong>Directly</strong>: Increasing sales and cutting costs</p></li>
+<li class="fragment"><p><strong>Indirectly</strong>: e.g., higher customer satisfaction and increasing traffic on a website</p></li>
+</ul></li>
+<li class="fragment"><p>Tie the performance of an ML system to the overall business performance</p></li>
 </ul>
 </section>
-<section id="ml-engineers" class="slide level2">
-<h2>ML engineers</h2>
-<p>Want a model that recommends restaurants that users will most likely order from, and they believe they can do so by using a more complex model with more data.</p>
-</section>
-<section id="sales-team" class="slide level2">
-<h2>Sales team</h2>
-<p>Wants a model that recommends the more expensive restaurants since these restaurants bring in more service fees.</p>
-</section>
-<section id="product-team" class="slide level2">
-<h2>Product team</h2>
-<p>Notices that every increase in latency leads to a drop in orders through the service, so they want a model that can return the recommended restaurants in less than 100 milliseconds.</p>
-</section>
-<section id="ml-platform-team" class="slide level2">
-<h2>ML platform team</h2>
-<p>As the traffic grows, this team has been woken up in the middle of the night because of problems with scaling their existing system, so they want to hold off on model updates to prioritize improving the ML platform.</p>
-</section>
-<section id="manager" class="slide level2">
-<h2>Manager</h2>
-<p>Wants to maximize the margin, and one way to achieve this might be to let go of the ML team.</p>
-</section>
-<section id="different-model-objectives" class="slide level2">
-<h2>Different Model Objectives</h2>
+<section id="e-commerce-example" class="slide level2">
+<h2>E Commerce example</h2>
 <ul>
-<li class="fragment"><p>Model A: Recommending the restaurants that users are most likely to click on</p></li>
-<li class="fragment"><p>Model B: Recommending the restaurants that will bring in the most money for the app</p></li>
-<li class="fragment"><p>Which model should be deployed to the users?</p></li>
-<li class="fragment"><p>Must-have vs nice-to-have requirements</p></li>
+<li class="fragment"><p>E commerce site that cares about purchase-through rate</p></li>
+<li class="fragment"><p>You want to move your recommender system from batch prediction to online prediction</p></li>
 </ul>
+<aside class="notes">
+<p>E commerce site that cares about purchase-through rate and you want to move your recommender system from batch prediction to online prediction. You might reason that online prediction will enable recommendations more relevant to users right now, which can lead to a higher purchase-through rate. You can even do an experiment to show that online prediction can improve your recommender system’s predictive accuracy by X% and, historically on your site, each percent increase in the recommender system’s predictive accuracy led to a certain increase in purchase-through rate.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="kaggle-vs-ml-in-production" class="slide level2">
-<h2>Kaggle vs ML in Production</h2>
+<section id="recommender-example" class="slide level2">
+<h2>Recommender example</h2>
 <ul>
-<li class="fragment"><p>Incentivizing the creation of more accurate models at the expense of other qualities valued by practitioners such as compactness, fairness, and energy efficiency</p></li>
-<li class="fragment"><p>Ensemble vs compact model</p></li>
-<li class="fragment"><p>Netflix price</p></li>
-</ul>
-</section>
-<section id="computational-priorities" class="slide level2">
-<h2>Computational priorities</h2>
-<ul>
-<li class="fragment"><p>Research usually prioritizes fast training</p></li>
-<li class="fragment"><p>Production usually prioritizes fast inference</p></li>
-<li class="fragment"><p>Research prioritizes high throughput <sup>1</sup></p></li>
-<li class="fragment"><p>Production prioritizes low latency <sup>2</sup></p></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>how many queries are processed within a specific period of time</p></li><li id="fn2"><p>the time it takes from receiving a query to returning the result</p></li></ol></aside></section>
-<section id="latency" class="slide level2">
-<h2>Latency</h2>
-<ul>
-<li class="fragment"><p>It’s a common practice to use high percentiles to specify the performance require‐ ments for your system</p></li>
-<li class="fragment"><p>For example, a product manager might specify that the 90th percentile or 99.9th percentile latency of a system must be below a certain number</p></li>
-</ul>
-</section>
-<section id="data-in-research-versus-data-in-production" class="slide level2">
-<h2>Data in research versus data in production</h2>
-
-<img data-src="images/lec-1/fig-1-5-sleep.png" class="r-stretch"><ul>
-<li class="fragment">Source: Andrej Karpathy, “Building the Software 2.0 Stack,” Spark+AI Summit 2018, video, 17:54, https://oreil.ly/Z21Oz.</li>
-</ul>
-</section>
-<section id="fairness" class="slide level2">
-<h2>Fairness</h2>
-<ul>
-<li class="fragment">Loan application might be rejected due to biases in the model</li>
-<li class="fragment">Resume might be ranked lower because the ranking system picks on the spelling of names</li>
-<li class="fragment">Mortgage might get a higher interest rate because it relies partially on biased credit scores</li>
-<li class="fragment">Predictive policing algorithms</li>
-<li class="fragment">Personality tests administered by potential employers</li>
-</ul>
-</section>
-<section id="fairness-1" class="slide level2">
-<h2>Fairness</h2>
-<p><em>In 2019, “Berkeley researchers found that both face-to-face and online lenders rejected a total of 1.3 million creditworthy Black and Latino applicants between 2008 and 2015.” When the researchers “used the income and credit scores of the rejected applications but deleted the race identifiers, the mortgage application was accepted</em> <sup>1</sup></p>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Khristopher J. Brooks, “Disparity in Home Lending Costs Minorities Millions, Researchers Find,” CBS News, November 15, 2019, https://oreil.ly/UiHUB.</p></li></ol></aside></section>
-<section id="interpretability" class="slide level2">
-<h2>Interpretability</h2>
-<ul>
-<li class="fragment"><p>Interpretability is a requirement for many ML use cases in the industry</p></li>
-<li class="fragment"><p>It’s important to understand why a decision is made so that we can trust a model and detect potential biases.</p></li>
-<li class="fragment"><p>It’s important for developers to be able to debug and improve a model.</p></li>
-</ul>
-</section></section>
-<section>
-<section id="machine-learning-systems-vs-traditional-software" class="title-slide slide level1 center">
-<h1>2) Machine Learning Systems vs Traditional Software</h1>
-
-</section>
-<section id="ml-systems" class="slide level2">
-<h2>ML Systems</h2>
-<ul>
-<li class="fragment"><p>ML systems are part code, part data, and part artifacts created from the two</p></li>
-<li class="fragment"><p>Usually applications developed with the most/best data win</p></li>
-<li class="fragment"><p>Instead of focusing on improving ML algorithms, most companies will focus on improving their data</p></li>
-<li class="fragment"><p>We need versioning for code and data</p></li>
-</ul>
-</section>
-<section id="recap" class="slide level2">
-<h2>Recap</h2>
-<ul>
-<li class="fragment">Use cases of ML</li>
-<li class="fragment">When ML solutions would be appropriate</li>
-<li class="fragment">ML in research vs ML in production</li>
-<li class="fragment">How ML systems differ from traditional software systems</li>
+<li class="fragment">Netflix measures the performance of their recommender system using take-rate: the number of quality plays divided by the number of recommendations a user sees</li>
 </ul>
 
 
@@ -572,7 +389,6 @@ Jan Kirenz
 <p>MLOps | Jan Kirenz</p>
 </div>
 </section></section>
-
     </div>
   </div>
 
