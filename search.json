@@ -322,200 +322,361 @@
     "text": "And More…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations\n\n\n\n\nhttps://mlops-ss23.github.io/website/"
   },
   {
-    "objectID": "slides/lec-2.html#business-and-ml-objectives",
-    "href": "slides/lec-2.html#business-and-ml-objectives",
-    "title": "Introduction to ML Systems Design",
-    "section": "Business and ML Objectives",
-    "text": "Business and ML Objectives\n\nGoal of any project is to increase profits\n\nDirectly: Increasing sales and cutting costs\nIndirectly: e.g., higher customer satisfaction and increasing traffic on a website\n\nTie the performance of an ML system to the overall business performance"
-  },
-  {
-    "objectID": "slides/lec-2.html#e-commerce-example",
-    "href": "slides/lec-2.html#e-commerce-example",
-    "title": "Introduction to ML Systems Design",
-    "section": "E Commerce example",
-    "text": "E Commerce example\n\nE commerce site that cares about purchase-through rate\nYou want to move your recommender system from batch prediction to online prediction\n\n\nE commerce site that cares about purchase-through rate and you want to move your recommender system from batch prediction to online prediction. You might reason that online prediction will enable recommendations more relevant to users right now, which can lead to a higher purchase-through rate. You can even do an experiment to show that online prediction can improve your recommender system’s predictive accuracy by X% and, historically on your site, each percent increase in the recommender system’s predictive accuracy led to a certain increase in purchase-through rate."
-  },
-  {
-    "objectID": "slides/lec-2.html#recommender-example",
-    "href": "slides/lec-2.html#recommender-example",
-    "title": "Introduction to ML Systems Design",
-    "section": "Recommender example",
-    "text": "Recommender example\n\nNetflix measures the performance of their recommender system using take-rate: the number of quality plays divided by the number of recommendations a user sees\n\n\n\n\nMLOps | Jan Kirenz"
-  },
-  {
-    "objectID": "slides/lec-1.html#machine-learning",
-    "href": "slides/lec-1.html#machine-learning",
+    "objectID": "slides/lec-01.html#machine-learning",
+    "href": "slides/lec-01.html#machine-learning",
     "title": "Overview of ML Systems",
     "section": "Machine Learning",
     "text": "Machine Learning"
   },
   {
-    "objectID": "slides/lec-1.html#when-to-use-machine-learning",
-    "href": "slides/lec-1.html#when-to-use-machine-learning",
+    "objectID": "slides/lec-01.html#when-to-use-machine-learning",
+    "href": "slides/lec-01.html#when-to-use-machine-learning",
     "title": "Overview of ML Systems",
     "section": "When to use Machine Learning",
     "text": "When to use Machine Learning\n\nThe system has the capacity to learn\nThere are patterns to learn, and they are complex\nData is available, or it’s possible to collect data\nIt’s a predicitve problem\nUnseen data shares patterns with the training data"
   },
   {
-    "objectID": "slides/lec-1.html#machine-learning-characteristics",
-    "href": "slides/lec-1.html#machine-learning-characteristics",
+    "objectID": "slides/lec-01.html#machine-learning-characteristics",
+    "href": "slides/lec-01.html#machine-learning-characteristics",
     "title": "Overview of ML Systems",
     "section": "Machine Learning characteristics",
     "text": "Machine Learning characteristics\nMachine learning is an approach to (1) learn (2) complex patterns from (3) existing data and use these patterns to make (4) predictions on (5) unseen data."
   },
   {
-    "objectID": "slides/lec-1.html#additional-characteristics",
-    "href": "slides/lec-1.html#additional-characteristics",
+    "objectID": "slides/lec-01.html#additional-characteristics",
+    "href": "slides/lec-01.html#additional-characteristics",
     "title": "Overview of ML Systems",
     "section": "Additional characteristics",
     "text": "Additional characteristics\n\nIt’s repetitive\nThe cost of wrong predictions is cheap\nIt’s at scale\nThe patterns are constantly changing\nIt’s not unethical\nIt’s cost effective (in the long run)"
   },
   {
-    "objectID": "slides/lec-1.html#typical-machine-learning-use-cases",
-    "href": "slides/lec-1.html#typical-machine-learning-use-cases",
+    "objectID": "slides/lec-01.html#typical-machine-learning-use-cases",
+    "href": "slides/lec-01.html#typical-machine-learning-use-cases",
     "title": "Overview of ML Systems",
     "section": "Typical Machine Learning Use Cases",
     "text": "Typical Machine Learning Use Cases\n\nRecommender system\nMachine translation\nComputer vision\nChat bots"
   },
   {
-    "objectID": "slides/lec-1.html#ml-use-cases-booking.com",
-    "href": "slides/lec-1.html#ml-use-cases-booking.com",
+    "objectID": "slides/lec-01.html#ml-use-cases-booking.com",
+    "href": "slides/lec-01.html#ml-use-cases-booking.com",
     "title": "Overview of ML Systems",
     "section": "ML Use Cases: Booking.com",
     "text": "ML Use Cases: Booking.com\n\n150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com"
   },
   {
-    "objectID": "slides/lec-1.html#enterprise-machine-learning-use-cases",
-    "href": "slides/lec-1.html#enterprise-machine-learning-use-cases",
+    "objectID": "slides/lec-01.html#enterprise-machine-learning-use-cases",
+    "href": "slides/lec-01.html#enterprise-machine-learning-use-cases",
     "title": "Overview of ML Systems",
     "section": "Enterprise Machine Learning Use Cases",
     "text": "Enterprise Machine Learning Use Cases\n\nFraud detection\nPrice optimization\nCustomer acquisition\nChurn prediction\nCustomer service support\nBrand monitoring (sentiment analysis)"
   },
   {
-    "objectID": "slides/lec-1.html#state-of-ai",
-    "href": "slides/lec-1.html#state-of-ai",
+    "objectID": "slides/lec-01.html#state-of-ai",
+    "href": "slides/lec-01.html#state-of-ai",
     "title": "Overview of ML Systems",
     "section": "State of AI",
     "text": "State of AI\nState of AI in 2022 by McKinsey & Company"
   },
   {
-    "objectID": "slides/lec-1.html#differences-between-ml-in-research-and-production",
-    "href": "slides/lec-1.html#differences-between-ml-in-research-and-production",
+    "objectID": "slides/lec-01.html#differences-between-ml-in-research-and-production",
+    "href": "slides/lec-01.html#differences-between-ml-in-research-and-production",
     "title": "Overview of ML Systems",
     "section": "Differences between ML in Research and Production",
     "text": "Differences between ML in Research and Production\n\n\n\n\n\n\n\n\n\nResearch\nProduction\n\n\n\n\nRequirements\nState-of-the-art model performance on benchmark datasets\nDifferent stakeholders have different requirements\n\n\nComputational priority\nFast training, high throughput\nFast inference, low latency\n\n\nData\nStatic\nConstantly shifting\n\n\nFairness\nOften not a focus\nMust be considered\n\n\nInterpretability\nOften not a focus\nMust be considered"
   },
   {
-    "objectID": "slides/lec-1.html#different-stakeholders-and-requirements",
-    "href": "slides/lec-1.html#different-stakeholders-and-requirements",
+    "objectID": "slides/lec-01.html#different-stakeholders-and-requirements",
+    "href": "slides/lec-01.html#different-stakeholders-and-requirements",
     "title": "Overview of ML Systems",
     "section": "Different Stakeholders and requirements",
     "text": "Different Stakeholders and requirements\n\nConsider a mobile app that recommends restaurants to users.\nThe app makes money by charging restaurants a 10% service fee on each order.\nThis means that expensive orders give the app more money than cheap orders."
   },
   {
-    "objectID": "slides/lec-1.html#ml-engineers",
-    "href": "slides/lec-1.html#ml-engineers",
+    "objectID": "slides/lec-01.html#ml-engineers",
+    "href": "slides/lec-01.html#ml-engineers",
     "title": "Overview of ML Systems",
     "section": "ML engineers",
     "text": "ML engineers\nWant a model that recommends restaurants that users will most likely order from, and they believe they can do so by using a more complex model with more data."
   },
   {
-    "objectID": "slides/lec-1.html#sales-team",
-    "href": "slides/lec-1.html#sales-team",
+    "objectID": "slides/lec-01.html#sales-team",
+    "href": "slides/lec-01.html#sales-team",
     "title": "Overview of ML Systems",
     "section": "Sales team",
     "text": "Sales team\nWants a model that recommends the more expensive restaurants since these restaurants bring in more service fees."
   },
   {
-    "objectID": "slides/lec-1.html#product-team",
-    "href": "slides/lec-1.html#product-team",
+    "objectID": "slides/lec-01.html#product-team",
+    "href": "slides/lec-01.html#product-team",
     "title": "Overview of ML Systems",
     "section": "Product team",
     "text": "Product team\nNotices that every increase in latency leads to a drop in orders through the service, so they want a model that can return the recommended restaurants in less than 100 milliseconds."
   },
   {
-    "objectID": "slides/lec-1.html#ml-platform-team",
-    "href": "slides/lec-1.html#ml-platform-team",
+    "objectID": "slides/lec-01.html#ml-platform-team",
+    "href": "slides/lec-01.html#ml-platform-team",
     "title": "Overview of ML Systems",
     "section": "ML platform team",
     "text": "ML platform team\nAs the traffic grows, this team has been woken up in the middle of the night because of problems with scaling their existing system, so they want to hold off on model updates to prioritize improving the ML platform."
   },
   {
-    "objectID": "slides/lec-1.html#manager",
-    "href": "slides/lec-1.html#manager",
+    "objectID": "slides/lec-01.html#manager",
+    "href": "slides/lec-01.html#manager",
     "title": "Overview of ML Systems",
     "section": "Manager",
     "text": "Manager\nWants to maximize the margin, and one way to achieve this might be to let go of the ML team."
   },
   {
-    "objectID": "slides/lec-1.html#different-model-objectives",
-    "href": "slides/lec-1.html#different-model-objectives",
+    "objectID": "slides/lec-01.html#different-model-objectives",
+    "href": "slides/lec-01.html#different-model-objectives",
     "title": "Overview of ML Systems",
     "section": "Different Model Objectives",
     "text": "Different Model Objectives\n\nModel A: Recommending the restaurants that users are most likely to click on\nModel B: Recommending the restaurants that will bring in the most money for the app\nWhich model should be deployed to the users?\nMust-have vs nice-to-have requirements"
   },
   {
-    "objectID": "slides/lec-1.html#kaggle-vs-ml-in-production",
-    "href": "slides/lec-1.html#kaggle-vs-ml-in-production",
+    "objectID": "slides/lec-01.html#kaggle-vs-ml-in-production",
+    "href": "slides/lec-01.html#kaggle-vs-ml-in-production",
     "title": "Overview of ML Systems",
     "section": "Kaggle vs ML in Production",
     "text": "Kaggle vs ML in Production\n\nIncentivizing the creation of more accurate models at the expense of other qualities valued by practitioners such as compactness, fairness, and energy efficiency\nEnsemble vs compact model\nNetflix price"
   },
   {
-    "objectID": "slides/lec-1.html#computational-priorities",
-    "href": "slides/lec-1.html#computational-priorities",
+    "objectID": "slides/lec-01.html#computational-priorities",
+    "href": "slides/lec-01.html#computational-priorities",
     "title": "Overview of ML Systems",
     "section": "Computational priorities",
     "text": "Computational priorities\n\nResearch usually prioritizes fast training\nProduction usually prioritizes fast inference\nResearch prioritizes high throughput 1\nProduction prioritizes low latency 2\n\nhow many queries are processed within a specific period of timethe time it takes from receiving a query to returning the result"
   },
   {
-    "objectID": "slides/lec-1.html#latency",
-    "href": "slides/lec-1.html#latency",
+    "objectID": "slides/lec-01.html#latency",
+    "href": "slides/lec-01.html#latency",
     "title": "Overview of ML Systems",
     "section": "Latency",
     "text": "Latency\n\nIt’s a common practice to use high percentiles to specify the performance require‐ ments for your system\nFor example, a product manager might specify that the 90th percentile or 99.9th percentile latency of a system must be below a certain number"
   },
   {
-    "objectID": "slides/lec-1.html#data-in-research-versus-data-in-production",
-    "href": "slides/lec-1.html#data-in-research-versus-data-in-production",
+    "objectID": "slides/lec-01.html#data-in-research-versus-data-in-production",
+    "href": "slides/lec-01.html#data-in-research-versus-data-in-production",
     "title": "Overview of ML Systems",
     "section": "Data in research versus data in production",
     "text": "Data in research versus data in production\n\n\nSource: Andrej Karpathy, “Building the Software 2.0 Stack,” Spark+AI Summit 2018, video, 17:54, https://oreil.ly/Z21Oz."
   },
   {
-    "objectID": "slides/lec-1.html#fairness",
-    "href": "slides/lec-1.html#fairness",
+    "objectID": "slides/lec-01.html#fairness",
+    "href": "slides/lec-01.html#fairness",
     "title": "Overview of ML Systems",
     "section": "Fairness",
     "text": "Fairness\n\nLoan application might be rejected due to biases in the model\nResume might be ranked lower because the ranking system picks on the spelling of names\nMortgage might get a higher interest rate because it relies partially on biased credit scores\nPredictive policing algorithms\nPersonality tests administered by potential employers"
   },
   {
-    "objectID": "slides/lec-1.html#fairness-1",
-    "href": "slides/lec-1.html#fairness-1",
+    "objectID": "slides/lec-01.html#fairness-1",
+    "href": "slides/lec-01.html#fairness-1",
     "title": "Overview of ML Systems",
     "section": "Fairness",
     "text": "Fairness\nIn 2019, “Berkeley researchers found that both face-to-face and online lenders rejected a total of 1.3 million creditworthy Black and Latino applicants between 2008 and 2015.” When the researchers “used the income and credit scores of the rejected applications but deleted the race identifiers, the mortgage application was accepted 1\nKhristopher J. Brooks, “Disparity in Home Lending Costs Minorities Millions, Researchers Find,” CBS News, November 15, 2019, https://oreil.ly/UiHUB."
   },
   {
-    "objectID": "slides/lec-1.html#interpretability",
-    "href": "slides/lec-1.html#interpretability",
+    "objectID": "slides/lec-01.html#interpretability",
+    "href": "slides/lec-01.html#interpretability",
     "title": "Overview of ML Systems",
     "section": "Interpretability",
     "text": "Interpretability\n\nInterpretability is a requirement for many ML use cases in the industry\nIt’s important to understand why a decision is made so that we can trust a model and detect potential biases.\nIt’s important for developers to be able to debug and improve a model."
   },
   {
-    "objectID": "slides/lec-1.html#ml-systems",
-    "href": "slides/lec-1.html#ml-systems",
+    "objectID": "slides/lec-01.html#ml-systems",
+    "href": "slides/lec-01.html#ml-systems",
     "title": "Overview of ML Systems",
     "section": "ML Systems",
     "text": "ML Systems\n\nML systems are part code, part data, and part artifacts created from the two\nUsually applications developed with the most/best data win\nInstead of focusing on improving ML algorithms, most companies will focus on improving their data\nWe need versioning for code and data"
   },
   {
-    "objectID": "slides/lec-1.html#recap",
-    "href": "slides/lec-1.html#recap",
+    "objectID": "slides/lec-01.html#summary",
+    "href": "slides/lec-01.html#summary",
     "title": "Overview of ML Systems",
-    "section": "Recap",
-    "text": "Recap\n\nUse cases of ML\nWhen ML solutions would be appropriate\nML in research vs ML in production\nHow ML systems differ from traditional software systems\n\n\n\n\nMLOps | Jan Kirenz"
+    "section": "Summary",
+    "text": "Summary\n\nUse cases of ML\nWhen ML solutions would be appropriate\nML in research vs ML in production\nHow ML systems differ from traditional software systems\n\n\n\n\nMLOps | Jan Kirenz"
+  },
+  {
+    "objectID": "slides/lec-02.html#business-and-ml-objectives-1",
+    "href": "slides/lec-02.html#business-and-ml-objectives-1",
+    "title": "Introduction to ML Systems Design",
+    "section": "Business and ML Objectives",
+    "text": "Business and ML Objectives\n\nGoal of any project is to increase profits\n\nDirectly: Increasing sales and cutting costs\nIndirectly: e.g., higher customer satisfaction and increasing traffic on a website\n\nTie the performance of an ML system to the overall business performance"
+  },
+  {
+    "objectID": "slides/lec-02.html#e-commerce-example",
+    "href": "slides/lec-02.html#e-commerce-example",
+    "title": "Introduction to ML Systems Design",
+    "section": "E Commerce example",
+    "text": "E Commerce example\n\nE commerce site that cares about purchase-through rate\nYou want to move your recommender system from batch prediction to online prediction\n\n\nE commerce site that cares about purchase-through rate and you want to move your recommender system from batch prediction to online prediction. You might reason that online prediction will enable recommendations more relevant to users right now, which can lead to a higher purchase-through rate. You can even do an experiment to show that online prediction can improve your recommender system’s predictive accuracy by X% and, historically on your site, each percent increase in the recommender system’s predictive accuracy led to a certain increase in purchase-through rate."
+  },
+  {
+    "objectID": "slides/lec-02.html#netflix-recommender-example",
+    "href": "slides/lec-02.html#netflix-recommender-example",
+    "title": "Introduction to ML Systems Design",
+    "section": "Netflix Recommender example",
+    "text": "Netflix Recommender example\n\nBusiness metric: subscription cancellation rate\nMetric: Total streaming hours\nNetflix measures the performance of their recommender system using take-rate: the number of quality plays divided by the number of recommendations a user sees\nThe higher the take-rate, the better the recommender system\nA higher take-rate also results in higher total streaming hours and lower subscription cancellation rates"
+  },
+  {
+    "objectID": "slides/lec-02.html#ab-testing",
+    "href": "slides/lec-02.html#ab-testing",
+    "title": "Introduction to ML Systems Design",
+    "section": "A/B Testing",
+    "text": "A/B Testing\n\nUse experiments to learn how ML metrics influence business metrics\nA/B testing to choose the model that leads to better business metrics\nRegardless of whether this model has better ML metrics."
+  },
+  {
+    "objectID": "slides/lec-02.html#ml-maturity-stage",
+    "href": "slides/lec-02.html#ml-maturity-stage",
+    "title": "Introduction to ML Systems Design",
+    "section": "ML maturity stage",
+    "text": "ML maturity stage\n\n\nHow long it takes for a company to bring a model to production is proportional to how long it has used ML. Source: Adapted from an image by Algorithmia\n\n\nReturns on investment in ML depend a lot on the maturity stage of adoption. The longer you’ve adopted ML, the more efficient your pipeline will run, the faster your development cycle will be, the less engineering time you’ll need, and the lower your cloud bills will be, which all lead to higher returns. According to a 2020 survey by Algorithmia, among companies that are more sophisticated in their ML adoption (having had models in production for over five years), almost 75% can deploy a model in under 30 days. Among those just getting started with their ML pipeline, 60% take over 30 days to deploy a model"
+  },
+  {
+    "objectID": "slides/lec-02.html#reliability",
+    "href": "slides/lec-02.html#reliability",
+    "title": "Introduction to ML Systems Design",
+    "section": "Reliability",
+    "text": "Reliability\n\nThe system should continue to perform the correct function at the desired level of performance even in the face of adversity (hardware or software faults, and even human error)\nML systems can fail silently"
+  },
+  {
+    "objectID": "slides/lec-02.html#scalability",
+    "href": "slides/lec-02.html#scalability",
+    "title": "Introduction to ML Systems Design",
+    "section": "Scalability",
+    "text": "Scalability\n\nWays an ML system can grow:\n\nComplexity (more complex models)\nTraffic volume (served predictions per day)\nML model count (# of models)"
+  },
+  {
+    "objectID": "slides/lec-02.html#scalability-1",
+    "href": "slides/lec-02.html#scalability-1",
+    "title": "Introduction to ML Systems Design",
+    "section": "Scalability",
+    "text": "Scalability\n\nResource scaling\n\nUp-scaling (expanding the resources to handle growth)\nDown-scaling (reducing the resources when not needed)\nAuto-scaling: automatically scaling up and down the number of machines depending on usage.\n\nAmazon’s autoscaling feature failed on Prime Day (2018), causing their system to crash. An hour of downtime was estimated to cost Amazon between $72 million and $99 million.\nArtifact management (model monitoring and retraining)"
+  },
+  {
+    "objectID": "slides/lec-02.html#maintainability",
+    "href": "slides/lec-02.html#maintainability",
+    "title": "Introduction to ML Systems Design",
+    "section": "Maintainability",
+    "text": "Maintainability\n\nCode should be documented\nCode, data, and artifacts should be versioned.\nModels should be sufficiently reproducible"
+  },
+  {
+    "objectID": "slides/lec-02.html#adaptibility",
+    "href": "slides/lec-02.html#adaptibility",
+    "title": "Introduction to ML Systems Design",
+    "section": "Adaptibility",
+    "text": "Adaptibility\n\nAdapt to shifting data distributions and business requirements\nCapacity for performance improvement\nAllowing updates without service interruption"
+  },
+  {
+    "objectID": "slides/lec-02.html#iterative-process-1",
+    "href": "slides/lec-02.html#iterative-process-1",
+    "title": "Introduction to ML Systems Design",
+    "section": "Iterative process",
+    "text": "Iterative process\n\nDeveloping an ML system is an iterative (never-ending) process.\nOnce a system is put into production, it’ll need to be continually monitored and updated.\nExample: Building an ML model to predict whether an ad should be shown when users enter a search query"
+  },
+  {
+    "objectID": "slides/lec-02.html#iterative-process-workflow-example",
+    "href": "slides/lec-02.html#iterative-process-workflow-example",
+    "title": "Introduction to ML Systems Design",
+    "section": "Iterative process workflow example",
+    "text": "Iterative process workflow example\n\n\nChoose a metric to optimize (e.g. impressions)\n\n\nCollect data and obtain labels\n\n\nEngineer features\n\n\nTrain models\n\n\nError analysis (e.g., wrong labels -> relabel data)\n\n\nTrain the model again\n\n\nError analysis (e.g., data imbalance -> collect more data)\n\n\nTrain the model again\n\n\nModel performs poorly on newer data -> update it on more recent data\n\n\nTrain the model again\n\n\nDeploy the model\n\n\nModel seems to be performing well, but revenue is decreasing -> change your model to optimize for ad click-through rate instead.\n\n\nGo to step 1."
+  },
+  {
+    "objectID": "slides/lec-02.html#iterative-process-2",
+    "href": "slides/lec-02.html#iterative-process-2",
+    "title": "Introduction to ML Systems Design",
+    "section": "Iterative process",
+    "text": "Iterative process\n\n\nOversimplified representation of what the iterative process for developing ML systems in production looks like from the perspective of a data scientist or an ML engineer."
+  },
+  {
+    "objectID": "slides/lec-02.html#step-1-project-scoping",
+    "href": "slides/lec-02.html#step-1-project-scoping",
+    "title": "Introduction to ML Systems Design",
+    "section": "Step 1: Project scoping",
+    "text": "Step 1: Project scoping\n\nIdentify and involve stakeholders.\nDefine goals, objectives, and constraints.\nEstimate and allocate resources\nOrganize teams"
+  },
+  {
+    "objectID": "slides/lec-02.html#step-2-data-engineering",
+    "href": "slides/lec-02.html#step-2-data-engineering",
+    "title": "Introduction to ML Systems Design",
+    "section": "Step 2: Data engineering",
+    "text": "Step 2: Data engineering\n\nAccess to raw data\nHandling data from different sources and formats.\nCurate training data\nSampling and generating labels"
+  },
+  {
+    "objectID": "slides/lec-02.html#step-3-ml-model-development",
+    "href": "slides/lec-02.html#step-3-ml-model-development",
+    "title": "Introduction to ML Systems Design",
+    "section": "Step 3: ML Model development",
+    "text": "Step 3: ML Model development\n\nFeature engineering\nModel training and selection\nModel evaluation"
+  },
+  {
+    "objectID": "slides/lec-02.html#step-4-model-deployment",
+    "href": "slides/lec-02.html#step-4-model-deployment",
+    "title": "Introduction to ML Systems Design",
+    "section": "Step 4: Model deployment",
+    "text": "Step 4: Model deployment\n\nMake model accessible to users"
+  },
+  {
+    "objectID": "slides/lec-02.html#step-5-monitoring-and-continual-learning",
+    "href": "slides/lec-02.html#step-5-monitoring-and-continual-learning",
+    "title": "Introduction to ML Systems Design",
+    "section": "Step 5: Monitoring and continual learning",
+    "text": "Step 5: Monitoring and continual learning\n\nMonitoring for performance decay\nMaintained to be adaptive to changing environments and changing requirements"
+  },
+  {
+    "objectID": "slides/lec-02.html#step-6-business-analysis",
+    "href": "slides/lec-02.html#step-6-business-analysis",
+    "title": "Introduction to ML Systems Design",
+    "section": "Step 6: Business analysis",
+    "text": "Step 6: Business analysis\n\nEvaluate model performance against business goals\nEliminate unproductive projects or scope out new projects.\nThis step is closely related to the first step"
+  },
+  {
+    "objectID": "slides/lec-02.html#types-of-ml-tasks",
+    "href": "slides/lec-02.html#types-of-ml-tasks",
+    "title": "Introduction to ML Systems Design",
+    "section": "Types of ML Tasks",
+    "text": "Types of ML Tasks"
+  },
+  {
+    "objectID": "slides/lec-02.html#classification-versus-regression",
+    "href": "slides/lec-02.html#classification-versus-regression",
+    "title": "Introduction to ML Systems Design",
+    "section": "Classification versus regression",
+    "text": "Classification versus regression\n\nClassification models classify inputs into different categories\nRegression models output a continuous value"
+  },
+  {
+    "objectID": "slides/lec-02.html#classification-versus-regression-1",
+    "href": "slides/lec-02.html#classification-versus-regression-1",
+    "title": "Introduction to ML Systems Design",
+    "section": "Classification versus regression",
+    "text": "Classification versus regression\n\n\nA regression model can be framed as a classification model and vice versa (if we transform the data)"
+  },
+  {
+    "objectID": "slides/lec-02.html#binary-versus-multiclass-classification",
+    "href": "slides/lec-02.html#binary-versus-multiclass-classification",
+    "title": "Introduction to ML Systems Design",
+    "section": "Binary versus multiclass classification",
+    "text": "Binary versus multiclass classification\n\nBinary\n\nOnly two possible classes\n\nMulticlass classification\n\nMore than two classes\n\nHigh cardinality\n\nNumber of classes is high\n\nHierarchical classifiaction"
+  },
+  {
+    "objectID": "slides/lec-02.html#multiclass-versus-multilabel-classification",
+    "href": "slides/lec-02.html#multiclass-versus-multilabel-classification",
+    "title": "Introduction to ML Systems Design",
+    "section": "Multiclass versus multilabel classification",
+    "text": "Multiclass versus multilabel classification\n\nBinary and multiclass classification\n\nExample belongs to one class\n\nMultilabel classification problem\n\nExample can belong to multiple classes"
+  },
+  {
+    "objectID": "slides/lec-02.html#multiple-ways-to-frame-a-problem",
+    "href": "slides/lec-02.html#multiple-ways-to-frame-a-problem",
+    "title": "Introduction to ML Systems Design",
+    "section": "Multiple ways to frame a problem",
+    "text": "Multiple ways to frame a problem\n\n\nThis is a bad approach because whenever a new app is added, you might have to retrain your model from scratch, or at least retrain all the components of your model whose number of parameters depends on N"
+  },
+  {
+    "objectID": "slides/lec-02.html#multiple-ways-to-frame-a-problem-1",
+    "href": "slides/lec-02.html#multiple-ways-to-frame-a-problem-1",
+    "title": "Introduction to ML Systems Design",
+    "section": "Multiple ways to frame a problem",
+    "text": "Multiple ways to frame a problem\n\n\nIn this new framing, whenever there’s a new app you want to consider recommending to a user, you simply need to use new inputs with this new app’s feature instead of having to retrain your model or part of your model from scratch.\n\n\n\n\nMLOps | Jan Kirenz"
   },
   {
     "objectID": "slides/lec-0.html#welcome",

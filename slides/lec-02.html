@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.280">
 
   <meta name="author" content="Jan Kirenz">
-  <title>MLOps - Spring 2023 - MLOps</title>
+  <title>MLOps - Spring 2023 - Introduction to ML Systems Design</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,7 +30,7 @@
     }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="slides.scss">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -321,10 +321,8 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
-<meta property="og:title" content="MLOps - Spring 2023 - MLOps">
-<meta property="og:description" content="Welcome 👋">
+<meta property="og:title" content="MLOps - Spring 2023 - Introduction to ML Systems Design">
+<meta property="og:description" content="Lecture 2">
 <meta property="og:site-name" content="MLOps - Spring 2023">
 </head>
 <body class="quarto-light">
@@ -332,8 +330,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">MLOps</h1>
-  <p class="subtitle">Welcome 👋</p>
+  <h1 class="title">Introduction to ML Systems Design</h1>
+  <p class="subtitle">Lecture 2</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -344,54 +342,336 @@ Jan Kirenz
 </div>
 
 </section>
-<section class="slide level2">
+<section>
+<section id="business-and-ml-objectives" class="title-slide slide level1 center" data-background-color="#0ca37f">
+<h1>Business and ML Objectives</h1>
 
-<div class="cell">
-
-</div>
 </section>
-<section id="welcome" class="slide level2">
-<h2>Welcome!</h2>
+<section id="business-and-ml-objectives-1" class="slide level2">
+<h2>Business and ML Objectives</h2>
 <ul>
-<li class="fragment">Name, current job, your major in the masters program</li>
-<li class="fragment">What do you hope to get out of this course?</li>
-<li class="fragment">Anything you want to share/ask?</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_89c0ada0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">08</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="resources" class="slide level2">
-<h2>Resources</h2>
-
-<img data-src="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/.png" class="r-stretch quarto-figure-center"><p class="caption">Designing Machine Learning Systems by Chip Huyen, released May 2022</p></section>
-<section id="organization" class="slide level2">
-<h2>Organization</h2>
+<li class="fragment"><p>Goal of any project is to increase profits</p>
 <ul>
-<li class="fragment"><p>Course website: <a href="https://mlops-ss23.github.io/website/" class="uri">https://mlops-ss23.github.io/website/</a></p></li>
-<li class="fragment"><p>Moodle course</p></li>
+<li class="fragment"><p><strong>Directly</strong>: Increasing sales and cutting costs</p></li>
+<li class="fragment"><p><strong>Indirectly</strong>: e.g., higher customer satisfaction and increasing traffic on a website</p></li>
+</ul></li>
+<li class="fragment"><p>Tie the performance of an ML system to the overall business performance</p></li>
 </ul>
 </section>
-<section id="assignments" class="slide level2">
-<h2>Assignments</h2>
+<section id="e-commerce-example" class="slide level2">
+<h2>E Commerce example</h2>
 <ul>
-<li class="fragment">Txt</li>
+<li class="fragment"><p>E commerce site that cares about purchase-through rate</p></li>
+<li class="fragment"><p>You want to move your recommender system from batch prediction to online prediction</p></li>
+</ul>
+<aside class="notes">
+<p>E commerce site that cares about purchase-through rate and you want to move your recommender system from batch prediction to online prediction. You might reason that online prediction will enable recommendations more relevant to users right now, which can lead to a higher purchase-through rate. You can even do an experiment to show that online prediction can improve your recommender system’s predictive accuracy by X% and, historically on your site, each percent increase in the recommender system’s predictive accuracy led to a certain increase in purchase-through rate.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="netflix-recommender-example" class="slide level2">
+<h2>Netflix Recommender example</h2>
+<ul>
+<li class="fragment"><p>Business metric: subscription cancellation rate</p></li>
+<li class="fragment"><p>Metric: Total streaming hours</p></li>
+<li class="fragment"><p>Netflix measures the performance of their recommender system using take-rate: the number of quality plays divided by the number of recommendations a user sees</p></li>
+<li class="fragment"><p>The higher the take-rate, the better the recommender system</p></li>
+<li class="fragment"><p>A higher take-rate also results in higher total streaming hours and lower subscription cancellation rates</p></li>
 </ul>
 </section>
-<section id="wrap-up" class="slide level2">
-<h2>Wrap up</h2>
-<p>Any questions about the course?</p>
-
-
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://mlops-ss23.github.io/website/" class="uri">https://mlops-ss23.github.io/website/</a></p>
-</div>
+<section id="ab-testing" class="slide level2">
+<h2>A/B Testing</h2>
+<ul>
+<li class="fragment"><p>Use experiments to learn how ML metrics influence business metrics</p></li>
+<li class="fragment"><p>A/B testing to choose the model that leads to better business metrics</p></li>
+<li class="fragment"><p>Regardless of whether this model has better ML metrics.</p></li>
+</ul>
 </section>
+<section id="ml-maturity-stage" class="slide level2">
+<h2>ML maturity stage</h2>
+
+<img data-src="images/lec-02/fig-2-1-time-to-production.png" class="r-stretch"><ul>
+<li class="fragment">How long it takes for a company to bring a model to production is proportional to how long it has used ML. Source: Adapted from an image by Algorithmia</li>
+</ul>
+<aside class="notes">
+<p>Returns on investment in ML depend a lot on the maturity stage of adoption. The longer you’ve adopted ML, the more efficient your pipeline will run, the faster your development cycle will be, the less engineering time you’ll need, and the lower your cloud bills will be, which all lead to higher returns. According to a 2020 survey by Algorithmia, among companies that are more sophisticated in their ML adoption (having had models in production for over five years), almost 75% can deploy a model in under 30 days. Among those just getting started with their ML pipeline, 60% take over 30 days to deploy a model</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="requirements-for-ml-systems" class="title-slide slide level1 center" data-background-color="#0ca37f">
+<h1>Requirements for ML Systems</h1>
+
+</section>
+<section id="reliability" class="slide level2">
+<h2>Reliability</h2>
+<ul>
+<li class="fragment"><p>The system should continue to perform the correct function at the desired level of performance even in the face of adversity (hardware or software faults, and even human error)</p></li>
+<li class="fragment"><p>ML systems can fail silently</p></li>
+</ul>
+</section>
+<section id="scalability" class="slide level2">
+<h2>Scalability</h2>
+<ul>
+<li class="fragment"><p>Ways an ML system can grow:</p>
+<ul>
+<li class="fragment"><p>Complexity (more complex models)</p></li>
+<li class="fragment"><p>Traffic volume (served predictions per day)</p></li>
+<li class="fragment"><p>ML model count (# of models)</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="scalability-1" class="slide level2">
+<h2>Scalability</h2>
+<ul>
+<li class="fragment"><p>Resource scaling</p>
+<ul>
+<li class="fragment">Up-scaling (expanding the resources to handle growth)</li>
+<li class="fragment">Down-scaling (reducing the resources when not needed)</li>
+<li class="fragment">Auto-scaling: automatically scaling up and down the number of machines depending on usage.</li>
+</ul></li>
+<li class="fragment"><p><em>Amazon’s autoscaling feature failed on Prime Day (2018), causing their system to crash. An hour of downtime was estimated to cost Amazon between $72 million and $99 million.</em></p></li>
+<li class="fragment"><p>Artifact management (model monitoring and retraining)</p></li>
+</ul>
+</section>
+<section id="maintainability" class="slide level2">
+<h2>Maintainability</h2>
+<ul>
+<li class="fragment"><p>Code should be documented</p></li>
+<li class="fragment"><p>Code, data, and artifacts should be versioned.</p></li>
+<li class="fragment"><p>Models should be sufficiently reproducible</p></li>
+</ul>
+</section>
+<section id="adaptibility" class="slide level2">
+<h2>Adaptibility</h2>
+<ul>
+<li class="fragment"><p>Adapt to shifting data distributions and business requirements</p></li>
+<li class="fragment"><p>Capacity for performance improvement</p></li>
+<li class="fragment"><p>Allowing updates without service interruption</p></li>
+</ul>
+</section></section>
+<section>
+<section id="iterative-process" class="title-slide slide level1 center" data-background-color="#0ca37f">
+<h1>Iterative process</h1>
+
+</section>
+<section id="iterative-process-1" class="slide level2">
+<h2>Iterative process</h2>
+<ul>
+<li class="fragment"><p>Developing an ML system is an iterative (never-ending) process.</p></li>
+<li class="fragment"><p>Once a system is put into production, it’ll need to be continually monitored and updated.</p></li>
+<li class="fragment"><p>Example: Building an ML model to predict whether an ad should be shown when users enter a search query</p></li>
+</ul>
+</section>
+<section id="iterative-process-workflow-example" class="slide level2 scrollable">
+<h2>Iterative process workflow example</h2>
+<ul>
+<li class="fragment"><ol type="1">
+<li class="fragment">Choose a metric to optimize (e.g.&nbsp;impressions)</li>
+</ol></li>
+<li class="fragment"><ol start="2" type="1">
+<li class="fragment">Collect data and obtain labels</li>
+</ol></li>
+<li class="fragment"><ol start="3" type="1">
+<li class="fragment">Engineer features</li>
+</ol></li>
+<li class="fragment"><ol start="4" type="1">
+<li class="fragment">Train models</li>
+</ol></li>
+<li class="fragment"><ol start="5" type="1">
+<li class="fragment">Error analysis (e.g., wrong labels -&gt; relabel data)</li>
+</ol></li>
+<li class="fragment"><ol start="6" type="1">
+<li class="fragment">Train the model again</li>
+</ol></li>
+<li class="fragment"><ol start="7" type="1">
+<li class="fragment">Error analysis (e.g., data imbalance -&gt; collect more data)</li>
+</ol></li>
+<li class="fragment"><ol start="8" type="1">
+<li class="fragment">Train the model again</li>
+</ol></li>
+<li class="fragment"><ol start="9" type="1">
+<li class="fragment">Model performs poorly on newer data -&gt; update it on more recent data</li>
+</ol></li>
+<li class="fragment"><ol start="10" type="1">
+<li class="fragment">Train the model again</li>
+</ol></li>
+<li class="fragment"><ol start="11" type="1">
+<li class="fragment">Deploy the model</li>
+</ol></li>
+<li class="fragment"><ol start="12" type="1">
+<li class="fragment">Model seems to be performing well, but revenue is decreasing -&gt; change your model to optimize for ad click-through rate instead.</li>
+</ol></li>
+<li class="fragment"><ol start="13" type="1">
+<li class="fragment">Go to step 1.</li>
+</ol></li>
+</ul>
+</section>
+<section id="iterative-process-2" class="slide level2">
+<h2>Iterative process</h2>
+
+<img data-src="images/lec-02/fig-2-2-process.png" class="r-stretch"><ul>
+<li class="fragment">Oversimplified representation of what the iterative process for developing ML systems in production looks like from the perspective of a data scientist or an ML engineer.</li>
+</ul>
+</section>
+<section id="step-1-project-scoping" class="slide level2">
+<h2>Step 1: Project scoping</h2>
+<ul>
+<li class="fragment"><p>Identify and involve stakeholders.</p></li>
+<li class="fragment"><p>Define goals, objectives, and constraints.</p></li>
+<li class="fragment"><p>Estimate and allocate resources</p></li>
+<li class="fragment"><p>Organize teams</p></li>
+</ul>
+</section>
+<section id="step-2-data-engineering" class="slide level2">
+<h2>Step 2: Data engineering</h2>
+<ul>
+<li class="fragment"><p>Access to raw data</p></li>
+<li class="fragment"><p>Handling data from different sources and formats.</p></li>
+<li class="fragment"><p>Curate training data</p></li>
+<li class="fragment"><p>Sampling and generating labels</p></li>
+</ul>
+</section>
+<section id="step-3-ml-model-development" class="slide level2">
+<h2>Step 3: ML Model development</h2>
+<ul>
+<li class="fragment"><p>Feature engineering</p></li>
+<li class="fragment"><p>Model training and selection</p></li>
+<li class="fragment"><p>Model evaluation</p></li>
+</ul>
+</section>
+<section id="step-4-model-deployment" class="slide level2">
+<h2>Step 4: Model deployment</h2>
+<ul>
+<li class="fragment">Make model accessible to users</li>
+</ul>
+</section>
+<section id="step-5-monitoring-and-continual-learning" class="slide level2">
+<h2>Step 5: Monitoring and continual learning</h2>
+<ul>
+<li class="fragment"><p>Monitoring for performance decay</p></li>
+<li class="fragment"><p>Maintained to be adaptive to changing environments and changing requirements</p></li>
+</ul>
+</section>
+<section id="step-6-business-analysis" class="slide level2">
+<h2>Step 6: Business analysis</h2>
+<ul>
+<li class="fragment"><p>Evaluate model performance against business goals</p></li>
+<li class="fragment"><p>Eliminate unproductive projects or scope out new projects.</p></li>
+<li class="fragment"><p>This step is closely related to the first step</p></li>
+</ul>
+</section></section>
+<section>
+<section id="framing-ml-problems" class="title-slide slide level1 center" data-background-color="#0ca37f">
+<h1>Framing ML Problems</h1>
+
+</section>
+<section id="types-of-ml-tasks" class="slide level2">
+<h2>Types of ML Tasks</h2>
+
+<img data-src="images/lec-02/fig-2-3-ml-types.png" class="r-stretch"></section>
+<section id="classification-versus-regression" class="slide level2">
+<h2>Classification versus regression</h2>
+<ul>
+<li class="fragment"><p>Classification models classify inputs into different categories</p></li>
+<li class="fragment"><p>Regression models output a continuous value</p></li>
+</ul>
+</section>
+<section id="classification-versus-regression-1" class="slide level2">
+<h2>Classification versus regression</h2>
+
+<img data-src="images/lec-02/fig-2-4-cl-reg.png" class="r-stretch"><ul>
+<li class="fragment">A regression model can be framed as a classification model and vice versa (if we transform the data)</li>
+</ul>
+</section>
+<section id="binary-versus-multiclass-classification" class="slide level2">
+<h2>Binary versus multiclass classification</h2>
+<ul>
+<li class="fragment">Binary
+<ul>
+<li class="fragment">Only two possible classes</li>
+</ul></li>
+<li class="fragment">Multiclass classification
+<ul>
+<li class="fragment">More than two classes</li>
+</ul></li>
+<li class="fragment">High cardinality
+<ul>
+<li class="fragment">Number of classes is high</li>
+</ul></li>
+<li class="fragment">Hierarchical classifiaction</li>
+</ul>
+</section>
+<section id="multiclass-versus-multilabel-classification" class="slide level2">
+<h2>Multiclass versus multilabel classification</h2>
+<ul>
+<li class="fragment">Binary and multiclass classification
+<ul>
+<li class="fragment">Example belongs to one class</li>
+</ul></li>
+<li class="fragment">Multilabel classification problem
+<ul>
+<li class="fragment">Example can belong to multiple classes</li>
+</ul></li>
+</ul>
+</section>
+<section id="multiple-ways-to-frame-a-problem" class="slide level2">
+<h2>Multiple ways to frame a problem</h2>
+
+<img data-src="images/lec-02/fig-2-5-app.png" class="r-stretch"><aside class="notes">
+<p>This is a bad approach because whenever a new app is added, you might have to retrain your model from scratch, or at least retrain all the components of your model whose number of parameters depends on N</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="multiple-ways-to-frame-a-problem-1" class="slide level2">
+<h2>Multiple ways to frame a problem</h2>
+<p><img data-src="images/lec-02/fig-2-6-app.png"></p>
+<aside class="notes">
+<p>In this new framing, whenever there’s a new app you want to consider recommending to a user, you simply need to use new inputs with this new app’s feature instead of having to retrain your model or part of your model from scratch.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+<p><img src="images/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>MLOps | Jan Kirenz</p>
+</div>
+</section></section>
     </div>
   </div>
 
@@ -605,44 +885,6 @@ Jan Kirenz
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
