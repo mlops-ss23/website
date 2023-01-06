@@ -1,0 +1,77 @@
+---
+title: Data Engineering Fundamentals
+subtitle: Lecture 3
+author: Jan Kirenz
+format:
+  revealjs:
+    theme: default
+    transition: fade
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: images/logo.png
+    css: slides.scss
+    footer: MLOps | Jan Kirenz
+    incremental: true 
+#jupyter: python3
+---
+
+
+# Data Engineering {background-color="#0ca37f"}
+
+
+*How to collect, process, store, retrieve, and process data*
+
+## Basics of Data Engineering
+
+- Data storage
+
+- Data format
+
+- Data structure
+
+- Data models
+  - define how data stored 
+  - in a particular data format 
+  - is structured
+
+  ## Data Sources
+
+
+- User input data
+  - text, images, videos, uploaded files, etc.
+
+- Internal databases (services and applications)
+  - Inventory
+  - Customer relationship
+  - ... 
+
+- System-generated data
+  - Logs (tell you how the system is doing) 
+  - System outputs (like model predictions)
+
+- Third-party data
+
+:::{.notes}
+- Log everything you can (makes debugging easier)
+   - What exactly?
+   - How?
+   - How long?
+   - Privacy regulations?
+:::
+
+## Data Sources
+
+- First-party data
+  - Data that your company already collects about your users or customers S
+
+- Second-party data 
+  - Data collected by another company on their own customers that they make available to you, though you’ll probably have to pay for it
+  
+- Third-party data
+  - Companies collect data on the public who aren’t their direct customers
+
+## Data Formats
+
+
