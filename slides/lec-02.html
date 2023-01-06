@@ -652,8 +652,8 @@ Jan Kirenz
 </section>
 <section id="multiple-ways-to-frame-a-problem-1" class="slide level2">
 <h2>Multiple ways to frame a problem</h2>
-<p><img data-src="images/lec-02/fig-2-6-app.png"></p>
-<aside class="notes">
+
+<img data-src="images/lec-02/fig-2-6-app.png" class="r-stretch"><aside class="notes">
 <p>In this new framing, whenever there’s a new app you want to consider recommending to a user, you simply need to use new inputs with this new app’s feature instead of having to retrain your model or part of your model from scratch.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -666,9 +666,221 @@ Jan Kirenz
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="objective-functions" class="slide level2">
+<h2>Objective Functions</h2>
+<p><em>To learn, an ML model needs an objective (loss) function to guide the learning process</em></p>
+<ul>
+<li class="fragment">Regression
+<ul>
+<li class="fragment">Means squared error (MSE)</li>
+<li class="fragment">Root mean squared error (RMSE)</li>
+<li class="fragment">Mean absolute error (MAE)</li>
+</ul></li>
+<li class="fragment">Classification
+<ul>
+<li class="fragment">Logistic loss (log loss) for binary classification</li>
+<li class="fragment">Cross entropy for multiclass classification</li>
+</ul></li>
+</ul>
+</section>
+<section id="decoupling-objectives" class="slide level2">
+<h2>Decoupling objectives</h2>
+<ul>
+<li class="fragment"><p>Example: Build a system to rank items on users’ newsfeeds</p></li>
+<li class="fragment"><p>Original goal: aximize users’ engagement</p></li>
+<li class="fragment"><p>You want to achieve this goal through the following three objectives:</p></li>
+<li class="fragment"><ol type="1">
+<li class="fragment">Filter out spam</li>
+</ol></li>
+<li class="fragment"><ol start="2" type="1">
+<li class="fragment">Filter out NSFW content</li>
+</ol></li>
+<li class="fragment"><ol start="3" type="1">
+<li class="fragment">Rank posts by engagement: how likely users will click on it</li>
+</ol></li>
+</ul>
+</section>
+<section id="decoupling-objectives-1" class="slide level2">
+<h2>Decoupling objectives</h2>
+<ul>
+<li class="fragment">Ethical concerns
+<ul>
+<li class="fragment">Extreme posts tend to get more engagements</li>
+<li class="fragment">Algorithm learned to prioritize extreme content</li>
+</ul></li>
+</ul>
+</section>
+<section id="decoupling-objectives-2" class="slide level2">
+<h2>Decoupling objectives</h2>
+<ul>
+<li class="fragment">New goal:
+<ul>
+<li class="fragment">Maximize users’ engagement</li>
+<li class="fragment">While minimizing the spread of extreme views and misinformation</li>
+</ul></li>
+<li class="fragment">New objectives:
+<ul>
+<li class="fragment"><ol type="1">
+<li class="fragment">Filter out spam</li>
+</ol></li>
+<li class="fragment"><ol start="2" type="1">
+<li class="fragment">Filter out NSFW content</li>
+</ol></li>
+<li class="fragment"><ol start="3" type="1">
+<li class="fragment">Filter out misinformation</li>
+</ol></li>
+<li class="fragment"><ol start="4" type="1">
+<li class="fragment">Rank posts by quality</li>
+</ol></li>
+<li class="fragment"><ol start="5" type="1">
+<li class="fragment">Rank posts by engagement: how likely users will click on it</li>
+</ol></li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>Two objectives are in conflict with each other. If a post is engaging but it’s of questionable quality, should that post rank high or low?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="decoupling-objectives-3" class="slide level2">
+<h2>Decoupling objectives</h2>
+<ul>
+<li class="fragment">Rank posts by quality
+<ul>
+<li class="fragment">Minimize “quality loss”</li>
+</ul></li>
+<li class="fragment">Rank posts by engagement
+<ul>
+<li class="fragment">Predict the number of clicks each post will get</li>
+<li class="fragment">Minimize “engagement loss”</li>
+</ul></li>
+</ul>
+</section>
+<section id="decoupling-objectives-4" class="slide level2">
+<h2>Decoupling objectives</h2>
+<p>Possible solution: Train one model</p>
+<p><span class="math display">\[loss = \alpha (quality_{loss}) + \beta (engagement_{loss}) \]</span></p>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>This is not a good idea</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>A problem with this approach is that each time you tune α and β—for example, if the quality of your users’ newsfeeds goes up but users’ engagement goes down, you might want to decrease α and increase β—you’ll have to retrain your model.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="decoupling-objectives-5" class="slide level2">
+<h2>Decoupling objectives</h2>
+<p>Better solution: Train two different models</p>
+<p><span class="math display">\[\alpha (quality_{score}) + \beta (engagement_{score}) \]</span></p>
+<ul>
+<li class="fragment">Quality model
+<ul>
+<li class="fragment">Minimizes quality_loss and outputs the predicted quality of each post</li>
+</ul></li>
+<li class="fragment">Engagement Model
+<ul>
+<li class="fragment">Minimizes engagement_loss and outputs the predicted number of clicks of each post</li>
+</ul></li>
+<li class="fragment">Combine the models’ outputs and rank posts by their combined scores</li>
+</ul>
+<aside class="notes">
+<p>Now you can tweak α and β without retraining your models!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="decoupling-objectives-6" class="slide level2">
+<h2>Decoupling objectives</h2>
+<ul>
+<li class="fragment"><p>Multiple objectives</p>
+<ul>
+<li class="fragment">Decouple them</li>
+</ul></li>
+<li class="fragment"><p>Makes model development and maintenance easier.</p></li>
+<li class="fragment"><p>Easier to tweak your system without retraining models</p></li>
+<li class="fragment"><p>Easier for maintenance (e.g., different maintenance schedules)</p></li>
+</ul>
+</section>
+<section id="mind-versus-data" class="slide level2">
+<h2>Mind versus Data</h2>
+<ul>
+<li class="fragment">Mind
+<ul>
+<li class="fragment">Intelligent architectural designs</li>
+</ul></li>
+<li class="fragment">Data
+<ul>
+<li class="fragment">Computation</li>
+</ul></li>
+<li class="fragment">Success of an ML system depends largely on:
+<ul>
+<li class="fragment">the quality and quantity of data it was trained on</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-science-hierarchy-of-needs" class="slide level2">
+<h2>Data science hierarchy of needs</h2>
 
-<p><img src="images/logo.png" class="slide-logo"></p>
-<div class="footer footer-default">
+<img data-src="images/lec-02/fig-2-7-needs.png" class="r-stretch"><p>Source: Adapted from an image by Monica Rogati</p>
+</section>
+<section id="the-size-of-the-datasets" class="slide level2">
+<h2>The size of the datasets</h2>
+
+<img data-src="images/lec-02/fig-2-8-data.png" class="r-stretch"></section>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<ul>
+<li class="fragment"><p>Start with business objectives</p>
+<ul>
+<li class="fragment">Translate into ML objectives</li>
+</ul></li>
+<li class="fragment"><p>General requirements:</p>
+<ul>
+<li class="fragment">reliability, scalability, maintainability, and adaptability</li>
+</ul></li>
+<li class="fragment"><p>Iterative process</p></li>
+<li class="fragment"><p>Role of data in ML Systems</p></li>
+</ul>
+
+
+<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>MLOps | Jan Kirenz</p>
 </div>
 </section></section>
