@@ -231,7 +231,7 @@ from the two
 
 - We need versioning for code and data
 
-## Recap
+## Summary
 
 - Use cases of ML
 - When ML solutions would be appropriate
