@@ -18,12 +18,11 @@ format:
 ---
 
 
-# Data Engineering {background-color="#0ca37f"}
 
+## Basics of Data Engineering
 
 *How to collect, process, store, retrieve, and process data*
 
-## Basics of Data Engineering
 
 - Data storage
 
@@ -36,7 +35,10 @@ format:
   - in a particular data format 
   - is structured
 
-  ## Data Sources
+
+## Data sources {background-color="#0ca37f"}
+
+## Data Sources
 
 
 - User input data
@@ -72,6 +74,38 @@ format:
 - Third-party data
   - Companies collect data on the public who aren’t their direct customers
 
+
+## Data Formats {background-color="#0ca37f"}
+
+## Data Formats 
+
+- How do I store multimodal data, e.g., a sample that might contain both images and texts?
+
+- Where do I store my data so that it’s cheap and still fast to access?
+
+- How do I store complex models so that they can be loaded and run correctly on different hardware?
+
 ## Data Formats
 
+- Store ("persist") data
+
+- Data serialization
+  - Converting data into a specific format
+
+- Format depends on how data will be used 
+  - Human readability
+  - Access patterns
+  - ...
+
+
+## Some common data formats
+
+| **Format** | **Binary/Text** | **Human-readable** | **Example** **use** **cases** |
+| ---------- | --------------- | ------------------ | ----------------------------- |
+| JSON       | Text            | Yes                | Everywhere                    |
+| _CSV_      | _Text_          | _Yes_              | _Everywhere_                  |
+| _Parquet_  | _Binary_        | _No_               | _Hadoop,_ _Amazon_ _Redshift_ |
+| Avro       | Binary primary  | No                 | Hadoop                        |
+| Protobuf   | Binary primary  | No                 | Google, TensorFlow (TFRecord) |
+| Pickle     | Binary          | No                 | Python, PyTorch serialization |
 
