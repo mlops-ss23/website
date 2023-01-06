@@ -286,3 +286,143 @@ This is a bad approach because whenever a new app is added, you might have to re
 In this new framing, whenever there’s a new app you want to consider recommending to a user, you simply need to use new inputs with this new app’s feature instead of having to retrain your model or part of your model from scratch.
 :::
 
+## Objective Functions
+
+*To learn, an ML model needs an objective (loss) function to guide the learning process*
+
+- Regression
+  - Means squared error (MSE)
+  - Root mean squared error (RMSE)
+  - Mean absolute error (MAE)
+
+- Classification
+  - Logistic loss (log loss) for binary classification
+  - Cross entropy for multiclass classification
+
+## Decoupling objectives
+
+- Example: Build a system to rank items on users’ newsfeeds
+
+- Original goal: aximize users’ engagement
+ 
+ - You want to achieve this goal through the following three objectives:
+  - 1. Filter out spam
+  - 2. Filter out NSFW content
+  - 3. Rank posts by engagement: how likely users will click on it
+
+## Decoupling objectives
+
+- Ethical concerns 
+  - Extreme posts tend to get more engagements
+  - Algorithm learned to prioritize extreme content
+
+
+## Decoupling objectives
+
+- New goal:
+  - Maximize users’ engagement 
+  - While minimizing the spread of extreme views and misinformation
+
+- New objectives:
+  - 1. Filter out spam
+  - 2. Filter out NSFW content
+  - 3. Filter out misinformation
+  - 4. Rank posts by quality
+  - 5. Rank posts by engagement: how likely users will click on it
+
+
+:::{.notes}
+Two objectives are in conflict with each other. If a post is engaging but it’s of questionable quality, should that post rank high or low?
+:::
+
+## Decoupling objectives  
+
+
+- Rank posts by quality
+  - Minimize "quality loss"
+
+- Rank posts by engagement
+  - Predict the number of clicks each post will get
+  - Minimize "engagement loss"
+
+## Decoupling objectives  
+
+Possible solution: Train one model
+
+$$loss = \alpha (quality_{loss}) + \beta (engagement_{loss}) $$
+
+::: {.callout-warning}
+## Warning
+This is not a good idea
+:::
+
+
+:::{.notes}
+A problem with this approach is that each time you tune α and β—for example, if the quality of your users’ newsfeeds goes up but users’ engagement goes down, you might want to decrease α and increase β—you’ll have to retrain your model.
+:::
+
+## Decoupling objectives  
+
+Better solution: Train two different models
+
+$$\alpha (quality_{score}) + \beta (engagement_{score}) $$
+
+- Quality model
+  - Minimizes quality_loss and outputs the predicted quality of each post
+
+- Engagement Model
+  - Minimizes engagement_loss and outputs the predicted number of clicks of each post
+
+- Combine the models’ outputs and rank posts by their combined scores
+
+:::{.notes}
+Now you can tweak α and β without retraining your models!
+:::
+
+## Decoupling objectives  
+
+- Multiple objectives 
+  - Decouple them
+
+- Makes model development and maintenance easier. 
+
+- Easier to tweak your system without retraining models
+
+- Easier for maintenance (e.g., different maintenance schedules)
+
+
+## Mind versus Data
+
+- Mind
+  - Intelligent architectural designs
+
+- Data
+  - Computation
+
+- Success of an ML system depends largely on:
+  - the quality and quantity of data it was trained on
+
+## Data science hierarchy of needs
+
+![](images/lec-02/fig-2-7-needs.png)
+
+
+Source: Adapted from an image by Monica Rogati
+
+
+## The size of the datasets
+
+![](images/lec-02/fig-2-8-data.png)
+
+
+## Summary 
+
+- Start with business objectives
+  - Translate into ML objectives 
+
+- General requirements:
+  - reliability, scalability, maintainability, and adaptability
+
+- Iterative process
+
+- Role of data in ML Systems
