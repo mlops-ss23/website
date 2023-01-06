@@ -342,13 +342,9 @@ Jan Kirenz
 </div>
 
 </section>
-<section>
-<section id="data-engineering" class="title-slide slide level1 center" data-background-color="#0ca37f">
-<h1>Data Engineering</h1>
-<p><em>How to collect, process, store, retrieve, and process data</em></p>
-</section>
 <section id="basics-of-data-engineering" class="slide level2">
 <h2>Basics of Data Engineering</h2>
+<p><em>How to collect, process, store, retrieve, and process data</em></p>
 <ul>
 <li class="fragment"><p>Data storage</p></li>
 <li class="fragment"><p>Data format</p></li>
@@ -358,24 +354,31 @@ Jan Kirenz
 <li class="fragment">define how data stored</li>
 <li class="fragment">in a particular data format</li>
 <li class="fragment">is structured</li>
+</ul></li>
 </ul>
-<h2 id="data-sources">Data Sources</h2></li>
-<li class="fragment"><p>User input data</p>
+</section>
+<section id="data-sources" class="slide level2" data-background-color="#0ca37f">
+<h2>Data sources</h2>
+</section>
+<section id="data-sources-1" class="slide level2">
+<h2>Data Sources</h2>
+<ul>
+<li class="fragment">User input data
 <ul>
 <li class="fragment">text, images, videos, uploaded files, etc.</li>
 </ul></li>
-<li class="fragment"><p>Internal databases (services and applications)</p>
+<li class="fragment">Internal databases (services and applications)
 <ul>
 <li class="fragment">Inventory</li>
 <li class="fragment">Customer relationship</li>
 <li class="fragment">…</li>
 </ul></li>
-<li class="fragment"><p>System-generated data</p>
+<li class="fragment">System-generated data
 <ul>
 <li class="fragment">Logs (tell you how the system is doing)</li>
 <li class="fragment">System outputs (like model predictions)</li>
 </ul></li>
-<li class="fragment"><p>Third-party data</p></li>
+<li class="fragment">Third-party data</li>
 </ul>
 <aside class="notes">
 <ul>
@@ -399,7 +402,7 @@ Jan Kirenz
           display:block!important;
       }</style></aside>
 </section>
-<section id="data-sources-1" class="slide level2">
+<section id="data-sources-2" class="slide level2">
 <h2>Data Sources</h2>
 <ul>
 <li class="fragment">First-party data
@@ -416,14 +419,95 @@ Jan Kirenz
 </ul></li>
 </ul>
 </section>
-<section id="data-formats" class="slide level2">
+<section id="data-formats" class="slide level2" data-background-color="#0ca37f">
 <h2>Data Formats</h2>
+</section>
+<section id="data-formats-1" class="slide level2">
+<h2>Data Formats</h2>
+<ul>
+<li class="fragment"><p>How do I store multimodal data, e.g., a sample that might contain both images and texts?</p></li>
+<li class="fragment"><p>Where do I store my data so that it’s cheap and still fast to access?</p></li>
+<li class="fragment"><p>How do I store complex models so that they can be loaded and run correctly on different hardware?</p></li>
+</ul>
+</section>
+<section id="data-formats-2" class="slide level2">
+<h2>Data Formats</h2>
+<ul>
+<li class="fragment"><p>Store (“persist”) data</p></li>
+<li class="fragment"><p>Data serialization</p>
+<ul>
+<li class="fragment">Converting data into a specific format</li>
+</ul></li>
+<li class="fragment"><p>Format depends on how data will be used</p>
+<ul>
+<li class="fragment">Human readability</li>
+<li class="fragment">Access patterns</li>
+<li class="fragment">…</li>
+</ul></li>
+</ul>
+</section>
+<section id="some-common-data-formats" class="slide level2">
+<h2>Some common data formats</h2>
+<table>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 20%">
+<col style="width: 25%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Format</strong></th>
+<th><strong>Binary/Text</strong></th>
+<th><strong>Human-readable</strong></th>
+<th><strong>Example</strong> <strong>use</strong> <strong>cases</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>JSON</td>
+<td>Text</td>
+<td>Yes</td>
+<td>Everywhere</td>
+</tr>
+<tr class="even">
+<td><em>CSV</em></td>
+<td><em>Text</em></td>
+<td><em>Yes</em></td>
+<td><em>Everywhere</em></td>
+</tr>
+<tr class="odd">
+<td><em>Parquet</em></td>
+<td><em>Binary</em></td>
+<td><em>No</em></td>
+<td><em>Hadoop,</em> <em>Amazon</em> <em>Redshift</em></td>
+</tr>
+<tr class="even">
+<td>Avro</td>
+<td>Binary primary</td>
+<td>No</td>
+<td>Hadoop</td>
+</tr>
+<tr class="odd">
+<td>Protobuf</td>
+<td>Binary primary</td>
+<td>No</td>
+<td>Google, TensorFlow (TFRecord)</td>
+</tr>
+<tr class="even">
+<td>Pickle</td>
+<td>Binary</td>
+<td>No</td>
+<td>Python, PyTorch serialization</td>
+</tr>
+</tbody>
+</table>
 
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>MLOps | Jan Kirenz</p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
