@@ -235,7 +235,28 @@
     "href": "slides/lec-03.html#relational-models-3",
     "title": "Data Engineering Fundamentals",
     "section": "Relational Models",
-    "text": "Relational Models\n\n\n\nMLOps | Jan Kirenz"
+    "text": "Relational Models\n\nRelational databases\n\nPostgreSQL\nMySQL\n\nData needs to follow a strict schema"
+  },
+  {
+    "objectID": "slides/lec-03.html#relational-models-4",
+    "href": "slides/lec-03.html#relational-models-4",
+    "title": "Data Engineering Fundamentals",
+    "section": "Relational Models",
+    "text": "Relational Models\nRanking of the most popular relational database management systems worldwide, as of January 2022:\n\nSource: Statista"
+  },
+  {
+    "objectID": "slides/lec-03.html#relational-model",
+    "href": "slides/lec-03.html#relational-model",
+    "title": "Data Engineering Fundamentals",
+    "section": "Relational Model",
+    "text": "Relational Model\n\nQuery language for relational databases\nStructured query language (SQL)\n\nDeclarative language\n\nSQL queries can become quite long and complex"
+  },
+  {
+    "objectID": "slides/lec-03.html#nosql",
+    "href": "slides/lec-03.html#nosql",
+    "title": "Data Engineering Fundamentals",
+    "section": "NoSQL",
+    "text": "NoSQL\n\nNot only SQL\nNonrelational models\n\nDocument model\n\n\n\n\n\n\nMLOps | Jan Kirenz"
   },
   {
     "objectID": "slides/lec-temp.html#mlops",
