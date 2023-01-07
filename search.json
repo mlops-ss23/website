@@ -168,6 +168,13 @@
     "text": "Some common data formats\n\n\n\n\n\n\n\n\n\nFormat\nBinary/Text\nHuman-readable\nExample use cases\n\n\n\n\nJSON\nText\nYes\nEverywhere\n\n\nCSV\nText\nYes\nEverywhere\n\n\nParquet\nBinary\nNo\nHadoop, Amazon Redshift\n\n\nAvro\nBinary primary\nNo\nHadoop\n\n\nProtobuf\nBinary primary\nNo\nGoogle, TensorFlow (TFRecord)\n\n\nPickle\nBinary\nNo\nPython, PyTorch serialization"
   },
   {
+    "objectID": "slides/lec-03.html#json",
+    "href": "slides/lec-03.html#json",
+    "title": "Data Engineering Fundamentals",
+    "section": "JSON",
+    "text": "JSON\n{\n\"firstName\": \"Boatie\",\n\"lastName\": \"McBoatFace\",\n\"isVibing\": true,\n\"age\": 12,\n\"address\": {\n  \"streetAddress\": \"12 Ocean Drive\",\n  \"city\": \"Port Royal\",\n  \"postalCode\": \"10021-3100\"\n}\n}\nJSON (JavaScript Object Notation) - Human-readable - Key-value pair"
+  },
+  {
     "objectID": "slides/lec-03.html#row-major-versus-column-major-format",
     "href": "slides/lec-03.html#row-major-versus-column-major-format",
     "title": "Data Engineering Fundamentals",
@@ -193,7 +200,7 @@
     "href": "slides/lec-03.html#text-vs-binary-format-1",
     "title": "Data Engineering Fundamentals",
     "section": "Text vs Binary Format",
-    "text": "Text vs Binary Format\nStore number 1000000\n\nText file\n\n7 characters\nEach character 1 byte\n7 byte\n\nBinary file as int32\n\n32 bits or 4 bytes"
+    "text": "Text vs Binary Format\nStore number 1000000\n\nText file\n\n7 characters\nEach character 1 byte\n7 byte\n\nBinary file (as int32)\n\n32 bits or 4 bytes"
   },
   {
     "objectID": "slides/lec-03.html#text-vs-binary-format-2",
@@ -205,6 +212,27 @@
   {
     "objectID": "slides/lec-03.html#relational-models",
     "href": "slides/lec-03.html#relational-models",
+    "title": "Data Engineering Fundamentals",
+    "section": "Relational Models",
+    "text": "Relational Models\n\n\nNormalization\n\nReduces data redundancy\nImproves data integrity"
+  },
+  {
+    "objectID": "slides/lec-03.html#relational-models-1",
+    "href": "slides/lec-03.html#relational-models-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Relational Models",
+    "text": "Relational Models\nInitial book relation:\n\n\n\nTitle\nAuthor\nFormat\nPublisher\nCountry\nPrice\n\n\n\n\nHarry Potter\nJ.K. Rowling\nPaperback\nBanana Press\nUK\n$20\n\n\nHarry Potter\nJ.K. Rowling\nE-book\nBanana Press\nUK\n$10\n\n\nSherlock Holmes\nConan Doyle\nPaperback\nGuava Press\nUS\n$30\n\n\nThe Hobbit\nJ.R.R. Tolkien\nPaperback\nBanana Press\nUK\n$30\n\n\nSherlock Holmes\nConan Doyle\nPaperback\nGuava Press\nUS\n$15"
+  },
+  {
+    "objectID": "slides/lec-03.html#relational-models-2",
+    "href": "slides/lec-03.html#relational-models-2",
+    "title": "Data Engineering Fundamentals",
+    "section": "Relational Models",
+    "text": "Relational Models\nUpdated book relation:\n\n\n\nTitle\nAuthor\nFormat\nPublisher ID\nPrice\n\n\n\n\n\nHarry Potter\nJ.K. Rowling\nPaperback\n1\n$20\n\n\n\nHarry Potter\nJ.K. Rowling\nE-book\n1\n$10\n\n\n\nSherlock Holmes\nConan Doyle\nPaperback\n2\n$30\n\n\n\nThe Hobbit\nJ.R.R. Tolkien\nPaperback\n1\n$30\n\n\n\nSherlock Holmes\nConan Doyle\nPaperback\n2\n$15\n\n\n\n\n\n\n\n\nPublisher ID\nPublisher\nCountry\n\n\n\n\n1\nBanana Press\nUK\n\n\n1\nGuava Press\nUS\n\n\n\n\nDownside: data is now spread across multiple relations"
+  },
+  {
+    "objectID": "slides/lec-03.html#relational-models-3",
+    "href": "slides/lec-03.html#relational-models-3",
     "title": "Data Engineering Fundamentals",
     "section": "Relational Models",
     "text": "Relational Models\n\n\n\nMLOps | Jan Kirenz"
