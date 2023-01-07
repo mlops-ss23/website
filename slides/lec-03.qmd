@@ -110,6 +110,25 @@ format:
 | Pickle     | Binary          | No                 | Python, PyTorch serialization |
 
 
+## JSON
+
+```JSON
+{
+"firstName": "Boatie",
+"lastName": "McBoatFace",
+"isVibing": true,
+"age": 12,
+"address": {
+  "streetAddress": "12 Ocean Drive",
+  "city": "Port Royal",
+  "postalCode": "10021-3100"
+}
+}
+```
+
+ JSON (JavaScript Object Notation)
+  - Human-readable
+  - Key-value pair
 
 ## Row-Major Versus Column-Major Format
 
@@ -133,18 +152,18 @@ format:
 - NumPy: 
   - Major order can be specified
 
-  ![](images/lec-03/fig-3-2-pandas.png)
+![](images/lec-03/fig-3-2-pandas.png)
 
 
 ## Text vs Binary Format
 
-  - Text files
+  - **Text files**
     - Plain text
     - Human-readable
     - Not very efficient
     - E.g. CSV
   
-  - Binary format
+  - **Binary format**
     - Nontext (only 0s and 1s)
     - Very compact
     - Not human-readable
@@ -154,12 +173,12 @@ format:
 
 Store number `1000000`
 
-- Text file
+- **Text file**
   - 7 characters 
   - Each character 1 byte
   - 7 byte
   
-- Binary file as int32
+- **Binary file** (as int32)
   - 32 bits or 4 bytes
 
 ## Text vs Binary Format
@@ -175,4 +194,47 @@ Store number `1000000`
 *Describe how data is represented*
 
 ## Relational Models
+
+![](images/lec-03/fig-3-4-relational.png)
+
+- Normalization
+  - Reduces data redundancy 
+  - Improves data integrity
+
+## Relational Models {.smaller}
+
+Initial book relation:
+
+| Title | Author| Format | Publisher | Country | Price |
+|--- | --- |  --- | --- | --- | --- |
+| Harry Potter | J.K. Rowling | Paperback | Banana Press | UK | $20 |
+| Harry Potter |J.K. Rowling | E-book  | Banana Press | UK | $10 |
+| Sherlock Holmes | Conan Doyle | Paperback | Guava Press | US |$30 |
+| The Hobbit | J.R.R. Tolkien | Paperback  | Banana Press | UK  | $30 |
+| Sherlock Holmes | Conan Doyle | Paperback | Guava Press | US | $15 |
+
+## Relational Models {.smaller}
+
+Updated book relation:
+
+| Title | Author| Format | Publisher ID  | Price |
+| --- | --- |  --- | --- | --- | --- |
+| Harry Potter | J.K. Rowling | Paperback | 1 | $20 |
+| Harry Potter |J.K. Rowling | E-book  | 1  | $10 |
+| Sherlock Holmes | Conan Doyle | Paperback | 2 |$30 |
+| The Hobbit | J.R.R. Tolkien | Paperback  | 1  | $30 |
+| Sherlock Holmes | Conan Doyle | Paperback | 2 | $15 |
+
+<br>
+
+| Publisher ID | Publisher | Country | 
+| --- | --- |  --- | 
+| 1 | Banana Press | UK |
+| 1 | Guava Press | US |
+
+- Downside: data is now spread across multiple relations
+
+## Relational Models
+
+
 
