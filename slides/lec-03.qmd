@@ -236,5 +236,38 @@ Updated book relation:
 
 ## Relational Models
 
+- Relational databases 
+  - PostgreSQL
+  - MySQL
+
+- Data needs to follow a strict schema
+
+## Relational Models
+
+Ranking of the most popular relational database management systems worldwide, as of January 2022:
+
+![](images/lec-03/fig-ranking-databases.png)
+
+Source: [Statista](https://www.statista.com/statistics/1131568/worldwide-popularity-ranking-relational-database-management-systems/)
+
+
+## Relational Model
+
+- Query language for relational databases
+
+- Structured query language (SQL)
+  - Declarative language
+
+- SQL queries can become quite long and complex
+
+## NoSQL
+
+- Not only SQL
+
+- Nonrelational models
+  - Document model
+  - 
+
+
 
 
