@@ -1117,7 +1117,84 @@
     "href": "slides/lec-04.html#hand-labels",
     "title": "Training Data",
     "section": "Hand labels",
-    "text": "Hand labels\n\nExpensive and slow\nLabel multiplicity\n\nAnnotate all entities they can find:\nAnnotator |# entities| Annotation |\n1 | 3 | [Darth Sidious], known simply as the Emperor, was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |\n|2 | 6 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord] of the [Sith] who reigned over the galaxy as [Galactic Emperor] of the [First Galactic Empire].| | 3 | 4 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |\n\n\n\nMLOps | Jan Kirenz"
+    "text": "Hand labels\n\nUsually expensive and slow\nCommom problem: Label multiplicity\nAnnotate all entities they can find:\n\nDarth Sidious] known simply as the Emperor, was a Dark Lord of the Sith who reigned over the galaxy as Galactic Emperor of the First Galactic Empire"
+  },
+  {
+    "objectID": "slides/lec-04.html#hand-labels-1",
+    "href": "slides/lec-04.html#hand-labels-1",
+    "title": "Training Data",
+    "section": "Hand labels",
+    "text": "Hand labels\n\n\n\n\n\n\n\n\nAnnotator\n#\nAnnotation\n\n\n\n\n1\n3\n[Darth Sidious], known simply as the Emperor, was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire].\n\n\n2\n6\n[Darth Sidious], known simply as the [Emperor], was a [Dark Lord] of the [Sith] who reigned over the galaxy as [Galactic Emperor] of the [First Galactic Empire].\n\n\n3\n4\n[Darth Sidious], known simply as the [Emperor], was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire].\n\n\n\n\nPossible solution: pick the entity that comprises the longest substring."
+  },
+  {
+    "objectID": "slides/lec-04.html#data-lineage",
+    "href": "slides/lec-04.html#data-lineage",
+    "title": "Training Data",
+    "section": "Data lineage",
+    "text": "Data lineage\n\nKeep track of the origin of data\nhelps you flag potential biases in your data and debug your models"
+  },
+  {
+    "objectID": "slides/lec-04.html#natural-labels",
+    "href": "slides/lec-04.html#natural-labels",
+    "title": "Training Data",
+    "section": "Natural labels",
+    "text": "Natural labels\n\nExplicit labels (e.g., user feedback)\nImplicit labels (e.g., user behavior)\nFeedback loop length"
+  },
+  {
+    "objectID": "slides/lec-04.html#handling-the-lack-of-labels",
+    "href": "slides/lec-04.html#handling-the-lack-of-labels",
+    "title": "Training Data",
+    "section": "Handling the lack of labels",
+    "text": "Handling the lack of labels\n\n\n\n\n\n\n\n\nMethod\nHow\nGround truths required?\n\n\n\n\nWeak supervision\nLeverages (often noisy) heuristics to generate labels\nNo, but a small number of labels are recommended to guide the development of heuristics\n\n\nSemi-supervision\nLeverages structural assumptions to generate labels\nYes, a small number of initial labels as seeds to generate more labels\n\n\nTransfer learning\nLeverages models pretrained on another task for your new task\nNo for zero-shot learning. Yes for fine-tuning, though the number of ground truths required is often much smaller than what would be needed if you train the model from scratch\n\n\nActive learning\nLabels data samples that are most useful to your model\nYes"
+  },
+  {
+    "objectID": "slides/lec-04.html#weak-supervision",
+    "href": "slides/lec-04.html#weak-supervision",
+    "title": "Training Data",
+    "section": "Weak supervision",
+    "text": "Weak supervision\n\nUse heuristics to label data\n\nRequires subject matter expertise\n\nProgrammatic labeling\nLabeling function (LF)"
+  },
+  {
+    "objectID": "slides/lec-04.html#weak-supervision-example",
+    "href": "slides/lec-04.html#weak-supervision-example",
+    "title": "Training Data",
+    "section": "Weak supervision example",
+    "text": "Weak supervision example\n\nA doctor might use the following heuristics to decide whether a patient’s case should be prioritized as emergent:\n\n“If the nurse’s note mentions a serious condition like pneumonia, the patient’s case should be given priority consideration.”\n\nExample of labeling function:\n\ndef labeling_function(note):\n  if \"pneumonia\" in note:\n    return \"EMERGENT\""
+  },
+  {
+    "objectID": "slides/lec-04.html#weak-supervision-labeling-function",
+    "href": "slides/lec-04.html#weak-supervision-labeling-function",
+    "title": "Training Data",
+    "section": "Weak supervision labeling function",
+    "text": "Weak supervision labeling function\n\nKeyword heuristic\n\nSuch as the preceding example\n\nRegular expressions\n\nSuch as if the note matches or fails to match a certain regular expression\n\nDatabase lookup\n\nSuch as if the note contains the disease listed in the dangerous disease list\n\nThe outputs of other models\n\nSuch as if an existing system classifies this as EMERGENT"
+  },
+  {
+    "objectID": "slides/lec-04.html#weak-supervision-example-1",
+    "href": "slides/lec-04.html#weak-supervision-example-1",
+    "title": "Training Data",
+    "section": "Weak supervision example",
+    "text": "Weak supervision example\n\nSnorkel AI"
+  },
+  {
+    "objectID": "slides/lec-04.html#weak-supervision-1",
+    "href": "slides/lec-04.html#weak-supervision-1",
+    "title": "Training Data",
+    "section": "Weak supervision",
+    "text": "Weak supervision\n“Because LFs encode heuristics, and heuristics are noisy, labels produced by LFs are noisy.”"
+  },
+  {
+    "objectID": "slides/lec-04.html#weak-supervision-2",
+    "href": "slides/lec-04.html#weak-supervision-2",
+    "title": "Training Data",
+    "section": "Weak supervision",
+    "text": "Weak supervision\n\nEspecially useful when your data has strict privacy requirements\nSubject matter expertise can be versioned, reused, and shared"
+  },
+  {
+    "objectID": "slides/lec-04.html#weak-supervision-3",
+    "href": "slides/lec-04.html#weak-supervision-3",
+    "title": "Training Data",
+    "section": "Weak supervision",
+    "text": "Weak supervision\n\n\n\n\n\n\n\nHand labeling\nProgrammatic labeling\n\n\n\n\nExpensive : Especially when subject matter expertise required\nCost saving : Expertise can be versioned, shared, and reused across an organization\n\n\nLack of privacy : Need to ship data to human annotators\nPrivacy : Create LFs using a cleared data subsample and then apply LFs to other data without looking at individual samples\n\n\nSlow : Time required scales linearly with number of labels needed\nFast : Easily scale from 1K to 1M samples\n\n\nNonadaptive : Every change requires relabeling the data\nAdaptive : When changes happen, just reapply LFs!\n\n\n\n\n\n\nMLOps | Jan Kirenz"
   },
   {
     "objectID": "slides/lec-0.html#welcome",
