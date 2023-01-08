@@ -18,25 +18,12 @@ format:
 ---
 
 
-
-## Basics of Data Engineering
+# Basics of Data Engineering
 
 *How to collect, process, store, retrieve, and process data*
 
 
-- Data storage
-
-- Data format
-
-- Data structure
-
-- Data models
-  - define how data stored 
-  - in a particular data format 
-  - is structured
-
-
-## Data sources {background-color="#0ca37f"}
+# Data sources {background-color="#0ca37f"}
 
 ## Data Sources
 
@@ -75,7 +62,7 @@ format:
   - Companies collect data on the public who aren’t their direct customers
 
 
-## Data Formats {background-color="#0ca37f"}
+# Data Formats {background-color="#0ca37f"}
 
 ## Data Formats 
 
@@ -171,7 +158,7 @@ format:
 
 ## Text vs Binary Format
 
-Store number `1000000`
+Store the number `1000000`
 
 - **Text file**
   - 7 characters 
@@ -187,7 +174,8 @@ Store number `1000000`
   - CSV: 14 MB
   - Parquet: 6 MB 
 
-- Parquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3, compared to text formats
+- Parquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3, compared to text formats.
+
 
 # Data models {background-color="#0ca37f"}
 
@@ -236,11 +224,12 @@ Updated book relation:
 
 ## Relational Models
 
+- Data follows a predefined data model (schema)
+
 - Relational databases 
   - PostgreSQL
   - MySQL
 
-- Data needs to follow a strict schema
 
 ## Relational Models
 
@@ -260,14 +249,267 @@ Source: [Statista](https://www.statista.com/statistics/1131568/worldwide-popular
 
 - SQL queries can become quite long and complex
 
+
 ## NoSQL
 
 - Not only SQL
 
 - Nonrelational models
   - Document model
-  - 
+  - Graph model (focus on relationships)
 
 
+## Document model
+
+- Usally based on JSON, XML or BSON (Binary JSON)
+
+- Each document has a unique key
+
+- No enforced schema
+
+- Better locality 
+  - All information can be stored in one document
+  - Content of each document is the priority
+
+- Less efficient to execute joins across documents
+
+## Graph model
 
 
+![](images/lec-03/fig-3-5-graph.png)
+
+- Graph model
+  - Nodes 
+  - Edges represent the relationships between the nodes
+
+- Graph database
+  - Relationships between data items are the priority 
+
+## Structured vs Unstructured Data
+
+- Structured data 
+  - Follows a predefined data model (data schema)
+  - Easier to analyze
+  - Storage in data warehouse
+
+- Unstructured data
+  - Text, numbers, dates, images, audi etc.
+  - Predefined data schema not necessary
+  - Storage in data lake
+
+## Structured vs Unstructured Data
+
+| Structured data | Unstructured data |
+| Schema clearly defined  | Data doesn’t have to follow a schema |
+| Easy to search and analyze | Fast arrival |
+| Can only handle data with a specific schema | Can handle data from any source |
+| Schema changes will cause a lot of troubles | No need to worry about schema changes (yet), as the worry is shifted to the
+downstream applications that use this data |
+| Stored in data warehouses | Stored in data lakes | 
+
+# Data Storage Engines and Processing {background-color="#0ca37f"}
+
+
+## OLTP
+
+- Online *transaction* processing (OLTP)
+  - Online transactions
+  - Row-major
+  - Low latency and high availability important
+
+- ACID
+  - Atomicity (all or nothing)
+  - Consistency (follows certain rules)
+  - Isolation (multiple transactions)
+  - Durability
+
+## OLAP
+
+- Online *analytical* processing (OLAP)
+  - Column-major
+
+- OLTP and OLAP: Storage and processing is coupled
+
+## Data Storage Engines and Processing
+
+![](images/lec-03/fig-3-6-olap.png)
+
+
+## Data Storage Engines and Processing
+
+*Today, we have transactional databases that can handle analytical queries and analytical
+databases that can handle transactional queries*
+
+- Decouple storage from processing
+  - Data stored in same place
+  - Processing layer on top
+
+- Google's BigQuery, Snowflwake, Terradata
+
+
+## Data Storage Engines and Processing
+
+- Online
+
+- Nearline
+
+- Offline
+
+## ETL: Extract, Transfom, and Load
+
+![](images/lec-03/fig-3-7-ETL.png)
+
+- Data warehouse
+
+## ELT: Extract, Load, and eventually Transform
+
+- Data lake
+
+- Can be inefficient
+
+
+## Data warehouse + Data Lake = Data lakehouse
+
+- Structured data + unstructured data
+
+- Databricks lakehouse
+
+- Snowflake
+
+
+# Modes of Dataflow {background-color="#0ca37f"}
+
+## Modes of Dataflow
+
+Data passing through:
+
+- Databases
+
+- Services using requests (e.g., GET)
+  - REST (representational state transfer) API 
+  - RPC (remote procedure call) API 
+
+- Real-time transport
+  - e.g., Apache Kafka and Amazon Kinesis
+
+
+## Data Passing Through Databases
+
+- Problem of accessing
+
+- Easy but slow
+
+
+## Data Passing Through Services
+
+- Request-driven
+
+- Service-oriented architecture
+
+- Microservice architecture
+
+## Data Passing Through Services
+
+- Example Lyft
+
+- Driver management service
+  - Predicts how many drivers will be available in the next minute in a given area.
+
+- Ride management service
+  - Predicts how many rides will be requested in the next minute in a given area.
+
+- Price optimization service
+  - Predicts the optimal price for each ride. 
+
+
+## Data Passing Through Services
+
+
+![](images/lec-03/fig-3-8-services.png)
+
+- Request-driven data passing is synchronous
+
+## Data Passing Through Real-Time Transport
+
+![](images/lec-03/fig-3-9-broker.png)
+
+
+- Broker
+  - Coordinates data passing among services
+  - In-memory storage to broker data
+
+- Event-driven architecture
+  - Event: Data broadcast to a real-time transport
+  - Event bus: Real-time transport
+
+
+## Data Passing Through Real-Time Transport
+
+- pubsup (publish-subscribe)
+  - Service publishs to topic in a real-time transport
+  - Service can subscribe to topic and read events
+
+![](images/lec-03/fig-3-10-pubsub.png)
+
+
+## Data Passing Through Real-Time Transport
+
+
+- message queue
+ - Responsible for getting a to the right consumers
+
+
+## Data Passing Through Real-Time Transport
+
+
+![](images/lec-03/fig-3-11-kafka.png)
+
+
+## Batch Processing Versus Stream Processing
+
+- Historical data vs streaming data
+
+- Batch processing vs stream processing
+
+- Batch (static) features vs streaming (dynamic) features
+
+
+## Batch Processing Versus Stream Processing
+
+
+- Spark, MapReduce
+
+- Apache Flink, KSQL, Spark Streaming
+
+
+## Summary
+
+- Data sources (first, second and third party)
+
+- Data formats
+  - Row-major vs column-major
+  - Text vs binary 
+  - Structured vs unstructured 
+
+- Data models
+  - Relational
+  - Document
+  - Graph
+
+Data storage engines
+  - Data warehouse
+  - Data lake
+  - Graph database
+
+## Summary
+
+- Data processing
+  - Transactional vs analytical
+
+- Data passing through
+  - Databases
+  - Services
+  - Real-time-transport (Apache KAfka, RabbitMQ)
+
+- Batch and streaming data
+  - Static features vs dynamic features

@@ -1,0 +1,96 @@
+---
+title: Training Data
+subtitle: Lecture 4
+author: Jan Kirenz
+format:
+  revealjs:
+    theme: default
+    transition: fade
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: images/logo.png
+    css: slides.scss
+    footer: MLOps | Jan Kirenz
+    incremental: true 
+#jupyter: python3
+---
+
+# Sampling {background-color="#0ca37f"}
+
+## Nonprobability Sampling 
+
+
+- Convenience sampling
+  - Samples selected based on their availability
+
+- Snowball sampling
+  - Future samples are selected based on existing samples
+
+- Judgment sampling
+  - Experts decide what samples to include
+
+- Quota sampling
+  - Select samples based on quotas for certain slices of data 
+
+## Nonprobability Sampling 
+
+- Sample is not representative for population (selection bias)
+
+
+## Simple Random Sampling
+
+- All samples in the population have equal probability of being selected
+
+- Easy to implement
+
+- Rare categories of data might not appear in your selection
+
+
+## Stratified Sampling
+
+1. Divide population into similar groups 
+2. Sample from each group separately
+
+- Each group is called a stratum
+
+- Sometimes it's impossible to divide all samples into groups
+
+## Weighted Sampling
+
+- Each sample is given a weight, which determines the probability of it being selected
+
+![](images/lec-04/fig-4-1-weighted.png)
+
+
+## Reservoir Sampling
+
+- Useful for streaming data
+
+1. Put the first k elements into the reservoir.
+2. For each incoming n*th* element, generate a random number i such that 1 ≤ i ≤ n.
+3. If 1 ≤ i ≤ k: replace the i*th* element in the reservoir with the n*th* element. Else, do nothing.
+
+
+- ![](images/lec-04/fig-4-2-reservoir.jpg)
+
+## Importance Sampling
+
+- Sample from a distribution when we only have access to another distribution
+
+
+# Labeling {background-color="#0ca37f"}
+
+## Hand labels
+
+- Expensive and slow
+
+- Label multiplicity
+
+Annotate all entities they can find:
+
+| Annotator |# entities| Annotation |
+| 1 | 3 | [Darth Sidious], known simply as the Emperor, was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |
+|2 | 6 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord] of the [Sith] who reigned over the galaxy as [Galactic Emperor] of the [First Galactic Empire].| 
+| 3 | 4 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |
