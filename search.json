@@ -1194,7 +1194,42 @@
     "href": "slides/lec-04.html#weak-supervision-3",
     "title": "Training Data",
     "section": "Weak supervision",
-    "text": "Weak supervision\n\n\n\n\n\n\n\nHand labeling\nProgrammatic labeling\n\n\n\n\nExpensive : Especially when subject matter expertise required\nCost saving : Expertise can be versioned, shared, and reused across an organization\n\n\nLack of privacy : Need to ship data to human annotators\nPrivacy : Create LFs using a cleared data subsample and then apply LFs to other data without looking at individual samples\n\n\nSlow : Time required scales linearly with number of labels needed\nFast : Easily scale from 1K to 1M samples\n\n\nNonadaptive : Every change requires relabeling the data\nAdaptive : When changes happen, just reapply LFs!\n\n\n\n\n\n\nMLOps | Jan Kirenz"
+    "text": "Weak supervision\n\n\n\n\n\n\n\nHand labeling\nProgrammatic labeling\n\n\n\n\nExpensive : Especially when subject matter expertise required\nCost saving : Expertise can be versioned, shared, and reused across an organization\n\n\nLack of privacy : Need to ship data to human annotators\nPrivacy : Create LFs using a cleared data subsample and then apply LFs to other data without looking at individual samples\n\n\nSlow : Time required scales linearly with number of labels needed\nFast : Easily scale from 1K to 1M samples\n\n\nNonadaptive : Every change requires relabeling the data\nAdaptive : When changes happen, just reapply LFs!"
+  },
+  {
+    "objectID": "slides/lec-04.html#weak-supervisionc",
+    "href": "slides/lec-04.html#weak-supervisionc",
+    "title": "Training Data",
+    "section": "Weak supervisionc",
+    "text": "Weak supervisionc\n\n\nModels trained with weakly supervised labels obtained by a single radiologist after eight hours of writing LFs had comparable performance with models trained on data obtained through almost a year of hand labeling"
+  },
+  {
+    "objectID": "slides/lec-04.html#semi-supervision",
+    "href": "slides/lec-04.html#semi-supervision",
+    "title": "Training Data",
+    "section": "Semi supervision",
+    "text": "Semi supervision\n\nGenerates new labels based on a small set of initial labels\nSemi-supervision requires an initial set of labels\nSelf-training\n\nUse model to make predictions for unlabeld data\nKeep labels with high probability scores"
+  },
+  {
+    "objectID": "slides/lec-04.html#semi-supervision-1",
+    "href": "slides/lec-04.html#semi-supervision-1",
+    "title": "Training Data",
+    "section": "Semi supervision",
+    "text": "Semi supervision\n\nPerturbation-based method"
+  },
+  {
+    "objectID": "slides/lec-04.html#transfer-learning",
+    "href": "slides/lec-04.html#transfer-learning",
+    "title": "Training Data",
+    "section": "Transfer learning",
+    "text": "Transfer learning"
+  },
+  {
+    "objectID": "slides/lec-04.html#active-learning",
+    "href": "slides/lec-04.html#active-learning",
+    "title": "Training Data",
+    "section": "Active learning",
+    "text": "Active learning\n\n\n\nMLOps | Jan Kirenz"
   },
   {
     "objectID": "slides/lec-0.html#welcome",
