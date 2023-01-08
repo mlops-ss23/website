@@ -82,15 +82,118 @@ format:
 
 # Labeling {background-color="#0ca37f"}
 
-## Hand labels
+## Hand labels 
 
-- Expensive and slow
+- Usually expensive and slow
 
-- Label multiplicity
+- Commom problem: Label multiplicity
 
-Annotate all entities they can find:
+- Annotate all entities they can find:
+  - Darth Sidious] known simply as the Emperor, was a Dark Lord of the Sith who reigned over the galaxy as  Galactic Emperor of the First Galactic Empire
 
-| Annotator |# entities| Annotation |
+## Hand labels {.smaller}
+
+
+| Annotator |# | Annotation |
+|-|-|---------|
 | 1 | 3 | [Darth Sidious], known simply as the Emperor, was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |
 |2 | 6 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord] of the [Sith] who reigned over the galaxy as [Galactic Emperor] of the [First Galactic Empire].| 
 | 3 | 4 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |
+
+- Possible solution: pick the entity that comprises the longest substring.
+
+
+## Data lineage
+
+- Keep track of the origin of data
+
+- helps you flag potential biases in your data and debug your models
+
+## Natural labels
+
+- Explicit labels (e.g., user feedback)
+
+- Implicit labels (e.g., user behavior)
+
+- Feedback loop length
+
+
+## Handling the lack of labels {.smaller}
+
+
+| **Method**        | **How**                                                       | **Ground truths required?**                                                                                                                                                     |
+| ----------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Weak supervision  | Leverages (often noisy) heuristics to generate labels         | No, but a small number of labels are recommended to guide the development of heuristics                                                                                         |
+| Semi-supervision  | Leverages structural assumptions to generate labels           | Yes, a small number of initial labels as seeds to generate more labels                                                                                                          |
+| Transfer learning | Leverages models pretrained on another task for your new task | No for zero-shot learning. Yes for fine-tuning, though the number of ground truths required is often much smaller than what would be needed if you train the model from scratch |
+| Active learning   | Labels data samples that are most useful to your model        | Yes                                                                                                                                                                             |
+
+## Weak supervision
+
+- Use heuristics to label data
+  - Requires subject matter expertise
+
+- Programmatic labeling
+
+- Labeling function (LF)
+
+
+## Weak supervision example
+
+- A doctor might use the following heuristics to decide whether a patient’s case should be prioritized as
+emergent:
+  - "If the nurse’s note mentions a serious condition like pneumonia, the patient’s case
+should be given priority consideration."
+
+- Example of labeling function:
+
+```python
+def labeling_function(note):
+  if "pneumonia" in note:
+    return "EMERGENT"
+```
+
+## Weak supervision labeling function {.smaller}
+
+
+- Keyword heuristic
+  - Such as the preceding example
+
+- Regular expressions
+  - Such as if the note matches or fails to match a certain regular expression
+
+- Database lookup
+  - Such as if the note contains the disease listed in the dangerous disease list
+
+- The outputs of other models
+  - Such as if an existing system classifies this as EMERGENT
+
+
+## Weak supervision example
+
+- Snorkel AI
+
+
+## Weak supervision 
+
+"Because LFs encode heuristics, and heuristics are noisy, labels produced by LFs are
+noisy."
+
+![](images/lec-04/fig-4-4-labeling-funtions.jpg)
+
+
+## Weak supervision
+
+- Especially useful when your data has strict privacy requirements
+
+- Subject matter expertise can be versioned, reused, and shared
+
+## Weak supervision
+
+| Hand labeling | Programmatic labeling |
+| -- | -- |
+| Expensive : Especially when subject matter expertise required | Cost saving : Expertise can be versioned, shared, and reused across an organization |
+| Lack of privacy : Need to ship data to human annotators | Privacy : Create LFs using a cleared data subsample and then apply LFs to other data without looking at individual samples |
+| Slow : Time required scales linearly with number of labels needed | Fast : Easily scale from 1K to 1M samples |
+| Nonadaptive : Every change requires relabeling the data | Adaptive : When changes happen, just reapply LFs! |
+
