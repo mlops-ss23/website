@@ -112,20 +112,6 @@
     "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here."
   },
   {
-    "objectID": "slides/lec-03.html#basics-of-data-engineering",
-    "href": "slides/lec-03.html#basics-of-data-engineering",
-    "title": "Data Engineering Fundamentals",
-    "section": "Basics of Data Engineering",
-    "text": "Basics of Data Engineering\nHow to collect, process, store, retrieve, and process data\n\nData storage\nData format\nData structure\nData models\n\ndefine how data stored\nin a particular data format\nis structured"
-  },
-  {
-    "objectID": "slides/lec-03.html#data-sources",
-    "href": "slides/lec-03.html#data-sources",
-    "title": "Data Engineering Fundamentals",
-    "section": "Data sources",
-    "text": "Data sources"
-  },
-  {
     "objectID": "slides/lec-03.html#data-sources-1",
     "href": "slides/lec-03.html#data-sources-1",
     "title": "Data Engineering Fundamentals",
@@ -138,13 +124,6 @@
     "title": "Data Engineering Fundamentals",
     "section": "Data Sources",
     "text": "Data Sources\n\nFirst-party data\n\nData that your company already collects about your users or customers S\n\nSecond-party data\n\nData collected by another company on their own customers that they make available to you, though you’ll probably have to pay for it\n\nThird-party data\n\nCompanies collect data on the public who aren’t their direct customers"
-  },
-  {
-    "objectID": "slides/lec-03.html#data-formats",
-    "href": "slides/lec-03.html#data-formats",
-    "title": "Data Engineering Fundamentals",
-    "section": "Data Formats",
-    "text": "Data Formats"
   },
   {
     "objectID": "slides/lec-03.html#data-formats-1",
@@ -200,14 +179,14 @@
     "href": "slides/lec-03.html#text-vs-binary-format-1",
     "title": "Data Engineering Fundamentals",
     "section": "Text vs Binary Format",
-    "text": "Text vs Binary Format\nStore number 1000000\n\nText file\n\n7 characters\nEach character 1 byte\n7 byte\n\nBinary file (as int32)\n\n32 bits or 4 bytes"
+    "text": "Text vs Binary Format\nStore the number 1000000\n\nText file\n\n7 characters\nEach character 1 byte\n7 byte\n\nBinary file (as int32)\n\n32 bits or 4 bytes"
   },
   {
     "objectID": "slides/lec-03.html#text-vs-binary-format-2",
     "href": "slides/lec-03.html#text-vs-binary-format-2",
     "title": "Data Engineering Fundamentals",
     "section": "Text vs Binary Format",
-    "text": "Text vs Binary Format\n\nFile with 17,654 rows and 10 columns\n\nCSV: 14 MB\nParquet: 6 MB\n\nParquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3, compared to text formats"
+    "text": "Text vs Binary Format\n\nFile with 17,654 rows and 10 columns\n\nCSV: 14 MB\nParquet: 6 MB\n\nParquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3, compared to text formats."
   },
   {
     "objectID": "slides/lec-03.html#relational-models",
@@ -235,7 +214,7 @@
     "href": "slides/lec-03.html#relational-models-3",
     "title": "Data Engineering Fundamentals",
     "section": "Relational Models",
-    "text": "Relational Models\n\nRelational databases\n\nPostgreSQL\nMySQL\n\nData needs to follow a strict schema"
+    "text": "Relational Models\n\nData follows a predefined data model (schema)\nRelational databases\n\nPostgreSQL\nMySQL"
   },
   {
     "objectID": "slides/lec-03.html#relational-models-4",
@@ -256,7 +235,182 @@
     "href": "slides/lec-03.html#nosql",
     "title": "Data Engineering Fundamentals",
     "section": "NoSQL",
-    "text": "NoSQL\n\nNot only SQL\nNonrelational models\n\nDocument model\n\n\n\n\n\n\nMLOps | Jan Kirenz"
+    "text": "NoSQL\n\nNot only SQL\nNonrelational models\n\nDocument model\nGraph model (focus on relationships)"
+  },
+  {
+    "objectID": "slides/lec-03.html#document-model",
+    "href": "slides/lec-03.html#document-model",
+    "title": "Data Engineering Fundamentals",
+    "section": "Document model",
+    "text": "Document model\n\nUsally based on JSON, XML or BSON (Binary JSON)\nEach document has a unique key\nNo enforced schema\nBetter locality\n\nAll information can be stored in one document\nContent of each document is the priority\n\nLess efficient to execute joins across documents"
+  },
+  {
+    "objectID": "slides/lec-03.html#graph-model",
+    "href": "slides/lec-03.html#graph-model",
+    "title": "Data Engineering Fundamentals",
+    "section": "Graph model",
+    "text": "Graph model\n\n\nGraph model\n\nNodes\nEdges represent the relationships between the nodes\n\nGraph database\n\nRelationships between data items are the priority"
+  },
+  {
+    "objectID": "slides/lec-03.html#structured-vs-unstructured-data",
+    "href": "slides/lec-03.html#structured-vs-unstructured-data",
+    "title": "Data Engineering Fundamentals",
+    "section": "Structured vs Unstructured Data",
+    "text": "Structured vs Unstructured Data\n\nStructured data\n\nFollows a predefined data model (data schema)\nEasier to analyze\nStorage in data warehouse\n\nUnstructured data\n\nText, numbers, dates, images, audi etc.\nPredefined data schema not necessary\nStorage in data lake"
+  },
+  {
+    "objectID": "slides/lec-03.html#structured-vs-unstructured-data-1",
+    "href": "slides/lec-03.html#structured-vs-unstructured-data-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Structured vs Unstructured Data",
+    "text": "Structured vs Unstructured Data\nStructured data | Unstructured data |\nSchema clearly defined | Data doesn’t have to follow a schema |\nEasy to search and analyze | Fast arrival |\nCan only handle data with a specific schema | Can handle data from any source |\nSchema changes will cause a lot of troubles | No need to worry about schema changes (yet), as the worry is shifted to the\ndownstream applications that use this data | | Stored in data warehouses | Stored in data lakes |"
+  },
+  {
+    "objectID": "slides/lec-03.html#oltp",
+    "href": "slides/lec-03.html#oltp",
+    "title": "Data Engineering Fundamentals",
+    "section": "OLTP",
+    "text": "OLTP\n\nOnline transaction processing (OLTP)\n\nOnline transactions\nRow-major\nLow latency and high availability important\n\nACID\n\nAtomicity (all or nothing)\nConsistency (follows certain rules)\nIsolation (multiple transactions)\nDurability"
+  },
+  {
+    "objectID": "slides/lec-03.html#olap",
+    "href": "slides/lec-03.html#olap",
+    "title": "Data Engineering Fundamentals",
+    "section": "OLAP",
+    "text": "OLAP\n\nOnline analytical processing (OLAP)\n\nColumn-major\n\nOLTP and OLAP: Storage and processing is coupled"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-storage-engines-and-processing-1",
+    "href": "slides/lec-03.html#data-storage-engines-and-processing-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Storage Engines and Processing",
+    "text": "Data Storage Engines and Processing"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-storage-engines-and-processing-2",
+    "href": "slides/lec-03.html#data-storage-engines-and-processing-2",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Storage Engines and Processing",
+    "text": "Data Storage Engines and Processing\nToday, we have transactional databases that can handle analytical queries and analytical databases that can handle transactional queries\n\nDecouple storage from processing\n\nData stored in same place\nProcessing layer on top\n\nGoogle’s BigQuery, Snowflwake, Terradata"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-storage-engines-and-processing-3",
+    "href": "slides/lec-03.html#data-storage-engines-and-processing-3",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Storage Engines and Processing",
+    "text": "Data Storage Engines and Processing\n\nOnline\nNearline\nOffline"
+  },
+  {
+    "objectID": "slides/lec-03.html#etl-extract-transfom-and-load",
+    "href": "slides/lec-03.html#etl-extract-transfom-and-load",
+    "title": "Data Engineering Fundamentals",
+    "section": "ETL: Extract, Transfom, and Load",
+    "text": "ETL: Extract, Transfom, and Load\n\n\nData warehouse"
+  },
+  {
+    "objectID": "slides/lec-03.html#elt-extract-load-and-eventually-transform",
+    "href": "slides/lec-03.html#elt-extract-load-and-eventually-transform",
+    "title": "Data Engineering Fundamentals",
+    "section": "ELT: Extract, Load, and eventually Transform",
+    "text": "ELT: Extract, Load, and eventually Transform\n\nData lake\nCan be inefficient"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-warehouse-data-lake-data-lakehouse",
+    "href": "slides/lec-03.html#data-warehouse-data-lake-data-lakehouse",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data warehouse + Data Lake = Data lakehouse",
+    "text": "Data warehouse + Data Lake = Data lakehouse\n\nStructured data + unstructured data\nDatabricks lakehouse\nSnowflake"
+  },
+  {
+    "objectID": "slides/lec-03.html#modes-of-dataflow-1",
+    "href": "slides/lec-03.html#modes-of-dataflow-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Modes of Dataflow",
+    "text": "Modes of Dataflow\nData passing through:\n\nDatabases\nServices using requests (e.g., GET)\n\nREST (representational state transfer) API\nRPC (remote procedure call) API\n\nReal-time transport\n\ne.g., Apache Kafka and Amazon Kinesis"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-passing-through-databases",
+    "href": "slides/lec-03.html#data-passing-through-databases",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Passing Through Databases",
+    "text": "Data Passing Through Databases\n\nProblem of accessing\nEasy but slow"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-passing-through-services",
+    "href": "slides/lec-03.html#data-passing-through-services",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Passing Through Services",
+    "text": "Data Passing Through Services\n\nRequest-driven\nService-oriented architecture\nMicroservice architecture"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-passing-through-services-1",
+    "href": "slides/lec-03.html#data-passing-through-services-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Passing Through Services",
+    "text": "Data Passing Through Services\n\nExample Lyft\nDriver management service\n\nPredicts how many drivers will be available in the next minute in a given area.\n\nRide management service\n\nPredicts how many rides will be requested in the next minute in a given area.\n\nPrice optimization service\n\nPredicts the optimal price for each ride."
+  },
+  {
+    "objectID": "slides/lec-03.html#data-passing-through-services-2",
+    "href": "slides/lec-03.html#data-passing-through-services-2",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Passing Through Services",
+    "text": "Data Passing Through Services\n\n\nRequest-driven data passing is synchronous"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-passing-through-real-time-transport",
+    "href": "slides/lec-03.html#data-passing-through-real-time-transport",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Passing Through Real-Time Transport",
+    "text": "Data Passing Through Real-Time Transport\n\n\nBroker\n\nCoordinates data passing among services\nIn-memory storage to broker data\n\nEvent-driven architecture\n\nEvent: Data broadcast to a real-time transport\nEvent bus: Real-time transport"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-passing-through-real-time-transport-1",
+    "href": "slides/lec-03.html#data-passing-through-real-time-transport-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Passing Through Real-Time Transport",
+    "text": "Data Passing Through Real-Time Transport\n\npubsup (publish-subscribe)\n\nService publishs to topic in a real-time transport\nService can subscribe to topic and read events"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-passing-through-real-time-transport-2",
+    "href": "slides/lec-03.html#data-passing-through-real-time-transport-2",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Passing Through Real-Time Transport",
+    "text": "Data Passing Through Real-Time Transport\n\nmessage queue\nResponsible for getting a to the right consumers"
+  },
+  {
+    "objectID": "slides/lec-03.html#data-passing-through-real-time-transport-3",
+    "href": "slides/lec-03.html#data-passing-through-real-time-transport-3",
+    "title": "Data Engineering Fundamentals",
+    "section": "Data Passing Through Real-Time Transport",
+    "text": "Data Passing Through Real-Time Transport"
+  },
+  {
+    "objectID": "slides/lec-03.html#batch-processing-versus-stream-processing",
+    "href": "slides/lec-03.html#batch-processing-versus-stream-processing",
+    "title": "Data Engineering Fundamentals",
+    "section": "Batch Processing Versus Stream Processing",
+    "text": "Batch Processing Versus Stream Processing\n\nHistorical data vs streaming data\nBatch processing vs stream processing\nBatch (static) features vs streaming (dynamic) features"
+  },
+  {
+    "objectID": "slides/lec-03.html#batch-processing-versus-stream-processing-1",
+    "href": "slides/lec-03.html#batch-processing-versus-stream-processing-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Batch Processing Versus Stream Processing",
+    "text": "Batch Processing Versus Stream Processing\n\nSpark, MapReduce\nApache Flink, KSQL, Spark Streaming"
+  },
+  {
+    "objectID": "slides/lec-03.html#summary",
+    "href": "slides/lec-03.html#summary",
+    "title": "Data Engineering Fundamentals",
+    "section": "Summary",
+    "text": "Summary\n\nData sources (first, second and third party)\nData formats\n\nRow-major vs column-major\nText vs binary\nStructured vs unstructured\n\nData models\n\nRelational\nDocument\nGraph\n\n\nData storage engines - Data warehouse - Data lake - Graph database"
+  },
+  {
+    "objectID": "slides/lec-03.html#summary-1",
+    "href": "slides/lec-03.html#summary-1",
+    "title": "Data Engineering Fundamentals",
+    "section": "Summary",
+    "text": "Summary\n\nData processing\n\nTransactional vs analytical\n\nData passing through\n\nDatabases\nServices\nReal-time-transport (Apache KAfka, RabbitMQ)\n\nBatch and streaming data\n\nStatic features vs dynamic features\n\n\n\n\n\nMLOps | Jan Kirenz"
   },
   {
     "objectID": "slides/lec-temp.html#mlops",
@@ -908,6 +1062,62 @@
     "title": "Introduction to ML Systems Design",
     "section": "Summary",
     "text": "Summary\n\nStart with business objectives\n\nTranslate into ML objectives\n\nGeneral requirements:\n\nreliability, scalability, maintainability, and adaptability\n\nIterative process\nRole of data in ML Systems\n\n\n\n\nMLOps | Jan Kirenz"
+  },
+  {
+    "objectID": "slides/lec-04.html#nonprobability-sampling",
+    "href": "slides/lec-04.html#nonprobability-sampling",
+    "title": "Training Data",
+    "section": "Nonprobability Sampling",
+    "text": "Nonprobability Sampling\n\nConvenience sampling\n\nSamples selected based on their availability\n\nSnowball sampling\n\nFuture samples are selected based on existing samples\n\nJudgment sampling\n\nExperts decide what samples to include\n\nQuota sampling\n\nSelect samples based on quotas for certain slices of data"
+  },
+  {
+    "objectID": "slides/lec-04.html#nonprobability-sampling-1",
+    "href": "slides/lec-04.html#nonprobability-sampling-1",
+    "title": "Training Data",
+    "section": "Nonprobability Sampling",
+    "text": "Nonprobability Sampling\n\nSample is not representative for population (selection bias)"
+  },
+  {
+    "objectID": "slides/lec-04.html#simple-random-sampling",
+    "href": "slides/lec-04.html#simple-random-sampling",
+    "title": "Training Data",
+    "section": "Simple Random Sampling",
+    "text": "Simple Random Sampling\n\nAll samples in the population have equal probability of being selected\nEasy to implement\nRare categories of data might not appear in your selection"
+  },
+  {
+    "objectID": "slides/lec-04.html#stratified-sampling",
+    "href": "slides/lec-04.html#stratified-sampling",
+    "title": "Training Data",
+    "section": "Stratified Sampling",
+    "text": "Stratified Sampling\n\nDivide population into similar groups\nSample from each group separately\n\n\nEach group is called a stratum\nSometimes it’s impossible to divide all samples into groups"
+  },
+  {
+    "objectID": "slides/lec-04.html#weighted-sampling",
+    "href": "slides/lec-04.html#weighted-sampling",
+    "title": "Training Data",
+    "section": "Weighted Sampling",
+    "text": "Weighted Sampling\n\nEach sample is given a weight, which determines the probability of it being selected"
+  },
+  {
+    "objectID": "slides/lec-04.html#reservoir-sampling",
+    "href": "slides/lec-04.html#reservoir-sampling",
+    "title": "Training Data",
+    "section": "Reservoir Sampling",
+    "text": "Reservoir Sampling\n\nUseful for streaming data\n\n\nPut the first k elements into the reservoir.\nFor each incoming nth element, generate a random number i such that 1 ≤ i ≤ n.\nIf 1 ≤ i ≤ k: replace the ith element in the reservoir with the nth element. Else, do nothing."
+  },
+  {
+    "objectID": "slides/lec-04.html#importance-sampling",
+    "href": "slides/lec-04.html#importance-sampling",
+    "title": "Training Data",
+    "section": "Importance Sampling",
+    "text": "Importance Sampling\n\nSample from a distribution when we only have access to another distribution"
+  },
+  {
+    "objectID": "slides/lec-04.html#hand-labels",
+    "href": "slides/lec-04.html#hand-labels",
+    "title": "Training Data",
+    "section": "Hand labels",
+    "text": "Hand labels\n\nExpensive and slow\nLabel multiplicity\n\nAnnotate all entities they can find:\nAnnotator |# entities| Annotation |\n1 | 3 | [Darth Sidious], known simply as the Emperor, was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |\n|2 | 6 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord] of the [Sith] who reigned over the galaxy as [Galactic Emperor] of the [First Galactic Empire].| | 3 | 4 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |\n\n\n\nMLOps | Jan Kirenz"
   },
   {
     "objectID": "slides/lec-0.html#welcome",
