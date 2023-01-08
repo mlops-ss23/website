@@ -188,7 +188,7 @@ noisy."
 
 - Subject matter expertise can be versioned, reused, and shared
 
-## Weak supervision
+## Weak supervision {.smaller}
 
 | Hand labeling | Programmatic labeling |
 | -- | -- |
@@ -196,4 +196,34 @@ noisy."
 | Lack of privacy : Need to ship data to human annotators | Privacy : Create LFs using a cleared data subsample and then apply LFs to other data without looking at individual samples |
 | Slow : Time required scales linearly with number of labels needed | Fast : Easily scale from 1K to 1M samples |
 | Nonadaptive : Every change requires relabeling the data | Adaptive : When changes happen, just reapply LFs! |
+
+
+## Weak supervisionc 
+
+![](images/lec-04/fig-4-5-medicine.jpg)
+
+
+- Models trained with weakly supervised labels obtained by a
+single radiologist after eight hours of writing LFs had comparable performance with
+models trained on data obtained through almost a year of hand labeling
+
+## Semi supervision
+
+- Generates new labels based on a small set of initial labels
+
+- Semi-supervision requires an initial set of labels
+
+- Self-training
+  - Use model to make predictions for unlabeld data
+  - Keep labels with high probability scores
+
+## Semi supervision
+
+
+- Perturbation-based method
+
+## Transfer learning
+
+## Active learning
+
 
