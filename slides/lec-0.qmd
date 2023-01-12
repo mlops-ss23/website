@@ -1,6 +1,6 @@
 ---
 title: MLOps
-subtitle: Welcome 👋
+subtitle: Welcome 
 author: Jan Kirenz
 format:
   revealjs:
@@ -24,14 +24,14 @@ library(countdown)
 ```
 
 
-## Welcome!
+## Welcome 👋!
 
-- Name, current job, your major in the masters program
+- Name, current job, your major in the masters program?
 - What do you hope to get out of this course?
 - Anything you want to share/ask?
 
 ```{r}
-countdown(minutes = 8)
+countdown(minutes = 5)
 ```
 
 
