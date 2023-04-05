@@ -17,213 +17,34 @@ format:
 #jupyter: python3
 ---
 
-# Sampling {background-color="#0ca37f"}
 
-## Nonprobability Sampling 
 
+# Framing ML Problems {background-image="../images/dje.jpg"}
 
-- Convenience sampling
-  - Samples selected based on their availability
+## Types of ML Tasks
 
-- Snowball sampling
-  - Future samples are selected based on existing samples
+![](../images/overview/fig-2-3-ml-types.png)
 
-- Judgment sampling
-  - Experts decide what samples to include
+## Classification versus regression
 
-- Quota sampling
-  - Select samples based on quotas for certain slices of data 
+- Classification models classify inputs into different categories
 
-## Nonprobability Sampling 
+- Regression models output a continuous value
 
-- Sample is not representative for population (selection bias)
+## Binary versus multiclass classification
 
+- Binary
+  - Only two possible classes
 
-## Simple Random Sampling
+- Multiclass classification
+  - More than two classes
 
-- All samples in the population have equal probability of being selected
 
-- Easy to implement
+## Multiclass versus multilabel classification
 
-- Rare categories of data might not appear in your selection
+- Binary and multiclass classification 
+  - Example belongs to one class
 
-
-## Stratified Sampling
-
-1. Divide population into similar groups 
-2. Sample from each group separately
-
-- Each group is called a stratum
-
-- Sometimes it's impossible to divide all samples into groups
-
-## Weighted Sampling
-
-- Each sample is given a weight, which determines the probability of it being selected
-
-![](images/lec-04/fig-4-1-weighted.png)
-
-
-## Reservoir Sampling
-
-- Useful for streaming data
-
-1. Put the first k elements into the reservoir.
-2. For each incoming n*th* element, generate a random number i such that 1 ≤ i ≤ n.
-3. If 1 ≤ i ≤ k: replace the i*th* element in the reservoir with the n*th* element. Else, do nothing.
-
-
-- ![](images/lec-04/fig-4-2-reservoir.jpg)
-
-## Importance Sampling
-
-- Sample from a distribution when we only have access to another distribution
-
-
-# Labeling {background-color="#0ca37f"}
-
-## Hand labels 
-
-- Usually expensive and slow
-
-- Commom problem: Label multiplicity
-
-- Annotate all entities they can find:
-  - Darth Sidious] known simply as the Emperor, was a Dark Lord of the Sith who reigned over the galaxy as  Galactic Emperor of the First Galactic Empire
-
-## Hand labels {.smaller}
-
-
-| Annotator |# | Annotation |
-|-|-|---------|
-| 1 | 3 | [Darth Sidious], known simply as the Emperor, was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |
-|2 | 6 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord] of the [Sith] who reigned over the galaxy as [Galactic Emperor] of the [First Galactic Empire].| 
-| 3 | 4 | [Darth Sidious], known simply as the [Emperor], was a [Dark Lord of the Sith] who reigned over the galaxy as [Galactic Emperor of the First Galactic Empire]. |
-
-- Possible solution: pick the entity that comprises the longest substring.
-
-
-## Data lineage
-
-- Keep track of the origin of data
-
-- helps you flag potential biases in your data and debug your models
-
-## Natural labels
-
-- Explicit labels (e.g., user feedback)
-
-- Implicit labels (e.g., user behavior)
-
-- Feedback loop length
-
-
-## Handling the lack of labels {.smaller}
-
-
-| **Method**        | **How**                                                       | **Ground truths required?**                                                                                                                                                     |
-| ----------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Weak supervision  | Leverages (often noisy) heuristics to generate labels         | No, but a small number of labels are recommended to guide the development of heuristics                                                                                         |
-| Semi-supervision  | Leverages structural assumptions to generate labels           | Yes, a small number of initial labels as seeds to generate more labels                                                                                                          |
-| Transfer learning | Leverages models pretrained on another task for your new task | No for zero-shot learning. Yes for fine-tuning, though the number of ground truths required is often much smaller than what would be needed if you train the model from scratch |
-| Active learning   | Labels data samples that are most useful to your model        | Yes                                                                                                                                                                             |
-
-## Weak supervision
-
-- Use heuristics to label data
-  - Requires subject matter expertise
-
-- Programmatic labeling
-
-- Labeling function (LF)
-
-
-## Weak supervision example
-
-- A doctor might use the following heuristics to decide whether a patient’s case should be prioritized as
-emergent:
-  - "If the nurse’s note mentions a serious condition like pneumonia, the patient’s case
-should be given priority consideration."
-
-- Example of labeling function:
-
-```python
-def labeling_function(note):
-  if "pneumonia" in note:
-    return "EMERGENT"
-```
-
-## Weak supervision labeling function {.smaller}
-
-
-- Keyword heuristic
-  - Such as the preceding example
-
-- Regular expressions
-  - Such as if the note matches or fails to match a certain regular expression
-
-- Database lookup
-  - Such as if the note contains the disease listed in the dangerous disease list
-
-- The outputs of other models
-  - Such as if an existing system classifies this as EMERGENT
-
-
-## Weak supervision example
-
-- Snorkel AI
-
-
-## Weak supervision 
-
-"Because LFs encode heuristics, and heuristics are noisy, labels produced by LFs are
-noisy."
-
-![](images/lec-04/fig-4-4-labeling-funtions.jpg)
-
-
-## Weak supervision
-
-- Especially useful when your data has strict privacy requirements
-
-- Subject matter expertise can be versioned, reused, and shared
-
-## Weak supervision {.smaller}
-
-| Hand labeling | Programmatic labeling |
-| -- | -- |
-| Expensive : Especially when subject matter expertise required | Cost saving : Expertise can be versioned, shared, and reused across an organization |
-| Lack of privacy : Need to ship data to human annotators | Privacy : Create LFs using a cleared data subsample and then apply LFs to other data without looking at individual samples |
-| Slow : Time required scales linearly with number of labels needed | Fast : Easily scale from 1K to 1M samples |
-| Nonadaptive : Every change requires relabeling the data | Adaptive : When changes happen, just reapply LFs! |
-
-
-## Weak supervisionc 
-
-![](images/lec-04/fig-4-5-medicine.jpg)
-
-
-- Models trained with weakly supervised labels obtained by a
-single radiologist after eight hours of writing LFs had comparable performance with
-models trained on data obtained through almost a year of hand labeling
-
-## Semi supervision
-
-- Generates new labels based on a small set of initial labels
-
-- Semi-supervision requires an initial set of labels
-
-- Self-training
-  - Use model to make predictions for unlabeld data
-  - Keep labels with high probability scores
-
-## Semi supervision
-
-
-- Perturbation-based method
-
-## Transfer learning
-
-## Active learning
-
+- Multilabel classification problem
+  - Example can belong to multiple classes
 
